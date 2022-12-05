@@ -1,0 +1,65 @@
+// variables
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body{
+         //background-color: #090090!important;
+    }
+
+   
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .page-wrapper{
+        .page-header{
+            background-color: #fff;
+            min-height: 68px;
+            border: none;
+            margin: 0;
+     
+            div.header.content{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                border: none;
+                padding: 15px 0;
+          
+            
+                span.action.nav-toggle{
+                    &:before {
+                        color:#073756;
+                    }
+                }
+
+                a.logo {
+                    margin: 0;
+                    margin-left: 10px;
+                    img{
+                        width: 122px;
+                        height: 43px;
+                    }
+                }
+
+
+            }
+        }
+    }
+ 
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  
+}
