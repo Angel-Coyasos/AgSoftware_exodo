@@ -1,0 +1,81 @@
+//
+//  Variables
+//  _____________________________________________
+
+@color-primario: #073756;
+@color-segundario:  #000;
+@color-fuente: #fff;
+@fuente1: 'Open Sans','sans-serif';
+@fuente2: 'd';
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body{
+        // background-color: #090090!important;
+    }
+
+    footer.page-footer {
+        .footer {
+            &.content {
+                margin: 0;
+                padding: 0;
+            }
+            &-container {
+                width: 100vw;
+                background: @color-primario;
+            }
+            &-content {
+                max-width: 1280px;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                padding: 0 20px;
+                .block-title {
+                    color: @color-fuente;
+                    text-transform: uppercase;
+                    &--title {
+                        font-family: @fuente1;
+                        font-size: 3rem;
+                        font-weight: 800;
+                        line-height: 1.1;
+                    }
+                }
+                .block-columns {
+                    display: flex;
+                }
+                .block-links-searchs {
+                    width: 700px;
+                    text-align: center;
+                    // margin-left: 145px; destop
+                    margin-bottom: 50px;
+                    .links-searchs {
+                        &:after {
+                            content: ' | ';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+ 
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  
+}
