@@ -11,5 +11,6 @@
         <css src="mage/calendar.css"/>
         <script src="requirejs/require.js"/>
         <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap" src_type="url" />
+        <link rel="stylesheet" type="text/css" src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" src_type="url" />
     </head>
 </page>
