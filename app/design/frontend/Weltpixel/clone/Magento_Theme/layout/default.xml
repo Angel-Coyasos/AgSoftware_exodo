@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+
 <!--
 /**
  * Copyright © Magento, Inc. All rights reserved.bin
@@ -26,5 +26,9 @@
             <referenceBlock name="form.subscribe" remove="true"/>
 
         </referenceContainer>
+        <referenceContainer name="header.container">
+                <referenceBlock name="header.panel.wrapper" remove="true"/>
+        </referenceContainer>
+
     </body>
 </page>
