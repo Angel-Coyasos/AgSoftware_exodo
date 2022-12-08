@@ -26,8 +26,11 @@
             <referenceBlock name="form.subscribe" remove="true"/>
 
         </referenceContainer>
+
         <referenceContainer name="header.container">
-                <referenceBlock name="header.panel.wrapper" remove="true"/>
+
+            <referenceBlock name="header.panel.wrapper" remove="true"/>
+            
         </referenceContainer>
 
     </body>
