@@ -54,6 +54,7 @@
 }
 
 
+
 //
 //  Common
 //  _____________________________________________
@@ -65,6 +66,7 @@
     }
 
     footer.page-footer {
+        padding-bottom: 0;
         .footer {
             &.content {
                 margin: 0;
@@ -150,6 +152,38 @@
                             }
                             &-development {
                                 .text-information;
+                            }
+                            &-icons {
+                                display: flex;
+                                // justify-content: center;
+                                .icon-facebook, .icon-twitter, .icon-linkedin {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin: 5px;
+                                    font-size: 43.43px;
+                                    text-decoration: none;
+                                    .icon-facebook--visible, .icon-twitter--visible, .icon-linkedin--visible {
+                                        color: @color-primario;
+                                        &:before {
+                                            background: @color-claro;
+                                        }
+                                    }
+                                    .icon-facebook--transition, .icon-twitter--transition, .icon-linkedin--transition {
+                                        display: none;
+                                    }
+                                    &:hover {
+                                        .icon-facebook--visible {
+                                            color: #1877F2;
+                                         }
+                                         .icon-twitter--visible {
+                                            color: #1D9BF0;
+                                         }
+                                         .icon-linkedin--visible {
+                                            color: #0A66C2;
+                                         }
+
+                                    }
+                                }
                             }
                             .newsletter-subscribe {
                                 .form-group {
@@ -277,6 +311,9 @@
                                 &--ancla {
                                     .link-ancla;
                                 }
+                            }
+                            &-icons {
+                                justify-content: center;
                             }
                         }
                     }
