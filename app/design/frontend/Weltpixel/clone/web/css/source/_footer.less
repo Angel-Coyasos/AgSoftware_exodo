@@ -4,9 +4,55 @@
 
 @color-primario: #073756;
 @color-segundario:  #000;
-@color-fuente: #fff;
+@color-claro: #f9f9f9;
+@color-titulo: #fff;
+@color-texto: #cccccc;
 @fuente1: 'Open Sans','sans-serif';
 @fuente2: 'd';
+
+
+//
+//  Mixins
+//  _____________________________________________
+
+.link-ancla {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 2.7;
+    letter-spacing: .1rem;                                   
+    color: @color-texto;
+    text-transform: uppercase;
+}
+
+.text-information {
+    position: relative;
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5px;
+    margin-bottom: 30px;
+    color: @color-texto;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 12px);
+        content: '\F3E8';
+        font-family: 'bootstrap-icons';
+        font-size: 24px;
+    }
+    span {
+        font-weight: 700;
+        &:before {
+            content: ' | ';
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+
 
 
 //
@@ -20,6 +66,7 @@
     }
 
     footer.page-footer {
+        padding-bottom: 0;
         .footer {
             &.content {
                 margin: 0;
@@ -34,30 +81,180 @@
                 display: flex;
                 flex-direction: column;
                 margin: 0 auto;
-                padding: 0 20px;
-                .block-title {
-                    color: @color-fuente;
+                padding: 40px 20px;
+                .block {
+
+                    // Estilos titulo footer.
+                    &-title {
+                    margin: 100px 0 50px 0;
                     text-transform: uppercase;
-                    &--title {
-                        font-family: @fuente1;
-                        font-size: 3rem;
-                        font-weight: 800;
-                        line-height: 1.1;
-                    }
-                }
-                .block-columns {
-                    display: flex;
-                }
-                .block-links-searchs {
-                    width: 700px;
-                    text-align: center;
-                    // margin-left: 145px; destop
-                    margin-bottom: 50px;
-                    .links-searchs {
-                        &:after {
-                            content: ' | ';
+                    color: @color-titulo; 
+                        &--title {
+                            font-family: @fuente1;
+                            font-size: 3rem;
+                            font-weight: 800;
+                            line-height: 1.1;
                         }
                     }
+
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        display: inline-block;   
+                        padding: 24px 34px;
+                        font-size: 22px;
+                        font-family: 'open sans';
+                        font-weight: 900;
+                        letter-spacing: 1px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-shadow: e("1px 1px 1px #00000033;");
+                        cursor: pointer;
+                        color: @color-primario;
+                        background-color: @color-titulo;
+                        &--text {
+                            margin: 0;
+                        }
+                    }
+
+                    // Estilos columnas con toda la informacion del footer.
+                    &-columns {
+                        display: flex;
+                        &__logo {
+                            &--text {
+                                margin: 18px 0 30px 0;
+                                font-size: 10px;
+                                color: @color-texto;
+                            }
+                        } 
+                       
+                        &__services,  &__about {
+                            &-links {
+                                &--ancla {
+                                    .link-ancla;
+                                    &:hover {
+                                        color: #ffffff;
+                                    }
+                                }
+                            }
+                        }
+                        &__information {
+                            &-title {
+                                text-align: center;
+                                .link-ancla;
+                            }
+                            &-links {
+                                &--ancla {
+                                    .link-ancla;
+                                }
+                            }
+                            &-hq {
+                                .text-information;
+                            }
+                            &-development {
+                                .text-information;
+                            }
+                            &-icons {
+                                display: flex;
+                                // justify-content: center;
+                                .icon-facebook, .icon-twitter, .icon-linkedin {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin: 0 5px 5px 5px;
+                                    font-size: 43.43px;
+                                    text-decoration: none;
+                                    .icon-facebook--visible, .icon-twitter--visible, .icon-linkedin--visible {
+                                        color: @color-primario;
+                                        &:before {
+                                            background: @color-claro;
+                                        }
+                                    }
+                                    .icon-facebook--transition, .icon-twitter--transition, .icon-linkedin--transition {
+                                        display: none;
+                                    }
+                                    &:hover {
+                                        .icon-facebook--visible {
+                                            color: #1877F2;
+                                         }
+                                         .icon-twitter--visible {
+                                            color: #1D9BF0;
+                                         }
+                                         .icon-linkedin--visible {
+                                            color: #0A66C2;
+                                         }
+
+                                    }
+                                }
+                            }
+                            .newsletter-subscribe {
+                                .form-group {
+                                    margin-bottom: 40px;
+                                    text-align: center;
+                                }
+                                .input-text {
+                                    width: 60%;
+                                    background: @color-primario;
+                                    border-top: @color-primario;
+                                    border-left: @color-primario;
+                                    border-right: @color-primario;
+                                    color: @color-claro;
+                                    &::placeholder {
+                                        font-family: 'Montserrat',sans-serif;
+                                        font-size: 10px;
+                                        font-weight: 400;
+                                        text-transform: uppercase;
+                                        color: @color-claro;
+                                    }
+                                }
+                                .button {
+                                    width: 30%;
+                                    margin-top: -3px;
+                                    margin-left: 5px;
+                                    padding: 0 15px;
+                                    font-family: 'Montserrat',sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 30px;
+                                    text-transform: uppercase;
+                                    border: 1px solid @color-claro;
+                                    color: @color-claro;
+                                    background: @color-primario;
+                                }
+                            }
+                        }
+                    }
+
+                    // Estilos etiquetas ancla de la parte inferior del footer.
+                    &-links-searchs {
+                        // width: 700px;
+                        text-align: center;
+                        // margin-left: 145px; destop
+                        margin-bottom: 50px;
+                        .links-searchs {
+                            position: relative;
+                            font-size: 10px;
+                            font-weight: bold;
+                            line-height: 12px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            padding-top: 5px;
+                            margin-bottom: 30px;
+                            color: @color-texto;
+                            text-decoration: none;
+                            &:after {
+                                content: ' | ';
+                            }
+                        }
+                        .links-searchs--blue {
+                            color: #01CBE1;
+                            &:hover {
+                                color: @color-texto;
+                            }
+                        }
+                        .links-searchs--gray {
+                            color: @color-texto;
+                        }
+                    }
+
                 }
             }
         }
@@ -70,6 +267,66 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
  
+    footer.page-footer {
+        .footer {
+            &-content {
+                width: 90%;
+                .block {
+
+                    // Estilos titulo footer.
+                    &-title {
+                        text-align: center;
+                    }
+
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        margin: 5px auto;
+                    }
+
+                    // Estilos columnas con toda la informacion del footer.
+                    &-columns {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 60px;
+                        &__logo {
+                            margin-bottom: 40px;
+                            &--minilogo {
+                                width: 100%;
+                            }
+                            &--text {
+                                text-align: center;
+                            }
+                            &--img-card {
+                                width: 100%;
+                            }
+                        } 
+                        &__services,  &__about {
+                            &--ul {
+                                text-align: center;
+                            }
+                        }
+                        &__information {
+                            width: 100%;
+                            &-links {
+                                &--ancla {
+                                    .link-ancla;
+                                }
+                            }
+                            &-icons {
+                                justify-content: center;
+                            }
+                        }
+                    }
+
+                     // Estilos etiquetas ancla de la parte inferior del footer.
+                    &-links-searchs {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 //
@@ -78,4 +335,60 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
+    footer.page-footer {
+        .footer {
+            &-content {
+
+                .block {
+
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        width: 350px;
+                        margin: 5px;
+                    }
+
+                    // Estilos columnas con toda la informacion del footer.
+                    &-columns {
+                        margin: 40px 0;
+
+                        &__logo {
+                            padding: 0 15px;
+                            &--minilogo {
+                                width: 170px;
+                            }
+                            &--img-card {
+                                width: 170px;
+                            }
+                        } 
+
+                        &__services,  &__about {
+                            padding: 0 15px;
+                            &--ul {
+                                padding-right: 50px;
+                            }
+                        }
+
+                        &__information { 
+                            &-hq {
+                                padding-left: 30px;
+                                text-align: left;
+                               
+                            }
+                            &-development {
+                                padding-left: 30px;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                     // Estilos etiquetas ancla de la parte inferior del footer.
+                    &-links-searchs {
+                        width: 700px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
 }
