@@ -75,7 +75,7 @@ class AddBlockCmsFooter implements DataPatchInterface, PatchRevertableInterface
           &lt;div class="block-columns"&gt;
           
             &lt;div class="block-columns__logo"&gt;
-              &lt;img class="block-columns__logo--minilogo" src="{{media url=wysiwyg/magento_partner_1.png}}" alt="logo footer" /&gt;
+              &lt;img class="block-columns__logo--minilogo" src="{{media url=wysiwyg/magento_partner.png}}" alt="logo footer" /&gt;
               &lt;p class="block-columns__logo--text"&gt;© 2022 Weltpixel. All Rights Reserved.&lt;/p&gt;
               &lt;img  class="block-columns__logo--img-card" src="{{media url=wysiwyg/logo-creditcards.png}}" alt="credit cards" /&gt;
             &lt;/div&gt;
@@ -286,7 +286,7 @@ class AddBlockCmsFooter implements DataPatchInterface, PatchRevertableInterface
     public static function getDependencies()
     {
         return [
-
+            \AgSoftware\PageFoteerV1\Setup\Patch\Data\AddBlockCmsPreFooter::class
         ];
     }
     

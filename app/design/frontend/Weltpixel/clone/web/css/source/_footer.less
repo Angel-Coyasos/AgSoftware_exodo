@@ -68,6 +68,18 @@
     footer.page-footer {
         padding-bottom: 0;
         .footer {
+            .pre-footer-container {
+                display: flex;
+                text-align: center;
+                width: 100vw;
+                &__img{
+                    padding: 30px 0;
+                    
+                    img {
+                        max-width: 1400px;
+                    }
+                }
+            }
             &.content {
                 margin: 0;
                 padding: 0;
@@ -341,6 +353,13 @@
 
                 .block {
 
+                    // Estilos titulo footer.
+                    &-title {
+                        &--title {
+                            font-size: 58px;
+                        }
+                    }
+
                     // Estilos boton ancla del footer.
                     &-ancla-btn {
                         width: 350px;
@@ -369,14 +388,14 @@
                         }
 
                         &__information { 
+                            width: 400px;
+                            padding: 0 15px;
                             &-hq {
-                                padding-left: 30px;
-                                text-align: left;
+                                text-align: center;
                                
                             }
                             &-development {
-                                padding-left: 30px;
-                                text-align: left;
+                                text-align: center;
                             }
                         }
                     }
