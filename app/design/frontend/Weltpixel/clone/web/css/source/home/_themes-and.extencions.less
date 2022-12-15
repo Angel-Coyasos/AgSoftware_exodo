@@ -65,7 +65,7 @@
                         &--text {
                             display: block;
                             font-family: @fuente2;
-                            font-size: 1rem;
+                            font-size: 0.9rem;
                             font-weight: 400;
                             letter-spacing: 1px;
                             text-transform: uppercase;
@@ -75,18 +75,6 @@
             }
             &__image {
                 .image__ancla {
-                    .laptop_banner {
-                        background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/h42.png);
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    }
-                    .mobile_banner {
-
-                    }
-                    .vissible-mobile {
-                        
-                    }
                     .hidden-mobile {
                         display: none;
                     }
@@ -114,14 +102,6 @@
                     }
                 }
             }
-            &__image {
-                .image__ancla {
-                    .hidden-mobile {
-                        display: none;
-                    }
-                }
-            }
-
         }
     }
 
@@ -147,8 +127,10 @@
                     }
                 }
                 &--button {
+                    width: auto;
                     .button__ancla {
-                        width: 350px;
+                        width: 312px;
+                        padding: 16px 20px;
                     }
                 }
             }
@@ -157,9 +139,53 @@
                 width: 58.33333333%;
                 min-height: 1px;
                 z-index: -1;
+            }
+
+        }
+    }
+
+}
+
+
+
+//
+//  Big Deskto
+//  _____________________________________________
+
+// .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l ) 
+@media (min-width: 1200px) { 
+  
+    .blocks-home__container {
+        .thems-and-extencions {
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+            background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/h42.png) no-repeat 53%;
+            background-size: contain;
+            background-position: 53%;
+            &__content {
+                &--title {
+                    .primary__title {
+                        padding: 75px 0 10px;
+                        font-size: 5.8rem;
+                    }
+                }
+                &--button {
+                    .button__ancla {
+                        width: 57%;
+                        padding: 18px 30px;
+                    }
+                }
+            }
+            &__image {
+                width: 50%;
+                left: 8.33333333%;
                 .image__ancla {
-                    .hidden-mobile {
+                    .vissible-mobile {
                         display: none;
+                    }
+                    .hidden-mobile {
+                        display: block;
                     }
                 }
             }
