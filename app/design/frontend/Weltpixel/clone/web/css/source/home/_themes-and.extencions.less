@@ -1,4 +1,18 @@
 //
+//  Variables
+//  _____________________________________________
+
+@color-primario: #073756;
+@color-segundario:  #000;
+@color-claro: #f9f9f9;
+@color-titulo: #fff;
+@color-texto: #cccccc;
+@fuente1: 'Open Sans','sans-serif';
+@fuente2: 'Montserrat', 'sans-serif';
+
+
+
+//
 //  Common
 //  _____________________________________________
 
@@ -8,6 +22,80 @@
         // background-color: #090090!important;
     }
 
+    .blocks-home__container {
+        .thems-and-extencions {
+            display: flex;
+            gap: 20px;
+            &__content {
+                &--title {
+                    .primary__title {
+                        margin: 30px 0 20px;
+                        font-family: @fuente1;
+                        font-size: 3.0rem;
+                        font-weight: 800;
+                        text-transform: uppercase; 
+                        color: @color-segundario;
+                        
+                    }
+                    .secondary__title {
+                        font-family: @fuente2;
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        text-transform: initial;
+                    }
+                }
+                &--button {
+                    .button__ancla {
+                        display: inline-block;
+                        margin: 5px;
+                        padding: 16px 20px;
+                        font-size: 1.5rem;
+                        line-height: 1;
+                        text-align: left;
+                        text-decoration: none;    
+                        background-color: @color-primario;
+                        color: @color-titulo;
+                        &--title {
+                            display: block;
+                            margin-bottom: 10px;
+                            font-family: @fuente1;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                        }
+                        &--text {
+                            display: block;
+                            font-family: @fuente2;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            &__image {
+                .image__ancla {
+                    .laptop_banner {
+                        background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/h42.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .mobile_banner {
+
+                    }
+                    .vissible-mobile {
+                        
+                    }
+                    .hidden-mobile {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
 }
 //
 //  Mobile
@@ -15,6 +103,28 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
  
+    .blocks-home__container {
+        .thems-and-extencions {
+            flex-direction: column;
+            text-align: center;
+            &__content {
+                &--title {
+                    .secondary__title {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            &__image {
+                .image__ancla {
+                    .hidden-mobile {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
 }
 
 //
@@ -23,4 +133,38 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
+    .blocks-home__container {
+        .thems-and-extencions {
+            flex-direction: row;
+            &__content {
+                position: relative;
+                left: 8.33333333%;
+                width: 41.66666667%;
+                min-height: 1px;
+                &--title {
+                    .secondary__title {
+                        margin-bottom: 80px;
+                    }
+                }
+                &--button {
+                    .button__ancla {
+                        width: 350px;
+                    }
+                }
+            }
+            &__image {
+                position: relative;
+                width: 58.33333333%;
+                min-height: 1px;
+                z-index: -1;
+                .image__ancla {
+                    .hidden-mobile {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
 }
