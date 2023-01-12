@@ -64,14 +64,14 @@ class AddBlockCmsFooter implements DataPatchInterface, PatchRevertableInterface
             "title" => "footer weltpixel",
             "identifier" => "footer-weltpixel",
             "store_id" => "All Store Views",
-            "content" => '<style>#html-body [data-pb-style=KM4J4AJ]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div class="footer-container" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="KM4J4AJ"><div class="footer-content" data-content-type="html" data-appearance="default" data-element="main">&lt;div class="block-title"&gt;
+            "content" => '<style>#html-body [data-pb-style=M6YHDMI]{justify-content:flex-start;display:flex;flex-direction:column;background-position:left top;background-size:cover;background-repeat:no-repeat;background-attachment:scroll}</style><div data-content-type="row" data-appearance="contained" data-element="main"><div class="footer-container" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="M6YHDMI"><div class="footer-content" data-content-type="html" data-appearance="default" data-element="main">&lt;div class="block-title"&gt;
             &lt;h2 class="block-title--title"&gt;weltpixel runs on magento 2. built with pearl. theme&lt;/h2&gt;
           &lt;/div&gt;
-          
+         
           &lt;a href="https://www.weltpixel.com/magento-2-theme-pearl" class="block-ancla-btn"&gt;
             &lt;p class="block-ancla-btn--text"&gt;GRAB Your COPY Now!&lt;/p&gt;
           &lt;/a&gt;
-          
+           
           &lt;div class="block-columns"&gt;
           
             &lt;div class="block-columns__logo"&gt;
@@ -161,44 +161,41 @@ class AddBlockCmsFooter implements DataPatchInterface, PatchRevertableInterface
             &lt;/div&gt;
           
             &lt;div class="block-columns__information"&gt;
-              &lt;h4 class="block-columns__information-title"&gt;Let`s Stay in touch!&lt;/h4&gt;
+              &lt;h4 class="block-columns__information-title"&gt;Let&apos;s Stay in touch!&lt;/h4&gt;
           
               &lt;div class="block-columns__information-icons"&gt;
           
                 &lt;a class="icon-facebook" href="https://m.facebook.com/WeltPixel/"&gt;
                    &lt;i class="fa-brands fa-square-facebook icon-facebook--visible"&gt;&lt;/i&gt;
-                   &lt;i class="fa-brands fa-square-facebook icon-facebook--transition"&gt;&lt;/i&gt;
                 &lt;/a&gt;
           
                 &lt;a class="icon-twitter" href="https://twitter.com/weltpixel"&gt;
                    &lt;i class="fa-brands fa-square-twitter icon-twitter--visible"&gt;&lt;/i&gt;
-                   &lt;i class="fa-brands fa-square-twitter icon-twitter--transition"&gt;&lt;/i&gt;
                 &lt;/a&gt;
           
                 &lt;a class="icon-linkedin" href="https://www.linkedin.com/mwlite/company/weltpixel"&gt;
                    &lt;i class="fa-brands fa-linkedin icon-linkedin--visible"&gt;&lt;/i&gt;
-                   &lt;i class="fa-brands fa-linkedin icon-linkedin--transition"&gt;&lt;/i&gt;
                 &lt;/a&gt;
           
-              &lt;/div&gt;
-          
+              &lt;/div&gt;        
+
              &lt;!-- FOOTER NEWSLETTER BLOCK BEGIN --&gt;
                  &lt;div class="newsletter-subscribe"&gt;
                       &lt;form action="{{store url="newsletter/subscriber/new/"}}" method="post"
-                        id="newsletter-footer" data-mage-init=`{"validation": {"errorClass": "mage-error"}}`&gt;
-          
+                        id="newsletter-footer" data-mage-init=&apos;{"validation": {"errorClass": "mage-error"}}&apos; id="newsletter-validate-detail"&gt;
                              &lt;div class="form-group"&gt;
                                   &lt;input name="email" type="email" id="newsletter-bottom" placeholder="Enter your email address"
-                                             data-validate="{required:true, `validate-email`:true}"
+                                             data-mage-init=&apos;{"mage/trim-input":{}}&apos; data-validate="{required:true, &apos;validate-email&apos;:true}"
                                              class="input-text required-entry validate-email"/&gt;
                                    &lt;button class="button" title="Subscribe" type="submit"&gt;
                                           &lt;span&gt;Sign Up&lt;/span&gt;
                                    &lt;/button&gt;
                               &lt;/div&gt;
+                             
                        &lt;/form&gt;
                   &lt;/div&gt;
               &lt;!-- FOOTER NEWSLETTER BLOCK END --&gt;
-          
+
               &lt;div class="block-columns__information-hq"&gt;
                 &lt;p class="block-columns__information--title"&gt;HQ Office&lt;/p&gt;
                 &lt;p class="block-columns__information--text"&gt;Philadelphia, PA 
@@ -214,7 +211,7 @@ class AddBlockCmsFooter implements DataPatchInterface, PatchRevertableInterface
             &lt;/div&gt;
           
           &lt;/div&gt;
-          
+         
           &lt;div class="block-links-searchs"&gt;
             &lt;a href="#" class="links-searchs links-searchs--blue" target="_blank"&gt;Magento 2 Google Analytics 4 (GA4) With GTM Support&lt;/a&gt;
             &lt;a href="#" class="links-searchs links-searchs--blue" target="_blank"&gt;Magento 2 Banner Slider&lt;/a&gt;
