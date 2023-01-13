@@ -1,17 +1,4 @@
 //
-//  Variables
-//  _____________________________________________
-
-@color-primario: #073756;
-@color-segundario:  #000;
-@color-claro: #f9f9f9;
-@color-titulo: #fff;
-@color-texto: #cccccc;
-@fuente1: 'Open Sans','sans-serif';
-@fuente2: 'd';
-
-
-//
 //  Mixins
 //  _____________________________________________
 
@@ -277,7 +264,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: 991px) {
  
     footer.page-footer {
         .footer {
@@ -288,11 +275,6 @@
                     // Estilos titulo footer.
                     &-title {
                         text-align: center;
-                    }
-
-                    // Estilos boton ancla del footer.
-                    &-ancla-btn {
-                        margin: 5px auto;
                     }
 
                     // Estilos columnas con toda la informacion del footer.
@@ -341,11 +323,35 @@
 
 }
 
+
+//
+//  Especial Tablet
+//  _____________________________________________
+
+@media (max-width: 1000px) {
+ 
+    footer.page-footer {
+        .footer {
+            &-content {
+                .block {
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        margin: 5px auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
 //
 //  Deskto
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: 992px)  {
   
     footer.page-footer {
         overflow-x: hidden;
@@ -359,12 +365,6 @@
                         &--title {
                             font-size: 58px;
                         }
-                    }
-
-                    // Estilos boton ancla del footer.
-                    &-ancla-btn {
-                        width: 350px;
-                        margin: 5px;
                     }
 
                     // Estilos columnas con toda la informacion del footer.
@@ -411,4 +411,26 @@
         }
     }
 
+}
+
+//
+//   Especial Deskto
+//  _____________________________________________
+
+@media (min-width: 1001px)  {
+    footer.page-footer {
+        .footer {
+            &-content {
+                .block {
+
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        width: 350px;
+                        margin: 5px;
+                    }
+                    
+                }
+            }
+        }
+    }
 }
