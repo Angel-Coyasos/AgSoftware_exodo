@@ -1,69 +1,22 @@
-// variables
+// variable
 
-//mixing
-.textRed {
-    &:after {
-        background: #F30D49;
-        content: 'HOT';
-        display: inline-block;
-        color: #ffffff;
-        font-size: 10px;
-        border-radius: 3px;
-        padding: 3px;
-        margin-left: 3px;
-        line-height: 1;
-        font-weight: 700;
-        text-shadow: none;
-        vertical-align: super;
-    }
-}
-.textBlue {
-    &:after {
-        content: 'LIVE STORES';
-        background: #E6EBEE;
-        display: inline-block;
-        color: #073756;
-        font-size: 12px;
-        border-radius: 3px;
-        padding: 3px;
-        margin-left: 3px;
-        line-height: 1;
-        font-weight: 700;
-        text-shadow: none;
-    }
-}
-.textFree {
-    &:after {
-        content: 'FREE';
-        background: #E6EBEE;
-        display: inline-block;
-        color: #073756;
-        font-size: 12px;
-        border-radius: 3px;
-        padding: 3px;
-        margin-left: 3px;
-        line-height: 1;
-        font-weight: 700;
-        text-shadow: none;
-    }
-}
-.textPrecing {
-    &:after {
-        background: #E6EBEE;
-        content: 'PRICING';
-        display: inline-block;
-        color: #073756;
-        font-size: 12px;
-        border-radius: 3px;
-        padding: 3px;
-        margin-left: 3px;
-        line-height: 1;
-        font-weight: 700;
-        text-shadow: none;
-    }
-}
+//mixin
 
-
+.textAfter(@content, @background, @color, @font-zise){
+    &:after {
+        content: @content;
+        background: @background;
+        display: inline-block;
+        color: @color;
+        font-size: @font-zise;
+        border-radius: 3px;
+        padding: 3px;
+        margin-left: 3px;
+        line-height: 1;
+        font-weight: 700;
+        text-shadow: none;
+    }
+}
 //
 //  Common
 //  _____________________________________________
@@ -72,7 +25,6 @@
     .page-wrapper{
         .page-header{
             .header.content{
-               // width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -89,24 +41,24 @@
                 }
                 .nav-sections {
                     display:none;
-                    background-color: #ffffff;
+                    background-color: @color-titulo;
                     div.nav-sections-items {
-                        background-color: #ffffff;
+                        background-color: @color-titulo;
                         div.nav-sections-item-title.active {
-                            background: #ffffff;
-                            border: solid #ffffff;
+                            background: @color-titulo;
+                            border: solid @color-titulo;
                         }
                         div.nav-sections-item-title {
                             width: 50%;
                             background-color: #f7f7f7;
-                            border: solid 0px #fff;
+                            border: solid 0px @color-titulo;
                             color: #232323;
                             font-size: 1.6rem;
                             text-transform: uppercase;
                             a.nav-sections-item-switch {
                                 color: #232323;
                                 &:hover {
-                                    color: #073756;
+                                    color: @color-primario;
                                 }
                             }
 
@@ -131,7 +83,7 @@
                                     }
                                     .nav-1 {
                                         a {
-                                            .textRed;
+                                            .textAfter('HOT', #F30D49, @color-titulo, 10px);
                                         }
                                        
                                     }
@@ -140,14 +92,14 @@
                                             .nav-2-3 {
                                                 a {
                                                     span {
-                                                        .textBlue;
+                                                        .textAfter('LIVE STORES', #E6EBEE, @color-primario, 12px);
                                                     }
                                                 }
                                             }
                                             .nav-2-10, .nav-4-4 {
                                                 a {
                                                     span {
-                                                        .textPrecing;
+                                                        .textAfter('PRICING', #E6EBEE, @color-primario, 12px);
                                                     }
                                                 }
 
@@ -166,23 +118,14 @@
                                             }
                                             .nav-3-1 {
                                                 a {
-                                                    text-shadow: 0 0 0 #000;
+                                                    text-shadow: 0 0 0 @color-oscuro;
                                                     line-height: normal
                                                 }
                                             }
-                                            // .nav-3-12, .nav-3-13, .nav-3-14 {
-                                            //     #aui-id-26, #ui-id-37, #ui-id-47{
-                                            //         span {
-                                            //             text-shadow: 0 0 0 #000;
-                                            //             line-height: normal
-                                            //         }
-                                            //     }
-                                            // }
                                             .nav-3-2, .nav-3-14-1, .nav-3-14-2{
                                                 a {
                                                     span {
-                                                        .textRed;
-                                                            font-size: 12px;
+                                                        .textAfter('HOT', #F30D49, @color-titulo, 12px);
                                                     }
                                                 }
                                             }
@@ -193,7 +136,7 @@
                                             .nav-3-13-3 {
                                                 a {
                                                     span {
-                                                        .textFree;
+                                                        .textAfter('FREE', #E6EBEE, @color-primario, 12px);
                                                     }
                                                 }
                                             }
@@ -204,7 +147,7 @@
                                                 }
                                                 #ui-id-26, #ui-id-37, #ui-id-47 {
                                                     span {
-                                                        text-shadow: 0 0 0 #000;
+                                                        text-shadow: 0 0 0 @color-oscuro;
                                                         line-height: normal
                                                     }
                                                 }
@@ -216,7 +159,7 @@
                                             .ui-menu-item {
                                                 a {
                                                     padding: 10px 0 10px 10px;
-                                                    color: #073756;
+                                                    color: @color-primario;
                                                     font-size: 12px;
                                                     font-weight: 400;
                                                     text-transform: uppercase;
@@ -224,7 +167,7 @@
                                             }
                                             .all-category {
                                                 a {
-                                                    text-shadow: 0 0 0 #000;
+                                                    text-shadow: 0 0 0 @color-oscuro;
                                                     line-height: normal
                                                 }
                                             }
@@ -234,7 +177,7 @@
                                         .submenu {
                                             .ui-menu-item {
                                                 a {
-                                                    color: #073756; 
+                                                    color: @color-primario; 
                                                 }
                                             }
                                         }
@@ -249,7 +192,7 @@
                     left: 0;
                     top: 0;
                     &:before {
-                        color:#073756;
+                        color:@color-primario;
                     }
                     &:after {
                         background-color: rgba(255,255,255,.5);
@@ -262,7 +205,7 @@
                     &:before {
                         font-size: 16px;
                         line-height: 35px;
-                        color: #073756;
+                        color: @color-primario;
                         content: '\F23D';
                         font-family: 'bootstrap-icons';
                         margin: 0;
@@ -286,7 +229,7 @@
                                 &:before {
                                     font-size: 16px;
                                     line-height: 28px;
-                                    color: #073756;
+                                    color: @color-primario;
                                     margin: 0;
                                 }
                             }
@@ -352,7 +295,7 @@
                                     color: #F8F8F8;
                                     margin-right: 20px;
                                     a {
-                                        color: #fff;
+                                        color: @color-titulo;
                                         font-weight: 800;
                                     }
                                 }
@@ -383,7 +326,7 @@
     div.page-wrapper {
         left: calc(100% - 54px);
         .page-header {
-            background-color: #fff;
+            background-color: @color-titulo;
             min-height: 68px;
             border: none;
             margin: 0;
@@ -402,7 +345,7 @@
                                 &:before {
                                     font-size: 16px;
                                     line-height: 28px;
-                                    color: #073756;
+                                    color: @color-primario;
                                     margin: 0;
                                 }
                             }
@@ -417,11 +360,11 @@
               div.nav-sections {
                 display: block;
                 max-width: 420px;
-                .nav-sections-items {
-                    .section-item-content {
-                        margin: 70;
-                    }
-                }
+                // .nav-sections-items {
+                //     .section-item-content {
+                //         margin: 70;
+                //     }
+                //}
               }
             }
         }
@@ -493,9 +436,9 @@
                 margin: 0 auto;
                 .section-item-content {
                     padding: 0 15px;
-                    background-color: #fff;
+                    background-color: @color-titulo;
                     .navigation{
-                        background-color: #fff;
+                        background-color: @color-titulo;
                         ul {
                             padding: 0;
                             .category-item {
@@ -504,7 +447,7 @@
                                     padding: 0 10px;
                                     span {
                                         font-size: 14px;
-                                        color: #073756;
+                                        color: @color-primario;
                                         line-height: 44px;
                                     }
                                 }
@@ -566,8 +509,46 @@
                     .section-item-content {
                         .navigation {
                             .ui-menu {
+                                .nav-2, .nav-5 {
+                                    .submenu {
+                                        min-width: 300px;
+                                        .category-item {
+                                            width: 100%;
+                                        }
+                                        li.ui-menu-item {
+                                            a.ui-menu-item-wrapper {
+                                                padding: 0 8px;
+                                                &:hover {
+                                                    background: none;
+                                                }
+                                                span {
+                                                    &:hover {
+                                                        color: #444;
+                                                        text-shadow: 0 0 0 @color-oscuro;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }                                    
+                                }
                                 .nav-3, .nav-4 {
                                     display: none;
+                                }
+                                li.category-item.ui-menu-item {
+                                    padding: 0 20px 0 0;
+                                    margin: 0;
+                                    a.ui-menu-item-wrapper {
+                                        padding: 0 8px;
+                                    }
+                                    #ui-id-2 {
+                                        padding: 0 10px 0 0;
+                                    }
+                                    #ui-id-3, #ui-id-57 {
+                                        padding: 0 20px 0 10px;
+                                        .ui-menu-icon {
+                                            display: none;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -600,7 +581,7 @@
                         i {
                         font-size: 17px;
                         line-height: 28px;
-                        color: #073756;
+                        color: @color-primario;
                         margin: 0;
                         }
                     }
