@@ -1,0 +1,153 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+        [data-content-type='row']
+        [data-appearance='contained'] {
+            max-width: none;
+            margin: 0 !important;
+        }
+
+    .cms-home.cms-index-index {
+        .block-static-block {
+            margin: 0;
+        }
+        .bg-overflowauto {
+            overflow: auto;
+            &__sect-1{
+                width: 100%;
+                text-align: center;
+                h2.h1-title {
+                    color: #000;
+                    font-weight: 800;
+                    font-size: 3rem;
+                    font-family: 'Open Sans',sans-serif;
+                    text-transform: uppercase;
+                }
+                h3.h3-descr {
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    font-family: 'Montserrat',sans-serif;
+                    font-size: 2.4rem;
+                    color: #303030;
+                    line-height: 1.1;
+                    margin-bottom: 30px;
+                    box-sizing: border-box;
+                }
+                .margin-mob-btn {
+                    margin: 0 15px;
+                    cursor: pointer;
+                    .wp-button.wp-button-desc {
+                        padding: 11px 24px;
+                        font-size: 16px;
+                        background-color: #073756;
+                        text-align: left;
+                        line-height: 1;
+                        color: #fff;
+                        display: inline-block;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        &:hover{
+                            color: #073756;
+                        }
+                        .btn-hp {
+                            display: inline-block;
+                            font-size: 16px;
+                            text-align: left;
+                            font-weight: 900;
+                            span {
+                                display: block;
+                                font-size: 10px;
+                                font-weight: 400;
+                                margin-top: 10px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//Tablet
+//________________________________________________
+
+@media (min-width: 768px) {
+    .cms-home.cms-index-index {
+        .bg-overflowauto {
+            &__sect-1 {
+            position: relative;
+            width: 41.66666667%;
+            left: 8.33333333%;
+            float: left;
+            padding: 0;
+                h3.h3-descr {
+                    margin-bottom: 80px;
+                }
+                .margin-mob-btn {
+                    .wp-button.wp-button-desc {
+                        background-color: #073756;
+                        padding: 24px 34px;
+                        font-size: 22px;
+                        height: auto;
+                        .btn-hp {
+                            line-height: 1;
+                            font-size: 22px;
+                            white-space: nowrap;
+                        }
+                    }
+                    
+                }
+            }
+            &__sect-2 {
+                width: 54.343333%;
+                position: relative;
+                min-height: 1px;
+                padding-left: 15px;
+                padding-right: 15px;
+                float: left;
+                left: 8.33333333%;
+            }
+            
+        }
+    } 
+}
+//
+// @media especial
+//
+@media (min-width: 840px) {
+    .cms-home.cms-index-index {
+        .bg-overflowauto {
+            padding-bottom: 150px;
+            padding-top: 100px;
+            &__sect-2 {
+                width: 50%;
+            }
+        }
+    }
+}
+    
+    //
+    //  Mobile
+    //  _____________________________________________
+    
+    .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    
+    }
+    
+    //
+    //  Desktop
+    //  _____________________________________________
+    
+    .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+        
+    }
+    
+    // @media (min-width: 1200px) {
+        
+    
+    // }

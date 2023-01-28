@@ -1,0 +1,63 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+        [data-content-type='row']
+        [data-appearance='contained'] {
+            box-sizing: border-box;
+            max-width: none;
+            margin: 0 !important;
+    }
+
+.cms-home {
+    .section-wrapper {
+        padding: 0 15px 80px;
+            &__title{
+                padding: 0 0 80px;
+                text-align: center;
+                h2 {
+                    font-weight: 800;
+                    font-size: 3rem;
+                    color: #000;
+                    text-transform: uppercase;
+                }
+            }
+            &__video{
+                max-width: 1000px;
+                margin: 0 auto;
+                box-shadow: 0 0px 15px 5px #efefef;
+            }
+    }
+}
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cms-home {
+        .section-wrapper {
+            &__title{
+                h2 {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+// @media (min-width: 1200px) {
+    
+
+// }
