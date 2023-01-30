@@ -1,0 +1,158 @@
+//
+//  Common
+//  _____________________________________________
+
+//& when (@media-common = true) {
+
+//     body{
+//         // background-color: #090090!important;
+//     }
+
+    body.cms-home {
+        .google-Analytics-4 {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: @background-gay;
+            .google-Analytics-4__content {
+                max-width: 50%;
+                align-self: center;
+                
+            }
+            /* .google-Analytics-4__image {
+                max-width: 50%;
+            } */
+            .google-Analytics-4__title {
+                margin-bottom: 0;
+                font-family: @fuente1;
+                font-weight: 700;
+                font-size: 48px;
+                letter-spacing: 0;
+                line-height: 59px;
+                text-transform: uppercase;
+                color: @color-oscuro;;    
+            }
+            .google-Analytics-4__subtitle {
+                margin-top: 0;
+                font-family: @fuente1;
+                font-weight: 700;
+                font-size: 48px;
+                letter-spacing: 0;
+                line-height: 59px;
+                text-transform: uppercase;
+                color: @color-oscuro;;
+            }
+            .google-Analytics-4__text {
+                margin-bottom: 10px;
+                font-family: @fuente2;
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                line-height: 1.5;
+                color: #575757;
+            }
+            .google-Analytics-4__button {
+                font-family: @fuente2;
+                font-size: 1.4rem;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 1.42857143;
+                color: #303030;
+                .pagebuilder-button-primary {
+                    height: auto;
+                    margin: 5px;
+                    padding: 24px 34px;
+                    font-family: @fuente-buton;
+                    font-size: 22px;
+                    line-height: 1;
+                    text-align: left;
+                    cursor: pointer;
+                    outline: none;
+                    transition: all .2s ease-in-out;
+                    color: @color-titulo;;
+                    border-radius: 0;
+                    background-color: @color-primario;;
+                    text-shadow: e("1px 1px 1px rgb(0 0 0 / 20%)");
+                    [data-element="link_text"] {
+                        font-family: 'open sans';
+                        font-weight: 900;
+                        text-shadow: none;
+                    }
+                }
+                &:hover {
+                    .pagebuilder-button-primary {
+                        color: @color-primario;;
+                    }
+                }
+            }
+        }
+    }
+
+// }
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+ 
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            max-width: 100%;
+            padding: 50px 5px;
+            .google-Analytics-4__content {
+                max-width: 100%;
+                width: 100%;
+                align-self: center;
+                
+            }
+            .google-Analytics-4__title {
+                font-size: 40px;
+                font-weight: 800;
+            }
+            .google-Analytics-4__subtitle {
+                font-size: 40px;
+                font-weight: 800;
+            }
+            .google-Analytics-4__text {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  
+}
+
+
+//
+//  Big Deskto
+//  _____________________________________________
+
+
+@media (max-width: 480px) {
+
+    body#html-body.cms-home {
+        .google-Analytics-4__button {
+            margin: 0 15px;
+            [data-content-type="button-item"] {
+                width: 100%;
+            }
+            .pagebuilder-button-primary {
+                width: 100%;
+                padding: 11px 24px;
+                font-size: 16px;
+                text-align: left;
+                margin: 0 auto 20px auto;
+                [data-element="link_text"] {
+                 
+                }
+            }
+        }
+    }
+
+}
