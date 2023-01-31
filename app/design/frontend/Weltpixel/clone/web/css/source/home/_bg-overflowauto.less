@@ -3,70 +3,93 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
-        [data-content-type='row']
-        [data-appearance='contained'] {
-            max-width: none;
-            margin: 0 !important;
-        }
-
-    .cms-home.cms-index-index {
-        .block-static-block {
-            margin: 0;
-        }
-        .bg-overflowauto {
+    #html-body.cms-index-index.cms-home {
+        .overflowauto {
             overflow: auto;
-            &__sect-1{
-                width: 100%;
-                text-align: center;
-                h2.h1-title {
-                    color: @color-oscuro;
-                    font-weight: 800;
-                    font-size: 3rem;
-                    font-family: 'Open Sans',sans-serif;
+            padding: 150px 0px 100px 0px;
+            background: #fff;
+
+             .pagebuilder-column-line
+             #html-body [data-pb-style=OY1TYBJ] {
+                display: block;
+            }
+            &__col-1 {
+                width: 41.66666667%;
+                position: relative;
+                float: left;
+                left: 8.33333333%;
+                .title-h2 {
+                    letter-spacing: 0px;
                     text-transform: uppercase;
+                    color: #000;
+                    font-family: 'Open Sans',sans-serif;
+                    font-weight: 800;
+                    line-height: 1.1;
+                    font-size: 3rem;
+                    font-style: inherit;
                 }
-                h3.h3-descr {
+                .text-description {
+                    margin-bottom: 0px;
                     letter-spacing: 0;
                     font-weight: 400;
                     font-family: 'Montserrat',sans-serif;
                     font-size: 2.4rem;
-                    color: #303030;
-                    line-height: 1.1;
-                    margin-bottom: 30px;
-                    box-sizing: border-box;
+                }
+                .margin {
+                    margin: 0 0 80px 0;
                 }
                 .margin-mob-btn {
-                    margin: 0 15px;
-                    cursor: pointer;
-                    .wp-button.wp-button-desc {
-                        padding: 11px 24px;
-                        font-size: 16px;
-                        background-color: @color-primario;
-                        text-align: left;
-                        line-height: 1;
+                    .wp-button {
+                        background-color: #073756;
                         color: #fff;
+                        text-decoration: none;
+                        text-align: left;
+                        padding: 24px 34px;
+                        font-size: 22px;
+                        height: auto;
+                        line-height: 1;
+                        font-family: 'Raleway',sans-serif;
                         display: inline-block;
+                        position: relative;
                         cursor: pointer;
+                        outline: none;
+                        white-space: nowrap;
+                        margin: 5px;
+                        font-weight: 600;
                         text-transform: uppercase;
-                        &:hover{
-                            color: @color-primario;
-                        }
+                        letter-spacing: 1px;
+                        border: none;
+                        text-shadow: e("1px 1px 1px rgb(0 0 0 / 20%)");
                         .btn-hp {
-                            display: inline-block;
-                            font-size: 16px;
-                            text-align: left;
+                            text-shadow: none;
+                            font-family: 'open sans';
                             font-weight: 900;
-                            span {
-                                display: block;
-                                font-size: 10px;
-                                font-weight: 400;
-                                margin-top: 10px;
-                                letter-spacing: 1px;
-                            }
+                        }
+                        &:hover {
+                            color: #073756;
+                        }
+                        span {
+                            display: block;
+                            font-family: 'open sans';
+                            text-transform: uppercase;
+                            font-style: inherit;
+                            font-size: 10px;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            margin-top: 10px;
                         }
                     }
+                    
                 }
+            }
+            &__col-2 {
+                left: 8.33333333%;
+                display: block;
+                position: relative;
+                min-height: 1px;
+                padding-left: 15px;
+                padding-right: 15px;
+                float: left;
             }
         }
     }
@@ -77,58 +100,13 @@
 //________________________________________________
 
 @media (min-width: 768px) {
-    .cms-home.cms-index-index {
-        .bg-overflowauto {
-            &__sect-1 {
-            position: relative;
-            width: 41.66666667%;
-            left: 8.33333333%;
-            float: left;
-            padding: 0;
-                h3.h3-descr {
-                    margin-bottom: 80px;
-                }
-                .margin-mob-btn {
-                    .wp-button.wp-button-desc {
-                        background-color: @color-primario;
-                        padding: 24px 34px;
-                        font-size: 22px;
-                        height: auto;
-                        .btn-hp {
-                            line-height: 1;
-                            font-size: 22px;
-                            white-space: nowrap;
-                        }
-                    }
-                    
-                }
-            }
-            &__sect-2 {
-                width: 54.343333%;
-                position: relative;
-                min-height: 1px;
-                padding-left: 15px;
-                padding-right: 15px;
-                float: left;
-                left: 8.33333333%;
-            }
-            
-        }
-    } 
+    
 }
 //
 // @media especial
 //
 @media (min-width: 840px) {
-    .cms-home.cms-index-index {
-        .bg-overflowauto {
-            padding-bottom: 150px;
-            padding-top: 100px;
-            &__sect-2 {
-                width: 50%;
-            }
-        }
-    }
+    
 }
     
     //
@@ -136,6 +114,43 @@
     //  _____________________________________________
     
     .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+        body#html-body.cms-index-index.cms-home {
+            .overflowauto {
+                padding: 0;
+                #html-body [data-pb-style=QTON678] {
+                    display: flex;
+                    width: 100%;
+                }
+
+                 &__col-1 {
+                     width: 100%;
+                    display: block;
+                    left: 0;
+                    float: left;
+                    text-align: center;
+                    .margin-mob-btn {
+                        margin: 0 15px;
+                        .wp-button {
+                            padding: 11px 24px;
+                            font-size: 16px;
+                            width: 100%;
+                            margin: 0 auto 20px auto;
+                            text-align: left;
+                            .btn-hp {
+                                text-shadow: none;
+                                font-family: 'open sans';
+                                font-weight: 900;
+                            }
+                        }
+                    }
+                    
+                    }
+                    &__col-2 {
+                        width: 100%;
+                        left: 0;
+                    }
+            }
+        }
     
     }
     
