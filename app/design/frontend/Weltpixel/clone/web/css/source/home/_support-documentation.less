@@ -53,24 +53,50 @@ body.cms-home {
         
 }
 
-// }
+
+
 //
-//  Big Desktop
+//  Small Tablet - Big Tablet
 //  _____________________________________________
 
-@media  (min-width: 1200px) {
+
+@media  (min-width: 480px) and (max-width: 991px) {
 
     body#html-body.cms-home {
 
         .support-documentation {
-            .title__the-best {
-                margin-top: 100px;
+            .pagebuilder-column-line  {
+                flex-direction: column;
+            }
+            &__content {
+                width: 100%;
+                padding: 50px;
+            }
+            &__image {
+                width: 100%;
+                .pagebuilder-mobile-hidden {
+                    float: right;
+                }
+            }
+            &__container-buttons {
+                margin: 50px 0 0;
+                .ancla-button {
+                    width: auto;
+                    padding: 24px 34px;
+                }
+                .theme-documentation {
+                    margin: 0 auto;
+                }
+                .support-center {
+                    margin: 0 auto;
+                }
             }
         }
-     
+            
     }
 
 }
+
 
 //
 //  Desktop
@@ -116,44 +142,23 @@ body.cms-home {
 }
 
 
+
+// }
 //
-//  Small Tablet - Big Tablet
+//  Big Desktop
 //  _____________________________________________
 
-
-@media  (min-width: 480px) and (max-width: 991px) {
+@media  (min-width: 1200px) {
 
     body#html-body.cms-home {
 
         .support-documentation {
-            .pagebuilder-column-line  {
-                flex-direction: column;
-            }
-            &__content {
-                width: 100%;
-                padding: 50px;
-            }
-            &__image {
-                width: 100%;
-                .pagebuilder-mobile-hidden {
-                    float: right;
-                }
-            }
-            &__container-buttons {
-                margin: 50px 0 0;
-                .ancla-button {
-                    width: auto;
-                    padding: 24px 34px;
-                }
-                .theme-documentation {
-                    margin: 0 auto;
-                }
-                .support-center {
-                    margin: 0 auto;
-                }
+            .title__the-best {
+                margin-top: 100px;
             }
         }
-            
+     
     }
 
 }
+
