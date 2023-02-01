@@ -10,13 +10,7 @@
 
     body.cms-home {
         .overflowhidden {
-            font-family: @fuente2;
-            font-size: 1.4rem;
-            font-weight: 400;
-            font-style: normal;
-            line-height: 1.42857143;
-            background-color: @background-gay;
-            color: #303030;
+            .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
         }
         .overflowhidden__list {
             width: 100%;
@@ -31,24 +25,17 @@
                     }
                     &--title {
                         margin: 0;
-                        font-family: @fuente1;
-                        font-weight: 800;
-                        font-size: 20px;
-                        line-height: 1.1;
-                        letter-spacing: 0px;
-                        color: @color-oscuro;;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
                     }
                     &--subtitle {
                         margin: 0;
-                        font-family: @fuente1;
-                        font-weight: 800;
-                        font-size: 20px;
-                        line-height: 1.1;
-                        letter-spacing: 0px;
-                        color: @color-oscuro;;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
+                        strong {
+                            font-weight: inherit;
+                        }
                     }
                     &--text {
-                        font-family: 'open sans';
+                        font-family: @fuente1;;
                         letter-spacing: 0.5px;
                         text-transform: capitalize;
                         color: @color-oscuro;;
@@ -57,7 +44,7 @@
                         }
                     }
                     &--span {
-                        font-family: 'open sans';
+                        font-family: @fuente1;
                         color: @color-primario;;
                         p {
                             span {
@@ -114,19 +101,14 @@
                     }
                     &--title {
                         margin: 20px 0 15px 0;
-                        letter-spacing: 0;
-                        font-family: @fuente1;
-                        font-size: 24px;
-                        font-weight: 800;
-                        line-height: 1.1;
                         text-transform: uppercase;
+                        .config-font ( @fuente1, 24px, 800, normal, 1.1, 0px, #303030 );
+                        
                     }
                     &--review-title {
                         margin-bottom: 30px;
-                        font-size: 14px;
-                        font-weight: 800;
                         text-transform: uppercase;
-                        color: @color-primario;;
+                        .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
                     }
                     &--text {
                         font-size: 14px;

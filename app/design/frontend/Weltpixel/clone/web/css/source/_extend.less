@@ -22,6 +22,25 @@
 @fuente-buton: 'Raleway',sans-serif;
 @background-gay: #fafafa;
 
+//
+//  Mixins
+//  _____________________________________________
+
+.config-font ( @family, @size, @weight, @style, @line, @letter, @color ) {
+    font-family: @family;
+    font-size: @size;
+    font-weight: @weight;
+    font-style: @style;
+    line-height: @line;
+    letter-spacing: @letter;
+    color: @color;
+}
+
+
+//
+//  Reinciando Stylos con Selector Universal
+//  _____________________________________________
+
 * {
 	box-sizing: border-box;
     margin: 0;
