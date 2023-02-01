@@ -23,58 +23,35 @@
             } */
             .google-Analytics-4__title {
                 margin-bottom: 0;
-                font-family: @fuente1;
-                font-weight: 700;
-                font-size: 48px;
-                letter-spacing: 0;
-                line-height: 59px;
                 text-transform: uppercase;
-                color: @color-oscuro;;    
+                .config-font ( @fuente1, 48px, 700, normal, 59px, 0px, @color-oscuro );
             }
             .google-Analytics-4__subtitle {
                 margin-top: 0;
-                font-family: @fuente1;
-                font-weight: 700;
-                font-size: 48px;
-                letter-spacing: 0;
-                line-height: 59px;
                 text-transform: uppercase;
-                color: @color-oscuro;;
+                .config-font ( @fuente1, 48px, 700, normal, 59px, 0px, @color-oscuro );
             }
             .google-Analytics-4__text {
                 margin-bottom: 10px;
-                font-family: @fuente2;
-                font-size: 18px;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                line-height: 1.5;
-                color: #575757;
+                .config-font ( @fuente2, 18px, 400, normal, 1.5, 0.5px, #575757 );
             }
             .google-Analytics-4__button {
-                font-family: @fuente2;
-                font-size: 1.4rem;
-                font-weight: 400;
-                font-style: normal;
-                line-height: 1.42857143;
-                color: #303030;
+                .config-font ( @fuente2, 14px, 400, normal, 1.42857143, 0, #303030 );
                 .pagebuilder-button-primary {
                     height: auto;
                     margin: 5px;
                     padding: 24px 34px;
-                    font-family: @fuente-buton;
-                    font-size: 22px;
-                    line-height: 1;
                     text-align: left;
                     cursor: pointer;
                     outline: none;
                     transition: all .2s ease-in-out;
-                    color: @color-titulo;;
                     border-radius: 0;
                     background-color: @color-primario;;
                     text-shadow: e("1px 1px 1px rgb(0 0 0 / 20%)");
+                    .config-font ( @fuente-buton, 22px, 900, normal, 1, 0, @color-titulo );
                     [data-element="link_text"] {
-                        font-family: 'open sans';
-                        font-weight: 900;
+                        font-family: @fuente1;
+                        font-weight: inherit;
                         text-shadow: none;
                     }
                 }
@@ -148,9 +125,6 @@
                 font-size: 16px;
                 text-align: left;
                 margin: 0 auto 20px auto;
-                [data-element="link_text"] {
-                 
-                }
             }
         }
     }
