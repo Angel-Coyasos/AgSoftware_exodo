@@ -1,0 +1,187 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+//     body{
+//         // background-color: #090090!important;
+//     }
+
+    body.cms-home {
+        .overflowhidden {
+            .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+        }
+        .overflowhidden__list {
+            width: 100%;
+            margin: 0;
+            padding: 30px 0;
+            .pagebuilder-column-line {
+                gap: 30px;
+                .item-list {
+                    align-items: center;
+                    &--image {
+                        max-width: 100px;
+                    }
+                    &--title {
+                        margin: 0;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--subtitle {
+                        margin: 0;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
+                        strong {
+                            font-weight: inherit;
+                        }
+                    }
+                    &--text {
+                        font-family: @fuente1;;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: @color-oscuro;;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                    &--span {
+                        font-family: @fuente1;
+                        color: @color-primario;;
+                        p {
+                            span {
+                                strong {
+                                    font-weight: 800;
+                                    font-size: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .overflowhidden__glad-solutions {
+            padding: 0 15px;
+            text-align: center;
+            .pagebuilder-column-line {
+                justify-content: center;
+                .glad-solutions {
+                    &__content {
+                        width: 100%;
+                        max-width: 800px;
+                        position: relative;
+                        margin: 30px 0 80px 0;
+                        padding: 70px 25px;
+                        text-align: center;
+                        letter-spacing: 0.5px;
+                        box-shadow: e("0px 0px 97px -17px #b0b0b0");
+                        &::before {
+                            content: "";
+                            width: 60px;
+                            height: 60px;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/b.png) no-repeat;
+                            background-size: 100%;
+                            top: -22px;
+                        }
+                        &::after {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            right: 80px;
+                            bottom: -50px;
+                            border-bottom: 50px solid @background-gay;
+                            border-left: 37px solid transparent;
+                            border-right: 0 solid transparent;
+                            box-shadow: e("0px 0px 97px -17px #b0b0b0");
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &--title {
+                        margin: 20px 0 15px 0;
+                        text-transform: uppercase;
+                        .config-font ( @fuente1, 24px, 800, normal, 1.1, 0px, #303030 );
+                        
+                    }
+                    &--review-title {
+                        margin-bottom: 30px;
+                        text-transform: uppercase;
+                        .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
+                    }
+                    &--text {
+                        font-size: 14px;
+                        color: @color-oscuro;;
+                    }
+                    &--name-author {
+                        margin-top: 45px;
+                        font-size: 16px;
+                        span::before {
+                            content: " - ";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+ 
+}
+
+
+//
+//  Small Deskto
+//  _____________________________________________
+
+
+@media  (min-width: 769px) and (max-width: 907px) {
+
+    body#html-body.cms-home {
+        .overflowhidden  {
+            .overflowhidden__list {
+                margin: 100px auto;
+                padding: 0;
+                .pagebuilder-column-line {
+                    width: 100%;
+                    display: flex;
+                    gap: 0px;
+                    flex-wrap: wrap;
+                    .most-popular, .premium-soluctions {
+                        width: 50%;
+                    }
+                    .magento-2-extencions {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  
+    body.cms-home {
+        .overflowhidden__list {
+            margin: 100px auto;
+            padding: 0;
+            .pagebuilder-column-line {
+                gap: 0px;
+            }
+        }
+    }
+
+}
+

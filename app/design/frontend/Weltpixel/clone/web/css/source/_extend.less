@@ -2,8 +2,11 @@
 @import "_home.less";
 @import "./home/_themes-and.extencions.less";
 @import "./home/_one-minute-installation.less";
+@import "./home/_google-Analytics-4";
 @import "./home/_bg-overflowauto.less";
 @import "./home/_container-awards.less";
+@import "./home/_overflowhidden.less";
+@import "./home/_support-documentation.less";
 @import "_footer.less";
 
 
@@ -16,14 +19,36 @@
 @color-claro: #f9f9f9;
 @color-titulo: #fff;
 @color-texto: #cccccc;
-@fuente1: 'Open Sans','sans-serif';
-@fuente2: 'Montserrat', 'sans-serif';
+@fuente1: 'Open Sans',sans-serif;
+@fuente2: 'Montserrat', sans-serif;
+@fuente-buton: 'Raleway',sans-serif;
+@background-gay: #fafafa;
 
-*{
+//
+//  Mixins
+//  _____________________________________________
+
+.config-font ( @family, @size, @weight, @style, @line, @letter, @color ) {
+    font-family: @family;
+    font-size: @size;
+    font-weight: @weight;
+    font-style: @style;
+    line-height: @line;
+    letter-spacing: @letter;
+    color: @color;
+}
+
+
+//
+//  Reinciando Stylos con Selector Universal
+//  _____________________________________________
+
+* {
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 //
 //  Common
 //  _____________________________________________
@@ -33,6 +58,7 @@
 //     body{
 //         // background-color: #090090!important;
 //     }
+
 
 // }
 //
