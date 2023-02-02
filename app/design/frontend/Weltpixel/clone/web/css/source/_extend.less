@@ -6,6 +6,7 @@
 @import "./home/_bg-overflowauto.less";
 @import "./home/_overflowhidden.less";
 @import "./home/_support-documentation.less";
+@import "./home/_quote-2.less";
 @import "_footer.less";
 
 
@@ -48,18 +49,23 @@
     padding: 0;
 }
 
+
+
 //
 //  Common
 //  _____________________________________________
 
-//& when (@media-common = true) {
+& when (@media-common = true) {
 
-//     body{
-//         // background-color: #090090!important;
-//     }
+    body{
+        // background-color: #090090!important;
+    }
 
 
-// }
+}
+
+
+
 //
 //  Mobile
 //  _____________________________________________
@@ -67,6 +73,8 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
  
 }
+
+
 
 //
 //  Deskto
