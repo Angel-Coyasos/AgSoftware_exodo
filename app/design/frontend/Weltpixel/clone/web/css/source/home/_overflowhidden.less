@@ -65,38 +65,12 @@
                 justify-content: center;
                 .glad-solutions {
                     &__content {
-                        width: 100%;
-                        max-width: 800px;
-                        position: relative;
-                        margin: 30px 0 80px 0;
-                        padding: 70px 25px;
-                        text-align: center;
-                        letter-spacing: 0.5px;
-                        box-shadow: e("0px 0px 97px -17px #b0b0b0");
+                        .card-quote ( 30px 0 80px 0, 70px 25px );
                         &::before {
-                            content: "";
-                            width: 60px;
-                            height: 60px;
-                            position: absolute;
-                            left: 0;
-                            right: 0;
-                            margin: 0 auto;
-                            background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/b.png) no-repeat;
-                            background-size: 100%;
-                            top: -22px;
+                           .card-quote-before ( 60px, 60px, -22px, 0, initial, 0, 0deg  );
                         }
                         &::after {
-                            content: "";
-                            width: 0;
-                            height: 0;
-                            position: absolute;
-                            right: 80px;
-                            bottom: -50px;
-                            border-bottom: 50px solid @background-gay;
-                            border-left: 37px solid transparent;
-                            border-right: 0 solid transparent;
-                            box-shadow: e("0px 0px 97px -17px #b0b0b0");
-                            transform: rotate(180deg);
+                            .card-quote-after ( initial, 80px, -50px, initial, 180deg );
                         }
                     }
                     &--title {
@@ -111,8 +85,7 @@
                         .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
                     }
                     &--text {
-                        font-size: 14px;
-                        color: @color-oscuro;;
+                        .config-font ( @fuente2, 14px, 400, normal, 1.42857143, 0.5px, @color-oscuro );
                     }
                     &--name-author {
                         margin-top: 45px;
@@ -168,17 +141,30 @@
 }
 
 //
-//  Deskto
+//  Desktop
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
-    body.cms-home {
+    body#html-body.cms-home {
         .overflowhidden__list {
             margin: 100px auto;
             padding: 0;
             .pagebuilder-column-line {
                 gap: 0px;
+            }
+        }
+        .overflowhidden  {
+            .glad-solutions {
+                &__content {
+                    .card-quote ( 35px auto 100px auto, 70px );
+                    &::before {
+                        .card-quote-before ( 95px, 68px, -36px, initial, initial, 45px, 0deg  );
+                    }
+                    &::after {
+                        .card-quote-after ( initial, 140px, -50px, initial, 180deg );
+                    }
+                }
             }
         }
     }

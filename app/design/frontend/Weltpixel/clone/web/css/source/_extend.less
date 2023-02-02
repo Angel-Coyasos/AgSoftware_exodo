@@ -10,6 +10,7 @@
 @import "_footer.less";
 
 
+
 //
 //  Variables
 //  _____________________________________________
@@ -24,8 +25,11 @@
 @fuente-buton: 'Raleway',sans-serif;
 @background-gay: #fafafa;
 
+
+
+
 //
-//  Mixins
+//  Mixin Configuracion de fuente
 //  _____________________________________________
 
 .config-font ( @family, @size, @weight, @style, @line, @letter, @color ) {
@@ -37,6 +41,55 @@
     letter-spacing: @letter;
     color: @color;
 }
+
+
+
+//
+//  Mixins card quote whith before y after de fuente
+//  _____________________________________________
+
+.card-quote ( @margin, @padding ) {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: @margin;
+    padding: @padding;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+}
+
+.card-quote-before ( @width, @height, @top, @right, @bottom, @left, @rotate  ) {
+    content: "";
+    width: @width;
+    height: @height;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    margin: 0 auto;
+    background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/b.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(@rotate);
+}
+
+.card-quote-after ( @top, @right, @bottom, @left, @rotate ) {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    border-bottom: 50px solid @background-gay;
+    border-left: 37px solid transparent;
+    border-right: 0 solid transparent;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+    transform: rotate( @rotate );
+}
+
 
 
 //
