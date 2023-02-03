@@ -10,6 +10,27 @@
 
     body.cms-home {
         .awesome-extensions {
+
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 15px;
+                    text-align: center;
+                }
+                .wrapper--title {
+                    h2 {
+                        margin: 50px 0;
+                        .config-font ( @fuente1, 3rem, 900, normal, 0.9, 0px, @color-oscuro );
+                       
+                    }
+                }
+                .wrapper--text {
+                    p {
+                        margin-bottom: 10px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030 );
+                    }
+                }
+            }
+
             .quote-4 {
                 padding: 0 15px;
                 text-align: center;
@@ -66,6 +87,13 @@
 
     body.cms-home {
         .awesome-extensions {
+
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 40px;
+                }
+            }
+
             .quote-4 {
                 &__card {
                     &::after {
@@ -78,40 +106,6 @@
     }
   
 }
-
-
-
-//
-//  Big Tablet
-//  _____________________________________________
-
-
-@media  (min-width: 769px) {
-
-    body.cms-home {
-        .awesome-extensions {
-            .quote-4 {
-                &__card {
-                    .card-quote ( 0, 70px);
-                    &::before {
-                        .card-quote-before ( 95px, 68px, initial, initial, -36px, 45px, 0deg  );
-                    }
-                    &::after {
-                        margin: 0 auto;
-                        .card-quote-after ( -50px, 140px, initial, initial, 0deg );
-                        border-left: 0 solid transparent;
-                        border-right: 38px solid transparent;
-                    }
-                }
-            }
-
-        }
-    }
-  
-}
-
-
-
 
 
 //
@@ -130,4 +124,37 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
+    body.cms-home {
+        .awesome-extensions {
+
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 40px;
+                }
+                .wrapper--title {
+                    h2 {
+                        font-size: 5.8rem;
+                       
+                    }
+                }
+            }
+
+            .quote-4 {
+                &__card {
+                    .card-quote ( 0, 70px);
+                    &::before {
+                        .card-quote-before ( 95px, 68px, initial, initial, -36px, 45px, 0deg  );
+                    }
+                    &::after {
+                        margin: 0 auto;
+                        .card-quote-after ( -50px, 140px, initial, initial, 0deg );
+                        border-left: 0 solid transparent;
+                        border-right: 38px solid transparent;
+                    }
+                }
+            }
+
+        }
+    }
+
 }
