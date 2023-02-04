@@ -43,7 +43,7 @@
 
                     }
                     &__sections-image {
-                        margin-top: 50px;
+                       /*  margin-top: 50px; */
                     }
                     &--span {
                         margin-top: 50px;
@@ -59,12 +59,33 @@
                         }
                     }
                     &--text  {
+                        height: 180px;
                         margin-bottom: 10px;
                         padding-top: 40px;
-                        .config-font ( @fuente2, 1.4rem, 400, normal, 30px, 0.5px, #303030 );
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 30px, 0.5px, #303030 );                      
                     }
 
                 }   
+            }
+
+            &__container-button {
+                text-align: center;
+                .ancla-button {
+                    text-decoration: none;
+                    .button-primary {
+                        width: 200px;
+                        margin-top: 50px;
+                        padding: 10px 15px;
+                        text-transform: uppercase;
+                        letter-spacing: 0px;
+                        background-color: @color-primario;
+                        border: #073756 1px solid;
+                        border-radius: 0;
+                        transition-duration: .3s;
+                        transition-property: background-color;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-claro )
+                    }
+                }
             }
 
             .quote-4 {
@@ -74,7 +95,7 @@
                     justify-content: center;
                 }
                 &__card {
-                    .card-quote ( 30px 0 80px 0, 70px 25px );
+                    .card-quote ( 50px 0 80px 0, 70px 25px );
                     &::before {
                         .card-quote-before ( 60px, 60px, -22px, 0, initial, 0, 0deg  );
                     }
@@ -201,7 +222,18 @@
                 }   
             }
 
+            &__container-button {
+                .ancla-button {
+                    .button-primary {
+                        margin-top: 100px;
+                    }
+                }
+            }
+
             .quote-4 {
+                .pagebuilder-column-line {
+                    padding: 100px 15px;
+                }
                 &__card {
                     .card-quote ( 0, 70px);
                     &::before {
@@ -271,6 +303,12 @@
             }
             .ajax-search__autocomplete, .azy-loading__enhanced {
                 padding-left: 40px;
+            }
+
+            .quote-4 {
+                .pagebuilder-column-line {
+                    padding: 150px 15px;
+                }
             }
 
         }
