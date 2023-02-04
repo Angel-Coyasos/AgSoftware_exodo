@@ -31,6 +31,42 @@
                 }
             }
 
+            &__sections {
+                .pagebuilder-column-line {
+                    padding: 0 15px;
+                }
+            }
+            &__section-magento2 {
+                text-align: center;
+                .awesome-extensions {
+                    &__sections-content {
+
+                    }
+                    &__sections-image {
+                        margin-top: 50px;
+                    }
+                    &--span {
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                        .config-font ( @fuente1, 1.4rem, 700, normal, 1.42857143, 0.5px, @color-primario );
+                    }
+                    &--title {
+                        text-decoration: none;
+                        color: @color-oscuro;
+                        h3 {
+                            margin: 20px 0 10px;
+                            .config-font ( @fuente1, 2.4rem, 900, normal, 1.1, 0px, inherit );
+                        }
+                    }
+                    &--text  {
+                        margin-bottom: 10px;
+                        padding-top: 40px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 30px, 0.5px, #303030 );
+                    }
+
+                }   
+            }
+
             .quote-4 {
                 padding: 0 15px;
                 text-align: center;
@@ -124,7 +160,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
-    body.cms-home {
+    body#html-body.cms-home {
         .awesome-extensions {
 
             &__wrapper {
@@ -137,6 +173,32 @@
                        
                     }
                 }
+            }
+
+            &__sections {
+                .pagebuilder-column-line {
+                    flex-wrap: wrap;
+                }
+            }
+
+            &__section-magento2 {
+                width: 100%;
+                .awesome-extensions {
+                    &__sections-content {
+
+                    }
+                    &--span {
+                        margin-top: 100px;
+                    }
+                    &--title {
+                        text-decoration: none;
+                        color: @color-oscuro;
+                        h3 {
+                            font-size: 40px;
+                        }
+                    }
+
+                }   
             }
 
             .quote-4 {
@@ -157,4 +219,61 @@
         }
     }
 
+}
+
+
+
+//
+//  Big Destop
+//  _____________________________________________
+
+
+@media  (min-width: 992px) {
+
+    body#html-body.cms-home {
+        .awesome-extensions {
+
+            &__sections {
+                .pagebuilder-column-line {
+                    flex-wrap: wrap;
+                }
+            }
+
+            &__section-magento2 {
+                width: 50%; 
+                padding: 0 15px;
+            }
+
+        }
+    }
+  
+}
+
+//
+//  Destop y Mas
+//  _____________________________________________
+
+
+@media  (min-width: 1200px) {
+
+    body#html-body.cms-home {
+
+        div[data-content-type="row"]:has(.awesome-extensions) {
+            max-width: 100%;
+        }
+        .awesome-extensions {
+
+            &__sections {
+                padding: 0 150px;
+            }
+            .enhanced__quick-cart, .mega-menu {
+                padding-right: 40px;
+            }
+            .ajax-search__autocomplete, .azy-loading__enhanced {
+                padding-left: 40px;
+            }
+
+        }
+    }
+  
 }
