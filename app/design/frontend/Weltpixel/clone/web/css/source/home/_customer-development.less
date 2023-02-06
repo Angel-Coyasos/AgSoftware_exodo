@@ -35,7 +35,7 @@
                         gap: 3px;
                         justify-content: center;
                         text-transform: uppercase;
-                        border: 1px solid #073756;
+                        border: 1px solid @color-primario;
                         cursor: pointer;
                         &::before {
                             font-family: 'bootstrap-icons';
@@ -54,8 +54,8 @@
                 }
                 [aria-expanded="false"] {
                     .title-buttons--close-expand {
-                        background-color: #fff;
-                        color: #073756;
+                        background-color: @color-claro;
+                        color: @color-primario;
                         &::before {
                             content: '\F26B';
                         }
@@ -66,8 +66,8 @@
                 }
                 [aria-expanded="true"] {
                     .title-buttons--close-expand {
-                        background-color: #073756;
-                        color: #fff;
+                        background-color: @color-primario;
+                        color: @color-claro;
                         &::before {
                             content: '\F623';
                         }
