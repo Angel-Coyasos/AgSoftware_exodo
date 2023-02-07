@@ -1,0 +1,79 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body{
+        // background-color: #090090!important;
+    }
+
+    body.cms-home {
+
+        .marketing-merchandising {
+            padding: 50px 0;
+            &__image {
+                order: 1;
+            }
+            &__content {
+                order: 2;
+                &--container {
+                    padding: 0 15px;
+                    [data-role="collapsible"] {
+                        p {
+                            position: relative;
+                            padding: 10px 0 10px 20px;
+                            cursor: pointer;
+                            .config-font ( @fuente2, 14px, 700, normal, inherit, 0px, #444 );
+                            &::before {
+                                width: 14px;
+                                position: absolute;
+                                left: 0;
+                                content: '\F623';
+                                font-family: 'bootstrap-icons';
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    [data-role="content"] {
+                        padding: 0 0 15px 20px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.4, 0.5px, #303030 );
+                        b {
+                            margin-top: 30px;
+                        }
+                        p {
+                            margin: 30px 0;
+                        }
+                    }
+                    h2 {
+                        .config-font ( @fuente1, 30px, 900, normal, 0.9, 0px, @color-oscuro );
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+ 
+}
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  
+}
