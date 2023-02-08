@@ -78,7 +78,8 @@ class AddBlockCmsCustomerSupport implements DataPatchInterface, PatchRevertableI
             "active": [0],
             "collapsible": false,
             "openedState": "active",
-            "multipleCollapsible": false
+            "multipleCollapsible": false,
+            "animate":{ "duration" :1000, "easing":"easeOutCubic"}
         }}'&gt;
     &lt;div data-role="collapsible" class="fist-item"&gt;
         &lt;div data-role="trigger"&gt;
