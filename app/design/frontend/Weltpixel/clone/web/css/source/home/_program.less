@@ -1,0 +1,124 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home.cms-index-index {
+        .partner-program {
+            padding: 80px 15px 0;
+            .partner-title-1 {
+                .config-font ( @fuente1, 14px, 900, normal, .9, 0, @color-oscuro);
+                 padding: 50px 15px 0 15px;
+                 text-align: center;
+            }
+            .margin {
+                margin: 0;
+                padding: 0;
+            }
+            .affiliate-cont {
+                margin: 50px 0 80px 0;
+                box-shadow: 0px 0px 97px -17px #b0b0b0;
+                .text-center {
+                    text-align: center;
+                    .logo-welt-partner {
+                        padding: 50px 0;
+
+                    }
+                }
+                .partner-title {
+                    .config-font ( @fuente2, 2.4rem, 400, inherit, .1.1, 0, @color-oscuro);
+                    text-align: center;
+                    padding: 0 0 25px;
+                    margin: 0;
+                }
+                .prg-wok {
+                    padding-top: 50px;
+                }
+                ul {
+                    padding-left: 40px;
+                }
+                h3 {
+                    padding-top: 50px;
+                }
+                ol {
+                    padding: 0 40px 50px;
+                }
+                .btn-partner {
+                    padding: 0 0 50px 0;
+                    .button-now {
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-primario);
+                        padding: 10px 15px;
+                        background-color: @color-titulo;
+                        border: @color-primario 1px solid;
+                        cursor: pointer;
+                        display: inline-block;
+                        margin: 0;
+                        border-radius: inherit;
+                        vertical-align: middle;
+                        &:hover {
+                            color: @color-titulo;
+                            background-color: #073756;
+                            border: #073756 1px solid;
+                        }
+                    }
+                }
+            }
+        }
+      
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
+   .cms-home.cms-index-index  {
+        .partner-program {
+            .partner-title-1 {
+                font-size: 30px;
+            }
+        }
+      
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    #html-body.cms-home {
+        .partner-program {
+            .partner-title-1 {
+                padding: 100px 0 0;
+                font-size: 58px;
+            }
+            .margin {
+                margin: 0;
+                padding: 0 0 100px;
+            }
+            .affiliate-cont {
+                width: 85%;
+                margin: 0 auto 80px;
+            }
+        }
+      
+
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l)  {
+    #html-body.cms-home {
+        .partner-program {
+            width: 83.33333333%;
+            float: left;
+            position: relative;
+            left: 8.33333333%;
+            .affiliate-cont {
+                margin-bottom: 150px;
+                width: 55%;
+            }
+        }
+      
+
+    }
+}
