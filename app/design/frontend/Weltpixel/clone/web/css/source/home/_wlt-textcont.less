@@ -1,0 +1,79 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            padding: 0 15px 50px;
+            margin-top: 50px;
+
+            .container-heading-wlt {
+                width: 100%;
+                max-width: 800px;
+                box-shadow: 0px 0px 97px -17px #b0b0b0;
+                display: inline-block;
+                text-align: center;
+                padding: 70px 25px;
+                position: relative;
+                &::before {
+                    .card-quote-before ( 60px, 60px, -36px, 0, initial, 0, 180deg  );
+                }
+                &::after {
+                    margin: 0 auto;
+                    .card-quote-after ( initial, 80px, -50px, auto, 180deg );
+                }
+                &__title {
+                    .config-font ( @fuente1, 2.4rem, 800, inherit, 1.1, 0, #303030 );
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+                &__subtitule {
+                    display: block;
+                    margin-bottom: 30px;
+                    p#XRXP8BS{
+                        .config-font ( @fuente2, 1.4rem, 800, inherit, 1.1, 0, @color-primario );
+                    }
+                }
+                &__text {
+                    p {
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0, @color-oscuro );
+                    }
+                }
+                &__before-center {
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
+   .cms-home.cms-index-index  {
+        
+      
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    #html-body.cms-home {
+     
+      
+
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l)  {
+    #html-body.cms-home {
+       
+        }
+      
+
+    }
+
