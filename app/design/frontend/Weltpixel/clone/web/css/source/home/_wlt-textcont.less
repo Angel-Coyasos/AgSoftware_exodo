@@ -54,7 +54,6 @@
 .media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
    .cms-home.cms-index-index  {
         
-      
     }
 }
 //
@@ -62,10 +61,24 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    #html-body.cms-home {
-     
-      
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            padding: 100px 15px;
 
+            .container-heading-wlt {
+                margin: 0 auto;
+                padding: 70px;
+                &::before {
+                    .card-quote-before ( 94px, 68px, initial, auto, -36px, 45px, 180deg  );
+                }
+                &::after {
+                    .card-quote-after ( -50px, 140px, initial, auto, 0deg );
+                    border-left: 0 solid transparent;
+                    border-right: 38px solid transparent
+                    
+                }
+            }
+        }
     }
 }
 
