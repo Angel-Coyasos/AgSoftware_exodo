@@ -4,6 +4,37 @@
 
 & when (@media-common = true) {
     .cms-home.cms-index-index {
+        .overflowhidden-items {
+            display: flex;
+            flex-flow: row wrap;
+            overflow: hidden;
+            background: #fafafa;
+            &__nopadding {
+                width: 100%;
+                float: left;
+                position: relative;
+                min-height: 1px;
+                padding: 0 15px;
+                .heading-title-awards {
+                    margin: 0;
+                    .config-font ( @fuente1, 30px, 900, normal, .9, 0, @color-oscuro);
+                }
+                .margin-title {
+                    margin: 0 0 50px;
+                }
+                .aws-descr {
+                    p {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            .order-2 {
+                order: 2;
+            }
+            .order-1 {
+                order: 1;
+            }
+        }
         
     }
 }
