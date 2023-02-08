@@ -7,14 +7,15 @@ declare(strict_types=1);
 
 namespace AgSoftware\Home\Setup\Patch\Data;
 
-use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
-use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 use Magento\Framework\Stdlib\DateTime\Filter\Date;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
+use Magento\Framework\App\State;
+use Magento\Cms\Model\BlockFactory;
+use Magento\Framework\App\Area;
 
 class AddBlockCmIns implements DataPatchInterface, PatchRevertableInterface 
 {
@@ -34,9 +35,8 @@ class AddBlockCmIns implements DataPatchInterface, PatchRevertableInterface
         Date $dateFilter,
         TimezoneInterface $localeDate,
         ModuleDataSetupInterface $moduleDataSetup,
-        \Magento\Framework\App\State $state,
-        \Magento\Cms\Model\BlockFactory $cmsBlock//,
-        //\Magento\Cms\Api\BlockRepositoryInterface $cmsRepository
+        State $state,
+        BlockFactory $cmsBlock,
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->cmsBlock = $cmsBlock;
@@ -86,11 +86,10 @@ class AddBlockCmIns implements DataPatchInterface, PatchRevertableInterface
         );
         $data = $inputFilter->getUnescaped();
         $cmsBlock->addData($data);
-        //if($this->state->getAreaCode()) {
-            $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML); // or \Magento\Framework\App\Area::AREA_FRONTEND, depending on your needs
-        //}
+
+        $this->state->setAreaCode(Area::AREA_ADMINHTML); // or \Magento\Framework\App\Area::AREA_FRONTEND, depending on your needs
+
         $cmsBlock->save();
-        //$this->ruleRepository->save($catalogRule);
 
         $this->moduleDataSetup->getConnection()->endSetup();
 
@@ -120,8 +119,7 @@ class AddBlockCmIns implements DataPatchInterface, PatchRevertableInterface
     public static function getDependencies()
     {
         return [
-          \AgSoftware\Home\Setup\Patch\Data\AddBlockCmsNoap::class
-
+           /*  \AgSoftware\Home\Setup\Patch\Data\AddBlockCmsThemesAndExtencions::class */
         ];
     }
     
