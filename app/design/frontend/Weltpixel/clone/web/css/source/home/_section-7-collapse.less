@@ -18,14 +18,11 @@
                 &__container {
                     .active-title {
                         .acctitle {
+                            .config-font ( @fuente2, 14px, 700, normal, 24px, 0,  #444);
                             display: block;
                             position: relative;
-                            line-height: 24px;
                             margin: 0;
-                            font-size: 14px;
-                            font-weight: 700;
                             padding: 10px 0 10px 20px;
-                            font-family: 'Montserrat',sans-serif;
                             border-top: 1px dotted #ddd;
                             cursor: pointer;
                             .icon-remove-circle {
@@ -158,9 +155,6 @@
 @media  (min-width: 768px) and (max-width: 1000px)  {
     #html-body.cms-home.cms-index-index {
             .section-7-collapse {
-             padding: 150px 0;
-             width: 100%;
-             background: #fafafa;
              .pagebuilder-column-line[data-pb-style=TEEGT38]  {
                 flex-direction: column;
             }
@@ -170,41 +164,10 @@
              &__text-content {
                 width: 100%;
                  .nopadding-collapsible {
-                     padding: 0 40px;
                      &__title {
                         font-size: 58px;
                      }
-                     &__container {
-                         .active-title {
-                             .acctitle {
-                                 display: block;
-                                 position: relative;
-                                 line-height: 24px;
-                                 margin: 0;
-                                 font-size: 14px;
-                                 font-weight: 700;
-                                 padding: 10px 0 10px 20px;
-                                 font-family: 'Montserrat',sans-serif;
-                                 border-top: 1px dotted #ddd;
-                             }
-     
-                             .border-none {
-                                 border-top: none;
-                                 border-bottom: 1px dotted #ddd;
-                             }
-                           
-                         }
-     
-                         .active-content {
-                             padding: 0 0 15px 20px;
-                             .acc-b-top {
-                                 margin-top: 30px;
-                             }
-                             .acc-b-bottom {
-                                 margin-bottom: 30px;
-                             }
-                         }
-                     }
+                    
                  }
              }
             }
