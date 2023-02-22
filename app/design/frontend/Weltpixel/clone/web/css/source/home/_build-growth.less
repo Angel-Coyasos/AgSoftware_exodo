@@ -4,13 +4,92 @@
 
 & when (@media-common = true) {
 
-    body{
-        // background-color: #090090!important;
+    body.cms-home {
+
+        div[data-content-type="row"]:has(.build-growth) {
+            max-width: 100%;
+        }
+
+        .build-growth {
+            
+            &__wrapper {
+                margin-top: 50px;
+                .wrapper {
+                    &--title {
+                        margin: 0;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--rewrite {
+                        margin: 0;
+                        margin-bottom: 50px;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--text {
+                        padding: 0 10px;
+                        margin-bottom: 10px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+                    }
+                    &--text-pb {
+                        margin-bottom: 100px;
+                    }
+                }
+                
+            }
+
+            .gallery-banners {
+
+                &__item {
+
+                }
+                &__wrapper {
+
+                    .wrapper {
+                        &--ancla {
+                            display: grid;
+                            text-decoration: none;
+                            .config-font ( @fuente2, 1.4rem, 900, normal, 30px, 0.5px, @color-oscuro );
+                        }
+                        &--magento2 {
+                            margin-top: 35px;
+                            color: @color-primario;
+                        }
+                        &--category {
+                            margin-bottom: 75px
+                        }
+                    }
+                }
+               
+            }
+
+        }
+
     }
 
 
 }
 
+
+
+//
+//  Small Mobile
+//  _____________________________________________
+
+
+@media  (min-width: 480px) {
+
+    body.cms-home {
+        .build-growth {        
+            &__wrapper {
+                .wrapper {
+                    &--text {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 
 //
@@ -29,4 +108,68 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
+    body.cms-home {
+
+        .build-growth {
+            
+            &__wrapper {
+                margin-top: 100px;
+                .wrapper {
+                    &--rewrite {
+                        margin-bottom: 100px;
+                    }
+                }
+                
+            }
+    
+        }
+
+    }
+   
+
+}
+
+
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+
+
+@media  (min-width: 1200px) {
+
+    body.cms-home {
+
+        .build-growth {
+            
+            &__wrapper {
+                margin-top: 150px;
+                .wrapper {
+                    &--title {
+                        font-size: 5.8rem;
+                        line-height: 0.9;
+                    }
+                    &--rewrite {
+                        font-size: 5.8rem;
+                        line-height: 0.9;
+                        margin-bottom: 0;
+                    }
+                    &--text-pd {
+                        margin: 100px 0 50px;
+                    }
+                    &--text-pm {
+                        margin: 0;
+                    }
+                    &--text-pb {
+                        margin: 0;
+                        padding-bottom: 100px;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+
 }
