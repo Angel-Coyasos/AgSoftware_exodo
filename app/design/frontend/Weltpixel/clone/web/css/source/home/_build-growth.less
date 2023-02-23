@@ -37,9 +37,21 @@
             }
 
             .gallery-banners {
-
-                &__item {
-
+                margin-bottom: 2.5rem;
+                &__item{
+                    margin: auto;
+                    max-width: 520px;
+                }
+                &__banner {
+                   /*  max-width: 520px; */
+                    height: 319px;
+                    opacity: 0.95;
+                    overflow: hidden;
+                    box-shadow: e("0px 0px 97px -17px #b0b0b0;");
+                    a[data-element="link"] {
+                        display: grid;
+                        height: 100%;
+                    }
                 }
                 &__wrapper {
 
@@ -108,7 +120,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   
-    body.cms-home {
+    body#html-body.cms-home {
 
         .build-growth {
             
@@ -120,6 +132,39 @@
                     }
                 }
                 
+            }
+
+            .gallery-banners {
+
+                .pagebuilder-column-line {
+                    display: flex;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                &__item {
+                    width: calc(16%);
+                    align-self: end;
+                    margin: 0;
+                }
+
+                .items--margin-bottom {
+                    margin: 0 34px 0 0;
+                }
+
+                .items--bg-contain {
+
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: contain;
+                            }
+                        }
+                    }
+
+                }
+               
             }
     
         }
@@ -138,7 +183,7 @@
 
 @media  (min-width: 1200px) {
 
-    body.cms-home {
+    body#html-body.cms-home {
 
         .build-growth {
             
@@ -166,6 +211,52 @@
                     }
                 }
                 
+            }
+
+            .gallery-banners {
+
+                &__item {
+                    width: calc(29%);
+                    margin: 0 34px;
+                }
+
+                .items--bg-contain {
+
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+
+                }
+               
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Custom Destop Big Mores
+//  _____________________________________________
+
+
+@media  (min-width: 1201px) {
+
+    body#html-body.cms-home {
+
+        .build-growth {
+
+            .gallery-banners {
+
+                .items--margin-bottom {
+                    margin: 0;
+                }
+               
             }
 
         }
