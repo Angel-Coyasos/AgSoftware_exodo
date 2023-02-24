@@ -9,6 +9,15 @@
 //     }
 
     body.cms-home {
+
+        div[data-content-type="row"]:has(.overflowhidden) {
+            background: #fafafa;
+        }
+
+        div.block-static-block:has(.overflowhidden) {
+            background: #fafafa;
+        }
+
         .overflowhidden {
             .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
         }
