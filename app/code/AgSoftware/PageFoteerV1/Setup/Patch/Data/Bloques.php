@@ -12,7 +12,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 
-class BloquesFooter implements DataPatchInterface, PatchRevertableInterface 
+class Bloques implements DataPatchInterface, PatchRevertableInterface 
 {
 
     /**
