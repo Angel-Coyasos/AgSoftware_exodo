@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace AgSoftware\PageFoteerV1\Setup\Patch\Data;
+namespace AgSoftware\Home\Setup\Patch\Data;
 
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
@@ -49,39 +49,18 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
          */
         
         $data = [];
-        $data[ 'agile-development' ] = [
-            "title" => "agile development",
-            "identifier" => "agile-development",
+        $data[ 'themes-and-extencions' ] = [
+            "title" => "themes and extencions",
+            "identifier" => "themes-and-extencions",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/agileDevelopment.html'),
+            "content" => file_get_contents(__DIR__.'/html/themesAndExtencions.html'),
             "is_active" => "1"
         ];
-        $data[ 'footer-weltpixel' ] = [
-            "title" => "awesome extencsions",
-            "identifier" => "awesome-extencsions",
+        $data[ 'vide-Home' ] = [
+            "title" => "vide Home",
+            "identifier" => "vide-Home",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/awesomeExtencions.html'),
-            "is_active" => "1"
-        ];
-        $data[ 'awesome-extencsions' ] = [
-            "title" => "build growth",
-            "identifier" => "build-growth",
-            "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/buildGrowth.html'),
-            "is_active" => "1"
-        ];
-        $data[ 'customer-development' ] = [
-            "title" => "customer development",
-            "identifier" => "customer-development",
-            "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/customerDevelopmen.html'),
-            "is_active" => "1"
-        ];
-        $data[ 'customer-support' ] = [
-            "title" => "customer support",
-            "identifier" => "customer-support",
-            "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/customerSupport.html'),
+            "content" => file_get_contents(__DIR__.'/html/videHome.html'),
             "is_active" => "1"
         ];
         $data[ 'google-analytics-4' ] = [
@@ -91,11 +70,68 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/googleAnalytics4.html'),
             "is_active" => "1"
         ];
+        $data[ 'overflow-hidden' ] = [
+            "title" => "overflow hidden",
+            "identifier" => "overflow-hidden",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/overflowhidden.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'awesome-extencsions' ] = [
+            "title" => "build growth",
+            "identifier" => "build-growth",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/buildGrowth.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'support-documentation' ] = [
+            "title" => "support documentation",
+            "identifier" => "support-documentation",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/supportDocumentation'),
+            "is_active" => "1"
+        ];
+        /* Reservado para BLOQU slider */
+        $data[ 'quote-2' ] = [
+            "title" => "quote 2",
+            "identifier" => "quote-2",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/quote2.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'overflow-auto' ] = [
+            "title" => "overflow auto",
+            "identifier" => "overflow-auto",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/overflowauto.html'),
+            "is_active" => "1"
+        ];
         $data[ 'industry-partners' ] = [
             "title" => "industry partners",
             "identifier" => "industry-partners",
             "store_id" => "All Store Views",
             "content" => file_get_contents(__DIR__.'/html/industryPartnes.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'no-padding' ] = [
+            "title" => "no padding",
+            "identifier" => "no-padding",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/nopadding.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'cont-Wp2' ] = [
+            "title" => "cont Wp2",
+            "identifier" => "cont-Wp2",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/contWp2.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'customer-development' ] = [
+            "title" => "customer development",
+            "identifier" => "customer-development",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/customerDevelopmen.html'),
             "is_active" => "1"
         ];
         $data[ 'marketing-merchandising' ] = [
@@ -105,13 +141,56 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/marketingMerchandising.html'),
             "is_active" => "1"
         ];
-        $data[ 'overflow-hidden' ] = [
-            "title" => "overflow hidden",
-            "identifier" => "overflow-hidden",
+        $data[ 'section-collapsible-8' ] = [
+            "title" => "section collapsible 8",
+            "identifier" => "section-collapsible-8",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/overflowhidden.html'),
+            "content" => file_get_contents(__DIR__.'/html/sectionCollapsible8.html'),
             "is_active" => "1"
         ];
+        $data[ 'customer-support' ] = [
+            "title" => "customer support",
+            "identifier" => "customer-support",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/customerSupport.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'section-collapse' ] = [
+            "title" => "section collapse",
+            "identifier" => "section-collapse",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/sectionCollapse.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'agile-development' ] = [
+            "title" => "agile development",
+            "identifier" => "agile-development",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/agileDevelopment.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'integrations-content' ] = [
+            "title" => "integrations content",
+            "identifier" => "integrations-content",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/integrationsContent.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'container-heading-wlt' ] = [
+            "title" => "container heading wlt",
+            "identifier" => "container-heading-wlt",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/containerHeadingWlt.html'),
+            "is_active" => "1"
+        ];
+        $data[ 'awesome-extencsions' ] = [
+            "title" => "awesome extencsions",
+            "identifier" => "awesome-extencsions",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/awesomeExtencions.html'),
+            "is_active" => "1"
+        ];
+        /* REVERSERVADO PARA BLOQEU DEL BLOG POST */
         $data[ 'post-list' ] = [
             "title" => "post list",
             "identifier" => "post-list",
@@ -119,35 +198,21 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/postList.html'),
             "is_active" => "1"
         ];
-        $data[ 'quote-2' ] = [
-            "title" => "quote 2",
-            "identifier" => "quote-2",
+        $data[ 'parter-Container' ] = [
+            "title" => "parter Container",
+            "identifier" => "parter-Container",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/quote2.html'),
-            "is_active" => "1"
-        ];
-        $data[ 'support-documentation' ] = [
-            "title" => "support documentation",
-            "identifier" => "support-documentation",
-            "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/quote2.html'),
-            "is_active" => "1"
-        ];
-        $data[ 'themes-and-extencions' ] = [
-            "title" => "themes and extencions",
-            "identifier" => "themes-and-extencions",
-            "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/themesAndExtencions.html'),
+            "content" => file_get_contents(__DIR__.'/html/parterContainer.html'),
             "is_active" => "1"
         ];
 
         foreach ( $data as $item) {
 
-            $cmsBlockFooter = $this->cmsBlock->create();
+            $cmsBlockHome= $this->cmsBlock->create();
 
-            $cmsBlockFooter->addData($item);
+            $cmsBlockHome->addData($item);
 
-            $this->cmsRepository->save($cmsBlockFooter);
+            $this->cmsRepository->save($cmsBlockHome);
 
         }
 
