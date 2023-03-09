@@ -6,7 +6,11 @@
 var config = {
     deps: [
         'js/modal',
-        'js/checkout-cart/rowsNumber'
+        'js/checkout-cart/rowsNumber',
+        'js/slick'
     ],
+   
 };
+
+
 
