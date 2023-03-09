@@ -12,7 +12,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 
-class Bloques implements DataPatchInterface, PatchRevertableInterface 
+class Bloques implements DataPatchInterface, PatchRevertableInterface
 {
 
     /**
@@ -41,13 +41,13 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
      */
     public function apply()
     {
-        
+
         $this->moduleDataSetup->getConnection()->startSetup();
 
         /**
          * @var \Magento\Cms\Model\Block $cmsBlock
          */
-        
+
         $data = [];
         $data[ 'themes-and-extencions' ] = [
             "title" => "themes and extencions",
@@ -131,7 +131,7 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "title" => "customer development",
             "identifier" => "customer-development",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/customerDevelopmen.html'),
+            "content" => file_get_contents(__DIR__ . '/html/customerDevelopment.html'),
             "is_active" => "1"
         ];
         $data[ 'marketing-merchandising' ] = [
@@ -247,5 +247,5 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
 
         ];
     }
-    
+
 }

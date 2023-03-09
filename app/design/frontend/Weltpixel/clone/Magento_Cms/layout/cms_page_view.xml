@@ -71,11 +71,11 @@
                     </arguments>
                 </block>
 
-                <!--<block class="Magento\Cms\Block\Block" name="customer-development">
+                <block class="Magento\Cms\Block\Block" name="customer-development">
                     <arguments>
                         <argument name="block_id" xsi:type="string">customer-development</argument>
                     </arguments>
-                </block>-->
+                </block>
 
                 <block class="Magento\Cms\Block\Block" name="section-collapsible-8">
                     <arguments>
