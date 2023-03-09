@@ -10,14 +10,18 @@
         <title>Customer Login</title>
     </head>
     <body>
-        <!-- contenedor padre para titulo de social login y lo botones para logearse -->
         <referenceContainer name="content">
-            <container name="social-login-container" htmlTag="div" htmlClass="social-login__container" before="-">
+            <!-- contenedor padre para titulo de social login y lo botones para logearse -->
+            <container name="social-login-container" htmlTag="div" htmlClass="social-login-container" before="-">
                 <block name="login-social-prefile-title" template="Magento_Customer::login-social-prefile-title.phtml" before="-"/>
             </container>
+            <!-- agregar bloque phtml remernber-me-box -->
+            <block name="remenber-me-box" template="Magento_Customer::remenber-me-box.phtml" before="-"/>
         </referenceContainer>
         <!-- mover el contendor de los bototnes de social login al contenedor padre del social login -->
         <move element="social-login-popup-authentication-social-login" destination="social-login-container" after="-"/>
+        <!-- mover bloque remenber-me-box a form.additional.info -->
+        <move element="remenber-me-box" destination="form.additional.info" after="-"/>
 
     </body>
 </page>
