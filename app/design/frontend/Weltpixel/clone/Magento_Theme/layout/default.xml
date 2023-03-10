@@ -30,12 +30,9 @@
         <referenceContainer name="header.container">
 
             <referenceBlock name="header.panel.wrapper" remove="true"/>
-            
+
         </referenceContainer>
         <move element="page.top" destination="header-wrapper"  after="logo"/>
 
-        <referenceContainer name="content">
-                <block name="slider.items" template="AgSoftware_SlickSlider::slider.phtml" before="-"/>
-        </referenceContainer>
     </body>
 </page>
