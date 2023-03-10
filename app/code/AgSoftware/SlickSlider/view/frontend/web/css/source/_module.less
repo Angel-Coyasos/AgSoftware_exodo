@@ -1,0 +1,42 @@
+@import 'slick.less';
+@import 'slick-theme.less';
+@import 'heading-title.less';
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.slider {
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+}
+.slick-slide {
+    margin: 0 50px;
+    transition: all ease-in-out .3s;
+    img {
+        width: 100%;
+    }
+}
+.slick-prev {
+    &:before {
+        color: black;
+    }
+}
+.slick-next {
+    &:before {
+        color: black;
+    }
+}
+
+.slick-current {
+    opacity: 1;
+}
