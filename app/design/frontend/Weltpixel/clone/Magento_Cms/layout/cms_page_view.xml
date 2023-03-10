@@ -53,6 +53,8 @@
                     </arguments>
                 </block>
 
+                <block name="slider.items" template="AgSoftware_SlickSlider::slider.phtml"/>
+
                 <block class="Magento\Cms\Block\Block" name="no-padding">
                     <arguments>
                         <argument name="block_id" xsi:type="string">no-padding</argument>
