@@ -1,0 +1,53 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .heading-title-awards {
+        padding: 0 15px;
+        text-align: center;
+        &__title {
+            margin-bottom: 50px;
+            .config-font ( @fuente1, 30px, 900, initial, 0.9, 0, @color-oscuro );
+            text-transform: uppercase;
+        }
+        &__text {
+            font-family: @fuente2;
+            font-style: initial;
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
+    .cms-home.cms-index-index {
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .heading-title-awards {
+        padding: 0 40px;
+        &__title {
+            font-size: 50px;
+        }
+       
+    }
+}
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__l) {
+    #html-body.cms-home {
+    }
+}
