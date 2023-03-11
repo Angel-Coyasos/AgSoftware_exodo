@@ -76,6 +76,7 @@
                                                 font-weight: 700;
                                                 line-height: 40px;
                                                 padding: 8px 40px 8px 10px;
+                                                font-family: @fuente2;
                                                 span {
                                                     font-size: 1.4rem;
                                                 }
@@ -122,7 +123,7 @@
                                                     line-height: normal
                                                 }
                                             }
-                                            .nav-3-2, .nav-3-14-1, .nav-3-14-2{
+                                            .nav-3-2, .nav-3-34, .nav-3-35{
                                                 a {
                                                     span {
                                                         .textAfter('HOT', #F30D49, @color-titulo, 12px);
@@ -130,22 +131,22 @@
                                                 }
                                             }
                                             .nav-3-3, .nav-3-4, 
-                                            .nav-3-5, .nav-3-12-1,
-                                            .nav-3-12-2, .nav-3-12-3,
-                                            .nav-3-13-1, .nav-3-13-2,
-                                            .nav-3-13-3 {
+                                            .nav-3-5, .nav-3-13,
+                                            .nav-3-14, .nav-3-15,
+                                            .nav-3-24, .nav-3-25,
+                                            .nav-3-26 {
                                                 a {
                                                     span {
                                                         .textAfter('FREE', #E6EBEE, @color-primario, 12px);
                                                     }
                                                 }
                                             }
-                                            .nav-3-12, .nav-3-13, .nav-3-14 {
+                                            .nav-3-12, .nav-3-23, .nav-3-33 {
                                                 margin-top: 20px;
                                                 .level1 {
                                                     padding: 0;
                                                 }
-                                                #ui-id-26, #ui-id-37, #ui-id-47 {
+                                                .ui-menu-item-wrapper {
                                                     span {
                                                         text-shadow: 0 0 0 @color-oscuro;
                                                         line-height: normal
@@ -154,7 +155,7 @@
                                             }
                                         }
                                     }
-                                    .nav-2, .nav-3, .nav-4, .nav-5{
+                                    .nav-2, .nav-3, .nav-4 {
                                         .submenu {
                                             .ui-menu-item {
                                                 a {
@@ -163,12 +164,26 @@
                                                     font-size: 12px;
                                                     font-weight: 400;
                                                     text-transform: uppercase;
+                                                    font-family:@fuente2;
                                                 }
                                             }
                                             .all-category {
                                                 a {
                                                     text-shadow: 0 0 0 @color-oscuro;
                                                     line-height: normal
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .nav-5 {
+                                        .submenu {
+                                            .ui-menu-item {
+                                                a {
+                                                    padding: 10px 0 10px 10px;
+                                                    color: @color-primario;
+                                                    font-size: 12px;
+                                                    font-weight: 400;
+                                                    text-transform: uppercase;
                                                 }
                                             }
                                         }
@@ -291,12 +306,35 @@
                             text-transform: uppercase;
                             p.search-description {
                                 padding: 10px 20px;
-                                span {
-                                    color: #F8F8F8;
-                                    margin-right: 20px;
+                                .descripcion1 {
+                                    &:before {
+                                        content: "# Type at least 3 character to search";
+                                        color: #F8F8F8;
+                                        margin-right: 20px;
+                                    }
+                                    
+                                    // a {
+                                    //     color: @color-titulo;
+                                    //     font-weight: 800;
+                                    // }
+                                }
+                                .descripcion2 {
+                                    &:before {
+                                        content: "# Hit enter to search";
+                                        color: #F8F8F8;
+                                        margin-right: 20px;
+                                    }
+                                }
+                                .descripcion3 {
                                     a {
-                                        color: @color-titulo;
-                                        font-weight: 800;
+                                        &:before {
+                                            content: "# For Support Center click HERE";
+                                            color: @color-titulo;
+                                            font-weight: 800;
+                                            &:hover {
+                                                text-decoration: none;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -538,7 +576,7 @@
                                     }                                    
                                 }
                                 .nav-2, .nav-5 {
-                                    #ui-id-3, #ui-id-58 {
+                                    .ui-menu-item-wrapper {
                                         padding: 0 20px 0 10px;
                                         .ui-menu-icon {
                                             display: none;
@@ -557,12 +595,7 @@
                                     #ui-id-2 {
                                         padding: 0 10px 0 0;
                                     }
-                                    // #ui-id-3, #ui-id-58 {
-                                    //     padding: 0 20px 0 10px;
-                                    //     .ui-menu-icon {
-                                    //         display: none;
-                                    //     }
-                                    // }
+                                  
                                 }
                                
                             }
