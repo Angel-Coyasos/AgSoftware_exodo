@@ -190,7 +190,13 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/awesomeExtencions.html'),
             "is_active" => "1"
         ];
-        /* REVERSERVADO PARA BLOQEU DEL BLOG POST */
+        $data[ 'heading-title-awards' ] = [
+            "title" => "heading title awards",
+            "identifier" => "heading-title-awards",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/heading-title-awards.html'),
+            "is_active" => "1"
+        ];
         $data[ 'post-list' ] = [
             "title" => "post list",
             "identifier" => "post-list",
