@@ -126,6 +126,12 @@
                         <argument name="block_id" xsi:type="string">awesome-extencsions</argument>
                     </arguments>
                 </block>
+                
+                  <block class="Magento\Cms\Block\Block" name="heading-title-awards">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">heading-title-awards</argument>
+                    </arguments>
+                </block>
 
                 <block class="Magento\Cms\Block\Block" name="post-list">
                     <arguments>
@@ -138,6 +144,7 @@
                         <argument name="block_id" xsi:type="string">parter-Container</argument>
                     </arguments>
                 </block>
+               
 
             </container>
 
