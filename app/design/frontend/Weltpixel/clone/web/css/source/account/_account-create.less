@@ -59,8 +59,9 @@
                             input[name="show-password"], 
                             label[for="assistance_allowed_checkbox"],
                             label[for="show-password"]
-                            .field-tooltip.toggle, 
-                            span[data-bind="i18n: 'Show Password'"] {
+                            span[data-bind="i18n: 'Show Password'"], 
+                            .field-tooltip.toggle 
+                             {
                                 display: none;
                             }
                         }
@@ -83,6 +84,23 @@
                                     }
                                 }
                             }
+                        }
+                    }
+                    .create.account {
+                        margin: 0;
+                
+                    }
+                    .fieldset.additional_info {
+                        margin: 0;
+                        &::after {
+                            margin: 10px 0 0;
+                            content: attr(data-hasrequired);
+                            display: block;
+                            letter-spacing: normal;
+                            word-spacing: normal;
+                            color: #e02b27;
+                            font-size: 1.2rem;
+                            margin: 35px 0;
                         }
                     }
                     .actions-toolbar {

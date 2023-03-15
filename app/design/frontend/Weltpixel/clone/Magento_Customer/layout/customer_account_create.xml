@@ -25,7 +25,9 @@
         <move element="social-login-popup-authentication-social-create" destination="social-login-container" after="-"/>
         
         <!-- mover bloque remenber-me-box a form.additional.info -->
+
+         <!-- mover bloque remenber-me-box a form.additional.info -->
         <move element="remenber-me-box" destination="form.additional.info" before="-"/>
 
-    </body>
+   </body>
 </page>
