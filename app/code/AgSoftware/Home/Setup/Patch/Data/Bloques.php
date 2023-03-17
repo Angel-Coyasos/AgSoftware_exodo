@@ -77,7 +77,11 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/overflowhidden.html'),
             "is_active" => "1"
         ];
+<<<<<<< HEAD
         $data[ 'build-growth' ] = [
+=======
+        $data[ 'awesome-extencsions' ] = [
+>>>>>>> 49773e23895b039bd2c1c85435ede4b9f2d1e335
             "title" => "build growth",
             "identifier" => "build-growth",
             "store_id" => "All Store Views",
@@ -88,7 +92,11 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "title" => "support documentation",
             "identifier" => "support-documentation",
             "store_id" => "All Store Views",
+<<<<<<< HEAD
             "content" => file_get_contents(__DIR__.'/html/supportDocumentation.html'),
+=======
+            "content" => file_get_contents(__DIR__.'/html/supportDocumentation'),
+>>>>>>> 49773e23895b039bd2c1c85435ede4b9f2d1e335
             "is_active" => "1"
         ];
         /* Reservado para BLOQU slider */
