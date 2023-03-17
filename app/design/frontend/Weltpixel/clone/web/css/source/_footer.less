@@ -20,7 +20,7 @@
     font-size: 10px;
     font-weight: bold;
     line-height: 2.7;
-    letter-spacing: .1rem;                                   
+    letter-spacing: .1rem;
     color: @color-texto;
     text-transform: uppercase;
 }
@@ -74,7 +74,7 @@
                 width: 100vw;
                 &__img{
                     padding: 30px 0;
-                    
+
                     img {
                         max-width: 1400px;
                     }
@@ -100,7 +100,7 @@
                     &-title {
                     margin: 100px 0 50px 0;
                     text-transform: uppercase;
-                    color: @color-titulo; 
+                    color: @color-titulo;
                         &--title {
                             font-family: @fuente1;
                             font-size: 3rem;
@@ -111,7 +111,7 @@
 
                     // Estilos boton ancla del footer.
                     &-ancla-btn {
-                        display: inline-block;   
+                        display: inline-block;
                         padding: 24px 34px;
                         font-size: 22px;
                         font-family: 'open sans';
@@ -137,8 +137,8 @@
                                 font-size: 10px;
                                 color: @color-texto;
                             }
-                        } 
-                       
+                        }
+
                         &__services,  &__about {
                             &-links {
                                 &--ancla {
@@ -216,6 +216,9 @@
                                         text-transform: uppercase;
                                         color: @color-claro;
                                     }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
                                 }
                                 .button {
                                     width: 30%;
@@ -227,6 +230,7 @@
                                     font-weight: 400;
                                     line-height: 30px;
                                     text-transform: uppercase;
+                                    border-radius: 0;
                                     border: 1px solid @color-claro;
                                     color: @color-claro;
                                     background: @color-primario;
@@ -277,7 +281,7 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media (max-width: 991px) {
  
     footer.page-footer {
         .footer {
@@ -311,7 +315,7 @@
                             &--img-card {
                                 width: 100%;
                             }
-                        } 
+                        }
                         &__services,  &__about {
                             &--ul {
                                 text-align: center;
@@ -341,11 +345,35 @@
 
 }
 
+
+//
+//  Especial Tablet
+//  _____________________________________________
+
+@media (max-width: 1000px) {
+ 
+    footer.page-footer {
+        .footer {
+            &-content {
+                .block {
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        margin: 5px auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
 //
 //  Deskto
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: 992px)  {
   
     footer.page-footer {
         overflow-x: hidden;
@@ -379,7 +407,7 @@
                             &--img-card {
                                 width: 170px;
                             }
-                        } 
+                        }
 
                         &__services,  &__about {
                             padding: 0 15px;
@@ -388,12 +416,12 @@
                             }
                         }
 
-                        &__information { 
+                        &__information {
                             width: 400px;
                             padding: 0 15px;
                             &-hq {
                                 text-align: center;
-                               
+
                             }
                             &-development {
                                 text-align: center;
@@ -411,4 +439,26 @@
         }
     }
 
+}
+
+//
+//   Especial Deskto
+//  _____________________________________________
+
+@media (min-width: 1001px)  {
+    footer.page-footer {
+        .footer {
+            &-content {
+                .block {
+
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        width: 350px;
+                        margin: 5px;
+                    }
+                    
+                }
+            }
+        }
+    }
 }
