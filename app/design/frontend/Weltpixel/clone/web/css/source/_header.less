@@ -31,15 +31,8 @@
                 align-items: center;
                 padding: 0;
                 border: none;
-                padding: 15px 0;
-          
-            
-                span.action.nav-toggle{
-                    &:before {
-                        color:#073756;
-                    }
-                }
-
+                padding: 15px 15px;
+                margin: 0;     
                 a.logo {
                     margin: 0;
                     margin-left: 10px;
@@ -48,12 +41,417 @@
                         height: 43px;
                     }
                 }
+                .nav-sections {
+                    display:none;
+                    background-color: @color-titulo;
+                    div.nav-sections-items {
+                        background-color: @color-titulo;
+                        div.nav-sections-item-title.active {
+                            background: @color-titulo;
+                            border: solid @color-titulo;
+                        }
+                        div.nav-sections-item-title {
+                            width: 50%;
+                            background-color: #f7f7f7;
+                            border: solid 0px @color-titulo;
+                            color: #232323;
+                            font-size: 1.6rem;
+                            text-transform: uppercase;
+                            a.nav-sections-item-switch {
+                                color: #232323;
+                                &:hover {
+                                    color: @color-primario;
+                                }
+                            }
 
+                        }
+                        .section-item-content {
+                            .navigation {
+                                padding: 0 15px;
+                                background-color: inherit;
+                                ul.ui-menu {
+                                    .level0 {
+                                        border-top: none;
+                                        border-bottom: 1px solid #f7f7f7;
+                                        .level-top {
+                                            color: inherit;
+                                                font-weight: 700;
+                                                line-height: 40px;
+                                                padding: 8px 40px 8px 10px;
+                                                font-family: @fuente2;
+                                                span {
+                                                    font-size: 1.4rem;
+                                                }
+                                        }
+                                    }
+                                    .nav-1 {
+                                        a {
+                                            .textAfter('HOT', #F30D49, @color-titulo, 10px);
+                                        }
+                                       
+                                    }
+                                    .nav-2, .nav-4 {
+                                        .submenu {
+                                            .nav-2-3 {
+                                                a {
+                                                    span {
+                                                        .textAfter('LIVE STORES', #E6EBEE, @color-primario, 12px);
+                                                    }
+                                                }
+                                            }
+                                            .nav-2-10, .nav-4-4 {
+                                                a {
+                                                    span {
+                                                        .textAfter('PRICING', #E6EBEE, @color-primario, 12px);
+                                                    }
+                                                }
 
+                                            }
+                                        }
+                                    }
+                                    .nav-3 {
+                                        .submenu {
+                                            li.all-category {
+                                                a {
+                                                    color: #232323;
+                                                    line-height: 1.3;
+                                                    font-size: 1.6rem;
+                                                }
+                                                
+                                            }
+                                            .nav-3-1 {
+                                                a {
+                                                    text-shadow: 0 0 0 @color-oscuro;
+                                                    line-height: normal
+                                                }
+                                            }
+                                            .nav-3-2, .nav-3-34, .nav-3-35{
+                                                a {
+                                                    span {
+                                                        .textAfter('HOT', #F30D49, @color-titulo, 12px);
+                                                    }
+                                                }
+                                            }
+                                            .nav-3-3, .nav-3-4, 
+                                            .nav-3-5, .nav-3-13,
+                                            .nav-3-14, .nav-3-15,
+                                            .nav-3-24, .nav-3-25,
+                                            .nav-3-26 {
+                                                a {
+                                                    span {
+                                                        .textAfter('FREE', #E6EBEE, @color-primario, 12px);
+                                                    }
+                                                }
+                                            }
+                                            .nav-3-12, .nav-3-23, .nav-3-33 {
+                                                margin-top: 20px;
+                                                .level1 {
+                                                    padding: 0;
+                                                }
+                                                .ui-menu-item-wrapper {
+                                                    span {
+                                                        text-shadow: 0 0 0 @color-oscuro;
+                                                        line-height: normal
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .nav-2, .nav-3, .nav-4 {
+                                        .submenu {
+                                            .ui-menu-item {
+                                                a {
+                                                    padding: 10px 0 10px 10px;
+                                                    color: @color-primario;
+                                                    font-size: 12px;
+                                                    font-weight: 400;
+                                                    text-transform: uppercase;
+                                                    font-family:@fuente2;
+                                                }
+                                            }
+                                            .all-category {
+                                                a {
+                                                    text-shadow: 0 0 0 @color-oscuro;
+                                                    line-height: normal
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .nav-5 {
+                                        .submenu {
+                                            .ui-menu-item {
+                                                a {
+                                                    padding: 10px 0 10px 10px;
+                                                    color: @color-primario;
+                                                    font-size: 12px;
+                                                    font-weight: 400;
+                                                    text-transform: uppercase;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .nav-2, .nav-3 {
+                                        .submenu {
+                                            .ui-menu-item {
+                                                a {
+                                                    color: @color-primario; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                span.action.nav-toggle{
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    &:before {
+                        color:@color-primario;
+                    }
+                    &:after {
+                        background-color: rgba(255,255,255,.5);
+                    }
+                }
+                div.minicart-wrapper{
+                    margin-left: auto;
+                    margin-top: 0;
+                .action.showcart {
+                    &:before {
+                        font-size: 16px;
+                        line-height: 35px;
+                        color: @color-primario;
+                        content: '\F23D';
+                        font-family: 'bootstrap-icons';
+                        margin: 0;
+                  
+                    }
+                }
+            }
+            .block-search{
+                margin: 0;
+                div.block-content{
+                    .minisearch{
+                        .search{
+                            width: 0;
+
+                            .label{
+                                width: auto;
+                                height: auto;
+                                position: relative;
+                                right: 23px;
+                                cursor: pointer;
+                                &:before {
+                                    font-size: 16px;
+                                    line-height: 28px;
+                                    color: @color-primario;
+                                    margin: 0;
+                                }
+                            }
+                            .control{
+                                border: none;
+                            }
+                        }
+                    }
+                }
+              }
             }
         }
     }
+    .modals-wrapper {
+        .modal-popup {
+            .modal-inner-wrap {
+                width: 100%;
+                background-color: transparent;
+                box-shadow: none;
+                margin: 0;
+                .modal-header {
+                    position: relative;
+                    h1{
+                        display: none;
+                    }
+                    .action-close {
+                        position: absolute;
+                        top: 8px;
+                        right: 2px;
+                        &::before {
+                            font-size: 26px;
+                            line-height: inherit;
+                            color: #f8f8f8;
+                            font-weight: 400;
+                            overflow: visible;
+                        }
+                    }
+                }
+                .modal-content {
+                    width: 80%;
+                    margin: 50px auto 0 auto;
+                    .control {
+                        .input-text{
+                            height: 66px;
+                            padding: 0 35px 0 20px;
+                            background-color: #222 ;
+                            color: #f8f8f8;
+                            border: 3px solid #f8f8f8;
+                            font-size: 18px;
+                            &::placeholder {
+                                color: #f8f8f8;
+                            }
+                            &:focus {
+                                box-shadow: none;
+                            }                        
+                        }
+                        .description {
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            p.search-description {
+                                padding: 10px 20px;
+                                .descripcion1 {
+                                    &:before {
+                                        content: "# Type at least 3 character to search";
+                                        color: #F8F8F8;
+                                        margin-right: 20px;
+                                    }
+                                    
+                                    // a {
+                                    //     color: @color-titulo;
+                                    //     font-weight: 800;
+                                    // }
+                                }
+                                .descripcion2 {
+                                    &:before {
+                                        content: "# Hit enter to search";
+                                        color: #F8F8F8;
+                                        margin-right: 20px;
+                                    }
+                                }
+                                .descripcion3 {
+                                    a {
+                                        &:before {
+                                            content: "# For Support Center click HERE";
+                                            color: @color-titulo;
+                                            font-weight: 800;
+                                            &:hover {
+                                                text-decoration: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nested {
+                            display: none;
+                        }
+                    }
+                }
+                .modal-footer {
+                    display: none;
+                }
+            }
+        } 
+        .modals-overlay {
+            background-color: rgba(25,25,25,.95);
+        }
+    }
+ }
+   
  
+
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    div.page-wrapper {
+        left: calc(100% - 54px);
+        .page-header {
+            background-color: @color-titulo;
+            min-height: 68px;
+            border: none;
+            margin: 0;
+            .header.content {
+                padding: 15px 15px 10px;  
+                div.user{
+                    display: none;
+                }
+                .block-search{
+                margin: 0;
+                div.block-content{
+                    .minisearch{
+                        .search{
+                            .label{
+                                position: relative;
+                                &:before {
+                                    font-size: 16px;
+                                    line-height: 28px;
+                                    color: @color-primario;
+                                    margin: 0;
+                                }
+                            }
+
+                            .control{
+                                border: none;
+                            }
+                        }
+                    }
+                }
+              }
+              div.nav-sections {
+                display: block;
+                max-width: 420px;
+                // .nav-sections-items {
+                //     .section-item-content {
+                //         margin: 70;
+                //     }
+                //}
+              }
+            }
+        }
+     }
+     .modals-wrapper {
+        aside.modal-popup.modal-slide {
+            left: 0;
+            div.modal-inner-wrap {
+                background-color: rgba(25,25,25,-0.05);
+                padding: 0 8px;
+                .modal-header {
+                    padding: 0;
+                    .action-close {
+                        top: -2px;
+                        right: -7px;
+                    }
+                }
+                .modal-content {
+                    width: 95%;
+                    margin: 80px auto;
+                    padding: 0;
+                    .control {
+                        .description {
+                            .search-description {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+                        .actions {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+     }
+     
+ }
+
+// @media especial
+ @media (min-width: 500px) and (max-width: 768px) {
+    .nav-open {
+        .page-wrapper {
+            left: 420px;
+        }
+    } 
 }
 
 //
@@ -61,5 +459,185 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-  
+.page-wrapper {
+    .page-header {
+        div.header.content {
+            margin: 0 auto;
+            .action.nav-toggle{
+                display: block;
+            }
+            a.logo {
+                img {
+                    width: 194px;
+                    height: 70px;
+                }
+            }
+            .nav-sections{
+                margin: 0 auto;
+                .section-item-content {
+                    padding: 0 15px;
+                    background-color: @color-titulo;
+                    .navigation{
+                        background-color: @color-titulo;
+                        ul {
+                            padding: 0;
+                            .category-item {
+                                margin: 0 10px 0 0;
+                                a {
+                                    padding: 0 10px;
+                                    span {
+                                        font-size: 14px;
+                                        color: @color-primario;
+                                        line-height: 44px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            
+            div.minicart-wrapper {
+                    position: relative;
+                }
+                div.user{
+                    position: absolute;
+                    left: -300%;
+                }
+                .block-search {
+                    width: 0;
+                    padding: 0;
+                    .block-content {
+                        .minisearch{ 
+                           .search {
+                                .label {
+                                    position: relative;
+                                    right: 23px;
+                                }
+                                .control {
+                                    input {
+                                       display: none;// linea para analizar
+                                    }
+                                }
+                            }
+                            .actions{
+                                .action.search{
+                                    display:none
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
 }
+}
+
+//despto
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-wrapper {
+        .page-header {
+            div.header.content {
+                .action.nav-toggle{
+                    display: none;
+                }
+                padding: 8px 0px;
+                max-width: 90%;
+                position: relative;
+                .nav-sections {
+                    display: block;
+                    .section-item-content {
+                        .navigation {
+                            .ui-menu {
+                                .nav-1, .nav-2, .nav-5 {
+                                    a.level-top {
+                                        &:hover {
+                                            text-shadow: 0 0 0 @color-oscuro;
+                                        }
+
+                                    }
+                                    .submenu {
+                                        min-width: 300px;
+                                        .category-item {
+                                            width: 100%;
+                                        }
+                                        li.ui-menu-item {
+                                            a.ui-menu-item-wrapper {
+                                                padding: 0 8px;
+                                                &:hover {
+                                                    background: none;
+                                                }
+                                                span {
+                                                    &:hover {
+                                                        color: #444;
+                                                        text-shadow: 0 0 0 @color-oscuro;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }                                    
+                                }
+                                .nav-2, .nav-5 {
+                                    .ui-menu-item-wrapper {
+                                        padding: 0 20px 0 10px;
+                                        .ui-menu-icon {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .nav-3, .nav-4 {
+                                    display: none;
+                                }
+                                li.category-item.ui-menu-item {
+                                    padding: 0 20px 0 0;
+                                    margin: 0;
+                                    a.ui-menu-item-wrapper {
+                                        padding: 0 8px;
+                                    }
+                                    #ui-id-2 {
+                                        padding: 0 10px 0 0;
+                                    }
+                                  
+                                }
+                               
+                            }
+                        }
+
+                    }
+                }
+                div.minicart-wrapper {
+                    position: relative;
+                    left: 20px;
+                }
+                .block-search {
+                    .block-content {
+                        .minisearch{ 
+                           .search {
+                                label.label {
+                                    position: relative;
+                                    right: 60px;
+                                }
+                               
+                            }
+                          
+                        }
+                    }
+                }
+                
+                div.user {
+                    position: relative;
+                    left: -28px;
+                    .user__login {
+                        i {
+                        font-size: 17px;
+                        line-height: 28px;
+                        color: @color-primario;
+                        margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
