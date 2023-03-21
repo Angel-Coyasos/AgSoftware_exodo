@@ -31,8 +31,6 @@
 @import "./home/_section-7-collapse.less";
 @import "./home/_heading-title-awards";
 
-
-
 /*
     FOOTER
 */
@@ -44,13 +42,9 @@
 @import "./account/_account-login.less";
 @import "./account/_account-create.less";
 
-
-
-
-//
-//  Variables
-//  _____________________________________________
-
+/*
+    Variables
+*/
 @color-primario: #073756;
 @color-oscuro:  #000;
 @color-claro: #f9f9f9;
@@ -64,10 +58,9 @@
 
 
 
-//
-//  Mixin Configuracion de fuente
-//  _____________________________________________
-
+/*
+    Mixin Configuracion de fuente
+*/
 .config-font ( @family, @size, @weight, @style, @line, @letter, @color ) {
     font-family: @family;
     font-size: @size;
@@ -78,12 +71,9 @@
     color: @color;
 }
 
-
-
-//
-//  Mixins card quote whith before y after de fuente
-//  _____________________________________________
-
+/*
+    Mixins card quote whith before y after de fuente
+*/
 .card-quote ( @margin, @padding ) {
     width: 100%;
     max-width: 800px;
@@ -126,18 +116,59 @@
     transform: rotate( @rotate );
 }
 
-
-
-//
-//  Reinciando Stylos con Selector Universal
-//  _____________________________________________
-
+/*
+    Reinciando Stylos con Selector Universal
+*/
 * {
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/*
+    MIXINS DE ESTILOS PARA LOS LINK DE LOS UL DE LAS SECIONES Y EL COPY RITGH DEL FOOTER
+*/
+.link-ancla {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 2.7;
+    letter-spacing: .1rem;
+    color: @color-texto;
+    text-transform: uppercase;
+}
+
+.text-information {
+    position: relative;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-left: 40px;
+    margin-top: 15px;
+    color: @color-texto;
+    &::before {
+        position: absolute;
+        left: 0;
+        content: '\F3E8';
+        font-family: 'bootstrap-icons';
+        font-size: 24.5px;
+        line-height: 25px;
+    }
+    span {
+        font-weight: 700;
+        &:before {
+            content: ' | ';
+            font-weight: 400;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
 
 
 //

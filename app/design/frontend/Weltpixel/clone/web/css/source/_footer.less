@@ -1,319 +1,266 @@
 //
-//  Mixins
-//  _____________________________________________
-
-.link-ancla {
-    font-family: 'Montserrat',sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 2.7;
-    letter-spacing: .1rem;
-    color: @color-texto;
-    text-transform: uppercase;
-}
-
-.text-information {
-    position: relative;
-    font-family: 'Montserrat',sans-serif;
-    font-size: 9px;
-    line-height: 12px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-left: 40px;
-    margin-top: 15px;
-    color: @color-texto;
-    &::before {
-        position: absolute;
-        left: 0;
-        content: '\F3E8';
-        font-family: 'bootstrap-icons';
-        font-size: 24.5px;
-        line-height: 25px;
-    }
-    span {
-        font-weight: 700;
-        &:before {
-            content: ' | ';
-            font-weight: 400;
-        }
-    }
-    p {
-        margin: 0;
-    }
-}
-
-
-
-//
 //  Common
 //  _____________________________________________
 
 & when (@media-common = true) {
-
-footer.page-footer {
-    padding-bottom: 0;
-    .footer {
-        margin-top: 25px;
-        .pre-footer-container {
-            display: flex;
-            text-align: center;
-            width: 100vw;
-            padding: 0 15px 15px;
-            &__img {
-                padding: 30px 0;
-                img {
-                    max-width: 1400px;
+    footer.page-footer {
+        padding-bottom: 0;
+        .footer {
+            margin-top: 25px;
+            .pre-footer-container {
+                display: flex;
+                text-align: center;
+                width: 100vw;
+                padding: 0 15px 15px;
+                &__img {
+                    padding: 30px 0;
+                    img {
+                        max-width: 1400px;
+                    }
                 }
             }
-        }
-        &.content {
-            margin: 0;
-            padding: 0;
-        }
-        &-container {
-            width: 100vw;
-            background: @color-primario;
-        }
-        &-content {
-            max-width: 1280px;
-            display: flex;
-            flex-direction: column;
-            .block {
-                // Estilos titulo footer.
-                &-title {
-                    padding: 0 15px;
-                    margin: 100px 0 50px 0;
-                    text-transform: uppercase;
-                    color: @color-titulo;
-                    &--title {
-                        margin-bottom: 0;
-                        font-family: @fuente1;
-                        font-size: 3rem;
-                        font-weight: 800;
-                        line-height: 1.1;
-                    }
-                }
-
-                // Estilos boton ancla del footer.
-                &-ancla-btn {
-                    display: inline-block;
-                    padding: 11px 24px;
-                    margin: 0 15px 15px;
-                    font-size: 16px;
-                    font-family: @fuente-buton;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                    text-align: left;
-                    text-transform: uppercase;
-                    text-shadow: e("1px 1px 1px #00000033;");
-                    cursor: pointer;
-                    color: @color-primario;
-                    background-color: @color-titulo;
-                    &--text {
-                        margin: 0;
-                    }
-                }
-
-                // Estilos columnas con toda la informacion del footer.
-                &-columns {
-                    display: flex;
-                    margin: 0 15px;
-                    &__logo {
+            &.content {
+                margin: 0;
+                padding: 0;
+            }
+            &-container {
+                width: 100vw;
+                background: @color-primario;
+            }
+            &-content {
+                max-width: 1280px;
+                display: flex;
+                flex-direction: column;
+                .block {
+                    // Estilos titulo footer.
+                    &-title {
                         padding: 0 15px;
-                        &--minilogo {
-                            padding: 18px 0;
+                        margin: 100px 0 50px 0;
+                        text-transform: uppercase;
+                        color: @color-titulo;
+                        &--title {
+                            margin-bottom: 0;
+                            .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0px, @color-titulo );
                         }
+                    }
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        display: inline-block;
+                        padding: 11px 24px;
+                        margin: 0 15px 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        text-shadow: e("1px 1px 1px #00000033;");
+                        cursor: pointer;
+                        background-color: @color-titulo;
+                        .config-font ( @fuente-buton, 16px, bold, normal, 1.1, 1px, @color-primario );
                         &--text {
-                            margin: 0 0 30px 0;
-                            font-size: 10px;
-                            font-family: 'Montserrat',sans-serif;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 1.42857143;
-                            letter-spacing: 0.5px;
-                            color: @color-texto;
+                            margin: 0;
                         }
                     }
-
-                    &__services,  &__about {
-                        padding: 0 15px;
-                        &-links {
-                            &--ancla {
-                                .link-ancla;
-                                &:hover {
-                                    color: #ffffff;
-                                }
+                    // Estilos columnas con toda la informacion del footer.
+                    &-columns {
+                        display: flex;
+                        margin: 0 15px;
+                        &__logo {
+                            padding: 0 15px;
+                            &--minilogo {
+                                padding: 18px 0;
+                            }
+                            &--text {
+                                margin: 0 0 30px 0;
+                                .config-font ( @fuente2, 10px, 400, normal, 1.42857143, 0.5px, @color-texto );
                             }
                         }
-                    }
-                    &__information {
-                        padding: 0 15px;
-                        margin-bottom: 40px;
-                        &-title {
-                            text-align: center;
-                            margin-top: 0;
-                            .link-ancla;
-                            letter-spacing: 0;
-                        }
-                        &-links {
-                            &--ancla {
-                                .link-ancla;
-                            }
-                        }
-                        &-hq {
-                            .text-information;
-                            .block-columns__information--text {
-                                font-size: 10px;
-                            }
-                        }
-                        &-development {
-                            .text-information;
-                            .block-columns__information--text {
-                                font-size: 10px;
-                            }
-                        }
-                        &-icons {
-                            display: flex;
-                            justify-content: space-around;
-                            gap: 10px;
-                            overflow: hidden;
-                            margin-bottom: 8px;
-                            .icons {
-                                &-itiems {
-                                    height: 38px;
-                                    transition: all .3s ease;
+                        &__services,  &__about {
+                            padding: 0 15px;
+                            &-links {
+                                &--ancla {
+                                    .link-ancla;
                                     &:hover {
-                                        transform: translateY(-38px);
+                                        color: #ffffff;
                                     }
                                 }
-                                &-card {
-                                    transition: all .3s ease;
-                                    display: flex;
-                                    flex-direction: column;
-                                    .fa-brands {
-                                        width: 38px;
+                            }
+                        }
+                        &__information {
+                            padding: 0 15px;
+                            margin-bottom: 40px;
+                            &-title {
+                                text-align: center;
+                                margin-top: 0;
+                                .link-ancla;
+                                letter-spacing: 0;
+                            }
+                            &-links {
+                                &--ancla {
+                                    .link-ancla;
+                                }
+                            }
+                            &-hq {
+                                .text-information;
+                                .block-columns__information--text {
+                                    font-size: 10px;
+                                }
+                            }
+                            &-development {
+                                .text-information;
+                                .block-columns__information--text {
+                                    font-size: 10px;
+                                }
+                            }
+                            &-icons {
+                                display: flex;
+                                justify-content: space-around;
+                                gap: 10px;
+                                overflow: hidden;
+                                margin-bottom: 8px;
+                                .icons {
+                                    &-itiems {
                                         height: 38px;
-                                        text-align: center;
-                                        color: #fff;
-                                        border-radius: 3px;
-                                        &:before {
-                                            font-size: 18px;
-                                            line-height: 40px;
+                                        transition: all .3s ease;
+                                        &:hover {
+                                            transform: translateY(-38px);
                                         }
                                     }
-                                    .icon-traslate--facebook {
-                                        background-color: #1877F2;
-                                    }
-                                    .icon-traslate--twitter {
-                                        background-color: #1D9BF0;
-                                    }
-                                    .icon-traslate--linkedin {
-                                        background-color: #0A66C2;
+                                    &-card {
+                                        transition: all .3s ease;
+                                        display: flex;
+                                        flex-direction: column;
+                                        .fa-brands {
+                                            width: 38px;
+                                            height: 38px;
+                                            text-align: center;
+                                            color: #fff;
+                                            border-radius: 3px;
+                                            &:before {
+                                                font-size: 18px;
+                                                line-height: 40px;
+                                            }
+                                        }
+                                        .icon-traslate--facebook {
+                                            background-color: #1877F2;
+                                        }
+                                        .icon-traslate--twitter {
+                                            background-color: #1D9BF0;
+                                        }
+                                        .icon-traslate--linkedin {
+                                            background-color: #0A66C2;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        .newsletter-subscribe {
-                            .form-group {
-                                margin-bottom: 40px;
-                                text-align: center;
-                            }
-                            .input-text {
-                                width: 60%;
-                                background: @color-primario;
-                                border-top: @color-primario;
-                                border-left: @color-primario;
-                                border-right: @color-primario;
-                                color: @color-claro;
-                                &::placeholder {
-                                    font-family: @fuente2;
-                                    font-size: 10px;
-                                    font-weight: 400;
-                                    letter-spacing: 0.5px;
-                                    text-transform: uppercase;
+                            .newsletter-subscribe {
+                                .form-group {
+                                    margin-bottom: 40px;
+                                    text-align: center;
+                                }
+                                .input-text {
+                                    width: 60%;
+                                    background: @color-primario;
+                                    border-top: @color-primario;
+                                    border-left: @color-primario;
+                                    border-right: @color-primario;
                                     color: @color-claro;
+                                    &::placeholder {
+                                        text-transform: uppercase;
+                                        .config-font ( @fuente2, 10px, 400, normal, 1.42857143, 0.5px, @color-claro );
+                                    }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
                                 }
-                                &:focus {
-                                    box-shadow: none;
+                                .button {
+                                    width: 30%;
+                                    margin-top: -3px;
+                                    margin-left: 5px;
+                                    padding: 0 15px;
+                                    text-transform: uppercase;
+                                    border-radius: 0;
+                                    border: 1px solid @color-claro;
+                                    background: @color-primario;
+                                    .config-font ( @fuente2, 14px, 400, normal, 30px, 0px, @color-claro );
                                 }
-                            }
-                            .button {
-                                width: 30%;
-                                margin-top: -3px;
-                                margin-left: 5px;
-                                padding: 0 15px;
-                                font-family: 'Montserrat',sans-serif;
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 30px;
-                                text-transform: uppercase;
-                                border-radius: 0;
-                                border: 1px solid @color-claro;
-                                color: @color-claro;
-                                background: @color-primario;
                             }
                         }
                     }
-                }
-
-                // Estilos etiquetas ancla de la parte inferior del footer.
-                &-links-searchs {
-                    text-align: center;
-                    padding: 0 30px;
-                    margin-bottom: 50px;
-                    max-width: 740px;
-                    .links-searchs {
-                        position: relative;
+                    // Estilos etiquetas ancla de la parte inferior del footer.
+                    &-links-searchs {
                         text-align: center;
-                        text-transform: uppercase;
-                        padding-top: 5px;
-                        margin-bottom: 30px;
-                        text-decoration: none;
-                        .config-font ( @fuente2, 10px, bold, normal, 12px, 0.5px, @color-texto );
-                    }
-                    .links-searchs--blue {
-                        font-weight: bold;
-                        color: #01CBE1;
-                        &:hover {
-                            color: @color-texto;
+                        padding: 0 30px;
+                        margin-bottom: 50px;
+                        max-width: 740px;
+                        .links-searchs {
+                            position: relative;
+                            text-align: center;
+                            text-transform: uppercase;
+                            padding-top: 5px;
+                            margin-bottom: 30px;
+                            text-decoration: none;
+                            .config-font ( @fuente2, 10px, bold, normal, 12px, 0.5px, @color-texto );
                         }
-                    }
-                    .links-searchs--gray {
-                        font-weight: 400;
-                        color: @color-texto;
-                        &:before {
-                            content: ' | ';
-                            font-size: 14px;
+                        .links-searchs--blue {
+                            font-weight: bold;
+                            color: #01CBE1;
+                            &:hover {
+                                color: @color-texto;
+                            }
+                        }
+                        .links-searchs--gray {
+                            font-weight: 400;
+                            color: @color-texto;
+                            &:before {
+                                content: ' | ';
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
-
             }
         }
     }
 }
 
-}
+//
+//  Mobile
+//  _____________________________________________
 
+@media (min-width: 481px) {
+    footer.page-footer {
+        .footer {
+            &-content {
+                .block {
+                    // Estilos boton ancla del footer.
+                    &-ancla-btn {
+                        padding: 24px 34px;
+                        margin: 0 auto;
+                        font-size: 22px;
+                        line-height: 1;
+                        letter-spacing: 1px;
+                        font-weight: bold;
+                        text-align: center;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
 
 //
 //  Mobile
 //  _____________________________________________
 
 @media (max-width: 991px) {
-
     footer.page-footer {
         .footer {
             &-content {
                 .block {
-
                     // Estilos titulo footer.
                     &-title {
                         text-align: center;
                     }
-
                     // Estilos columnas con toda la informacion del footer.
                     &-columns {
                         flex-direction: column;
@@ -347,7 +294,6 @@ footer.page-footer {
                             }
                         }
                     }
-
                     // Estilos etiquetas ancla de la parte inferior del footer.
                     &-links-searchs {
                         width: 100%;
@@ -356,61 +302,6 @@ footer.page-footer {
             }
         }
     }
-
-}
-
-//
-//  Mobile
-//  _____________________________________________
-
-@media (min-width: 481px) {
-
-footer.page-footer {
-    .footer {
-        &-content {
-            .block {
-                // Estilos boton ancla del footer.
-                &-ancla-btn {
-                    padding: 24px 34px;
-                    margin: 0 auto;
-                    font-size: 22px;
-                    line-height: 1;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                    text-align: center;
-                    transition: all .2s ease-in-out;
-                    &--text {
-
-                    }
-                }
-            }
-        }
-    }
-}
-
-}
-
-
-//
-//  Especial Tablet
-//  _____________________________________________
-
-@media (max-width: 1000px) {
-
-footer.page-footer {
-    .footer {
-        &-content {
-            .block {
-                // Estilos boton ancla del footer.
-                &-ancla-btn {
-                    /*margin: 5px auto;*/
-                }
-
-            }
-        }
-    }
-}
-
 }
 
 //
@@ -418,78 +309,71 @@ footer.page-footer {
 //  _____________________________________________
 
 @media (min-width: 992px)  {
-
-footer.page-footer {
-    overflow-x: hidden;
-    .footer {
-        &-content {
-            padding: 0 15px;
-            .block {
-
-                // Estilos titulo footer.
-                &-title {
-                    &--title {
-                        /*font-size: 58px;*/
-                    }
-                }
-
-                // Estilos columnas con toda la informacion del footer.
-                &-columns {
-                    margin: 0;
-
-                    &__logo {
-                        width: 20.499%;
-                        padding: 0 15px;
-                        &--minilogo {
-                            width: 170px;
-                        }
-                        &--img-card {
-                            width: 170px;
+    footer.page-footer {
+        overflow-x: hidden;
+        .footer {
+            &-content {
+                padding: 0 15px;
+                .block {
+                    // Estilos titulo footer.
+                    &-title {
+                        &--title {
+                            /*font-size: 58px;*/
                         }
                     }
+                    // Estilos columnas con toda la informacion del footer.
+                    &-columns {
+                        margin: 0;
+                        &__logo {
+                            width: 20.499%;
+                            padding: 0 15px;
+                            &--minilogo {
+                                width: 170px;
+                            }
+                            &--img-card {
+                                width: 170px;
+                            }
+                        }
+                        &__services,  &__about {
+                            padding: 0 15px;
+                            margin-top: 60px;
+                            &--ul {
+                                padding-right: 50px;
+                                li {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        &__information {
+                            width: 400px;
+                            padding: 0 15px;
+                            margin-top: 60px;
+                            &-icons {
+                                justify-content: center;
+                            }
+                            &-hq {
+                                text-align: center;
 
-                    &__services,  &__about {
-                        padding: 0 15px;
-                        margin-top: 60px;
-                        &--ul {
-                            padding-right: 50px;
-                            li {
+                            }
+                            &-development {
                                 text-align: center;
                             }
                         }
                     }
-
-                    &__information {
-                        width: 400px;
-                        padding: 0 15px;
-                        margin-top: 60px;
-                        &-icons {
-                            justify-content: center;
-                        }
-                        &-hq {
-                            text-align: center;
-
-                        }
-                        &-development {
-                            text-align: center;
-                        }
+                     // Estilos etiquetas ancla de la parte inferior del footer.
+                    &-links-searchs {
+                        width: 740px;
+                        margin-top: 40px;
                     }
-                }
-
-                 // Estilos etiquetas ancla de la parte inferior del footer.
-                &-links-searchs {
-                    width: 740px;
-                    margin-top: 40px;
                 }
             }
         }
     }
-}
 
 }
 
 //
-//   Especial Deskto
+//   Especial Desktop
 //  _____________________________________________
 
 @media (min-width: 1001px)  {
@@ -543,7 +427,7 @@ footer.page-footer {
 
 
 //
-//   Especial Deskto
+//   Especial Desktop
 //  _____________________________________________
 
 @media (min-width: 1031px)  {
@@ -564,7 +448,7 @@ footer.page-footer {
 }
 
 //
-//   Especial Deskto
+//   Especial Desktop
 //  _____________________________________________
 
 @media (min-width: 1442px)  {
