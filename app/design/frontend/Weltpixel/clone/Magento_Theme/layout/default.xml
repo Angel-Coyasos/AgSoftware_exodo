@@ -30,7 +30,7 @@
         <referenceContainer name="header.container">
 
             <referenceBlock name="header.panel.wrapper" remove="true"/>
-            
+
         </referenceContainer>
         <move element="page.top" destination="header-wrapper"  after="logo"/>
 

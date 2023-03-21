@@ -176,33 +176,42 @@ footer.page-footer {
                         }
                         &-icons {
                             display: flex;
-                            margin-bottom: 5px;
-                            .icon-facebook, .icon-twitter, .icon-linkedin {
-                                display: flex;
-                                flex-direction: column;
-                                margin: 0 5px 5px 5px;
-                                font-size: 43.43px;
-                                text-decoration: none;
-                                .icon-facebook--visible, .icon-twitter--visible, .icon-linkedin--visible {
-                                    color: @color-primario;
-                                    &:before {
-                                        background: @color-claro;
+                            justify-content: space-around;
+                            gap: 10px;
+                            overflow: hidden;
+                            margin-bottom: 8px;
+                            .icons {
+                                &-itiems {
+                                    height: 38px;
+                                    transition: all .3s ease;
+                                    &:hover {
+                                        transform: translateY(-38px);
                                     }
                                 }
-                                .icon-facebook--transition, .icon-twitter--transition, .icon-linkedin--transition {
-                                    display: none;
-                                }
-                                &:hover {
-                                    .icon-facebook--visible {
-                                        color: #1877F2;
-                                     }
-                                     .icon-twitter--visible {
-                                        color: #1D9BF0;
-                                     }
-                                     .icon-linkedin--visible {
-                                        color: #0A66C2;
-                                     }
-
+                                &-card {
+                                    transition: all .3s ease;
+                                    display: flex;
+                                    flex-direction: column;
+                                    .fa-brands {
+                                        width: 38px;
+                                        height: 38px;
+                                        text-align: center;
+                                        color: #fff;
+                                        border-radius: 3px;
+                                        &:before {
+                                            font-size: 18px;
+                                            line-height: 40px;
+                                        }
+                                    }
+                                    .icon-traslate--facebook {
+                                        background-color: #1877F2;
+                                    }
+                                    .icon-traslate--twitter {
+                                        background-color: #1D9BF0;
+                                    }
+                                    .icon-traslate--linkedin {
+                                        background-color: #0A66C2;
+                                    }
                                 }
                             }
                         }
@@ -510,6 +519,9 @@ footer.page-footer {
                             }
                         }
                         &__information {
+                            &-icons {
+                                justify-content: left;
+                            }
                             .newsletter-subscribe {
                                 .form-group {
                                     text-align: left;
