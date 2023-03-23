@@ -1,13 +1,7 @@
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
-
-    body{
-        // background-color: #090090!important;
-    }
-
     body.cms-home {
         .themes-and-extencions {
             display: flex;
@@ -16,7 +10,7 @@
                 &--title {
                     .primary__title {
                         margin: 4% 0 2rem;
-                        text-transform: uppercase; 
+                        text-transform: uppercase;
                         .config-font ( @fuente1, 3rem, 800, normal, 1.2, 0px, @color-oscuro );
                     }
                     .secondary__title {
@@ -32,7 +26,7 @@
                         margin: 0 0 20px;
                         padding: 16px 20px;
                         text-align: left;
-                        text-decoration: none;    
+                        text-decoration: none;
                         background-color: @color-primario;
                         &--title {
                             display: block;
@@ -42,14 +36,15 @@
                         }
                         &--text {
                             display: block;
+                            white-space: nowrap;
                             text-transform: uppercase;
                             .config-font ( @fuente1, 1rem, 400, normal, 1, 1px, @color-titulo );
                         }
                         &:hover {
-                            &--title  {
+                            .button__ancla--title  {
                                 color: @color-primario;
                             }
-                            &--text {
+                            .button__ancla--text {
                                 color: @color-primario;
                             }
                         }
@@ -58,23 +53,22 @@
             }
         }
     }
-
 }
+
 //
 //  Mobile
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
- 
     body.cms-home {
         .themes-and-extencions {
             flex-direction: column;
             text-align: center;
-            &__content {                
+            &__content {
                 &--title {
+                    margin: 0 10px;
                     .primary__title {
                         margin: 4% 0 2rem;
-                        text-transform: uppercase; 
+                        text-transform: uppercase;
                         .config-font ( @fuente1, 3rem, 800, normal, 1.2, 0px, @color-oscuro );
                     }
                     .secondary__title {
@@ -84,15 +78,12 @@
             }
         }
     }
-
 }
 
 //
 //  Deskto
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-  
     body#html-body.cms-home {
         .themes-and-extencions {
             flex-direction: row;
@@ -113,8 +104,8 @@
                     }
                 }
                 &--button {
-                    position: absolute;
-                    left: 0;
+                    position: relative;
+                    text-align: left;
                     width: auto;
                     white-space: nowrap;
                     .button__ancla {
@@ -138,17 +129,12 @@
             }
         }
     }
-
 }
-
 
 //
 //  Destop Big
 //  _____________________________________________
-
-// .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l ) 
-@media (min-width: 840px) { 
-  
+@media (min-width: 840px) {
     body#html-body.cms-home {
         .themes-and-extencions {
             &__content {
@@ -160,17 +146,12 @@
             }
         }
     }
-
 }
-
 
 //
 //  Small Tablet
 //  _____________________________________________
-
-// .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l ) 
-@media (min-width: 480px) { 
-  
+@media (min-width: 481px) {
     body#html-body.cms-home {
         .themes-and-extencions {
             &__content {
@@ -186,17 +167,12 @@
             }
         }
     }
-
 }
 
-
 //
-//  Big Deskto
+//  Big Desktop
 //  _____________________________________________
-
-// .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l ) 
-@media (min-width: 1200px) { 
-  
+@media (min-width: 1200px) {
     body#html-body.cms-home {
         .themes-and-extencions {
             background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/h42.png) no-repeat 53%;
@@ -220,13 +196,16 @@
                     text-align: left;
                     .button__ancla {
                         padding: 18px 30px;
+                        &--title {
+                            font-size: 1.7rem;
+                        }
                     }
                 }
             }
             div.pagebuilder-column:has(.themes-and-extencions__image) {
                 width: 50%;
-                left: 8.33333333%;   
-                z-index: -1;         
+                left: 8.33333333%;
+                z-index: -1;
             }
             &__image {
                 img.pagebuilder-mobile-hidden {
@@ -237,8 +216,44 @@
                     display: none !important;
                 }
             }
-
         }
     }
-
 }
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media (min-width: 1366px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--button {
+                    .button__ancla {
+                        padding: 24px 34px;
+                        &--title {
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media (min-width: 1230px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--title {
+                    .primary__title {
+                        padding: 75px 0 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
