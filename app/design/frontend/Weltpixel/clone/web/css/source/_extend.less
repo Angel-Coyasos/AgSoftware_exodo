@@ -1,7 +1,50 @@
+/*
+    HEADER
+*/
 @import "_header.less";
+
+/*
+    HOME
+*/
 @import "_home.less";
 @import "./home/_themes-and.extencions.less";
+@import "./home/_one-minute-installation.less";
+@import "./home/_google-Analytics-4";
+@import "./home/_bg-overflowauto.less";
+@import "./home/_container-awards.less";
+@import "./home/_overflowhidden.less";
+@import "./home/_build-growth.less";
+@import "./home/_support-documentation.less";
+@import "./home/_quote-2.less";
+@import "./home/_industry-partners.less";
+@import "./home/_customer-development.less";
+@import "./home/_marketing-merchandising.less";
+@import "./home/_agile-development.less";
+@import "./home/_awesome-extencsions.less";
+@import "./home/_customer-support.less";
+@import "./home/_post-list.less";
+@import "./home/_cont-wpx.less";
+@import "./home/_section-wrapper-slider.less";
+@import "./home/_program.less";
+@import "./home/_wlt-textcont.less";
+@import "./home/_content-items.less";
+@import "./home/_section-7-collapse.less";
+@import "./home/_heading-title-awards";
+
+
+
+/*
+    FOOTER
+*/
 @import "_footer.less";
+
+/*
+    ACCOUNT
+*/
+@import "./account/_account-login.less";
+@import "./account/_account-create.less";
+
+
 
 
 //
@@ -13,8 +56,89 @@
 @color-claro: #f9f9f9;
 @color-titulo: #fff;
 @color-texto: #cccccc;
-@fuente1: 'Open Sans','sans-serif';
-@fuente2: 'Montserrat', 'sans-serif';
+@fuente1: 'Open Sans',sans-serif;
+@fuente2: 'Montserrat', sans-serif;
+@fuente-buton: 'Raleway',sans-serif;
+@background-gay: #fafafa;
+
+
+
+
+//
+//  Mixin Configuracion de fuente
+//  _____________________________________________
+
+.config-font ( @family, @size, @weight, @style, @line, @letter, @color ) {
+    font-family: @family;
+    font-size: @size;
+    font-weight: @weight;
+    font-style: @style;
+    line-height: @line;
+    letter-spacing: @letter;
+    color: @color;
+}
+
+
+
+//
+//  Mixins card quote whith before y after de fuente
+//  _____________________________________________
+
+.card-quote ( @margin, @padding ) {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: @margin;
+    padding: @padding;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+}
+
+.card-quote-before ( @width, @height, @top, @right, @bottom, @left, @rotate  ) {
+    content: "";
+    width: @width;
+    height: @height;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    margin: 0 auto;
+    background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/b.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(@rotate);
+}
+
+.card-quote-after ( @top, @right, @bottom, @left, @rotate ) {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    border-bottom: 50px solid @background-gay;
+    border-left: 37px solid transparent;
+    border-right: 0 solid transparent;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+    transform: rotate( @rotate );
+}
+
+
+
+//
+//  Reinciando Stylos con Selector Universal
+//  _____________________________________________
+
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 //
 //  Common
@@ -26,19 +150,25 @@
         // background-color: #090090!important;
     }
 
+
 }
+
+
+
 //
 //  Mobile
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
- 
+
 }
+
+
 
 //
 //  Deskto
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-  
+
 }

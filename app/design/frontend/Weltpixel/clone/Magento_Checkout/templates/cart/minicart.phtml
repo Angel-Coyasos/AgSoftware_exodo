@@ -11,6 +11,7 @@
 <div data-block="minicart" class="minicart-wrapper">
     <a class="action showcart" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
        data-bind="scope: 'minicart_content'">
+        <span class="showcart__mincart"><i class="fa-solid fa-cart-shopping"></i></span>
         <span class="text"><?= $block->escapeHtml(__('My Cart')) ?></span>
         <span class="counter qty empty"
               data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() },
@@ -27,6 +28,7 @@
             <!-- /ko -->
             </span>
         </span>
+    </a>
     <?php if ($block->getIsNeedToDisplaySideBar()):?>
         <div class="block block-minicart"
              data-role="dropdownDialog"
@@ -70,8 +72,8 @@ script;
     }
     </script>
 </div>
-<div class="user">
-    <a href="" class="user__login">
-        <i class="bi bi-person-fill"></i>
-    </a>
-</div>
+
+<!-- <div class="user">
+    <i class="fa-solid fa-user"></i>
+</div> -->
+
