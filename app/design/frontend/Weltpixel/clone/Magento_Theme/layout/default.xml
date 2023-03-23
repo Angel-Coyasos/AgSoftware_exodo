@@ -1,4 +1,3 @@
-
 <!--
 /**
  * Copyright © Magento, Inc. All rights reserved.bin
@@ -28,11 +27,19 @@
         </referenceContainer>
 
         <referenceContainer name="header.container">
+            <container name="header_right" htmlTag="div" htmlClass="header_right" before="-">
+                <block name="minicart" template="Magento_Checkout::cart/minicart.phtml" before="-"/>
+                <block name="user" template="Magento_Theme::user.phtml" before="minicart"/>
 
-            <referenceBlock name="header.panel.wrapper" remove="true"/>
+            </container>
 
-        </referenceContainer>
+            <referenceBlock name="header.panel.wrapper" remove="false"/>        
+</referenceContainer>
+
         <move element="page.top" destination="header-wrapper"  after="logo"/>
+        <move element="header_right" destination="header-wrapper"  after="page.top"/>
+        <move element="top.search" destination="header_right"  before="-"/>
+    
 
     </body>
 </page>
