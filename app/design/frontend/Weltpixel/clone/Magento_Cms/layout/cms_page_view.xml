@@ -127,9 +127,9 @@
                     </arguments>
                 </block>
 
-                <block class="Magento\Cms\Block\Block" name="awesome-extencsions">
+                <block class="Magento\Cms\Block\Block" name="awesome-extensions">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">awesome-extencsions</argument>
+                        <argument name="block_id" xsi:type="string">awesome-extensions</argument>
                     </arguments>
                 </block>
 
