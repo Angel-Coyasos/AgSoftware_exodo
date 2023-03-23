@@ -48,6 +48,7 @@
                 max-width: 92.5%;
                 padding: 1.2%;
                 .block-customer-login {
+                    margin-bottom: 40px;
                     .block-title {
                         strong {
                             text-transform: uppercase;
@@ -58,6 +59,7 @@
                         .form-login {
                             .fieldset {
                                 &:after {
+                                    text-align: center;
                                     padding-top: 30px;
                                 }
                             }
@@ -144,5 +146,119 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body.customer-account-login {
+
+        .columns {
+            .login-container {
+                display: flex;
+                flex-direction: column;
+                .block {
+                    width: 100%;
+                    .control {
+                        width: 100%;
+                    }
+                    .actions-toolbar {
+                        .primary {
+                            width: 100%;
+                            .primary {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .block-content {
+                        .form-login {
+                            .fieldset {
+                                &:after {
+                                    padding-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+//
+//  Deskto Personalizado
+//  _____________________________________________
+
+@media (min-width: 841px) {
+
+    body#html-body.customer-account-login {
+
+        .page-main {
+            max-width: 1200px;
+        }
+        .page-title-wrapper {
+            .page-title {
+                margin-bottom: 0;
+                .base {
+                    font-size: 58px;
+                }
+            }
+        }
+        .columns {
+            .column.main {
+                display: flex;
+            }
+            .social-login-container {
+                width: 32%;
+                padding: 1.2%;
+                margin-bottom: 24px;
+                .social-login--title {
+                    font-size: 1.8rem;
+                }
+                .account-social-login {
+                    max-width: 75%;
+                    padding: 1.2%;
+                }
+            }
+            .login-container {
+                width: 63%;
+                display: block;
+                .block {
+                    .control {
+                        width: 80%;
+                    }
+                }
+                .block-customer-login {
+                    float: left;
+                    width: 48%;
+                }
+                .block-new-customer {
+                    float: right;
+                    width: 48%;
+                }
+                .actions-toolbar {
+                    .primary {
+                        width: auto;
+                        .primary {
+                            width: auto;
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .secondary {
+                        width: auto;
+                    }
+                }
+                .block-content {
+                    .form-login {
+                        .fieldset {
+                            &:after {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
