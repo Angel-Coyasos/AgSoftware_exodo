@@ -15,13 +15,11 @@
                 text-transform: uppercase;
                 .config-font (@fuente1, 3rem, 800, inherit, 1.1, 0px, @color-claro);
             }
-
             &--subtitle {
                 margin: 0 0 50px 0;
                 text-transform: uppercase;
                 .config-font (@fuente1, 3rem, 800, inherit, 1.1, 0px, @color-claro);
             }
-
             &--text {
                 margin-bottom: 10px;
                 .config-font (@fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, @color-claro);
@@ -92,23 +90,37 @@
 //
 //  Desktop
 //  _____________________________________________
+@media  (min-width: 768px) {
+    body#html-body.cms-home {
+        .support-documentation {
+            &__image {
+                position: relative;
+                left: 8.33333333%;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
 @media  (min-width: 992px) {
     body#html-body.cms-home {
         .support-documentation {
             padding: 50px 0;
             .pagebuilder-column-line  {
-                justify-content: center;
+                justify-content: end;
             }
             &__content {
                 width: 41%;
                 position: relative;
-                left: 3%;
-                padding: 0;
+                left: 0;
+                padding: 50px;
             }
             &__image {
-                width: 42%;
+                width: 50%;
                 position: relative;
-                left: 8.33333333%;
+                left: 0;
             }
             &__container-buttons {
                 margin: 50px 0 0;
@@ -128,6 +140,19 @@
 }
 
 //
+//  Desktop
+//  _____________________________________________
+@media  (min-width: 994px) {
+    body#html-body.cms-home {
+        .support-documentation {
+            &__content {
+                padding: 0;
+            }
+        }
+    }
+}
+
+//
 //  Big Desktop
 //  _____________________________________________
 @media  (min-width: 1200px) {
@@ -135,6 +160,51 @@
         .support-documentation {
             .title__the-best {
                 margin-top: 100px;
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media  (min-width: 1231px) {
+    body#html-body.cms-home {
+        .support-documentation {
+            &--title {
+                font-size: 48px;
+                line-height: 0.9;
+            }
+            &--subtitle {
+                font-size: 48px;
+                line-height: 0.9;
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media  (min-width: 1441px) {
+    body#html-body.cms-home {
+        .support-documentation {
+            &--title {
+                font-size: 58px;
+                line-height: 0.9;
+            }
+            &--subtitle {
+                font-size: 58px;
+                line-height: 0.9;
+            }
+            &__image {
+                figure {
+                    a {
+                        .pagebuilder-mobile-hidden {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
