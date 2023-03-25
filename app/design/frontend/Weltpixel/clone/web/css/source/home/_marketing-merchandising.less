@@ -1,15 +1,8 @@
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
-
-    body{
-        // background-color: #090090!important;
-    }
-
     body.cms-home {
-
         .marketing-merchandising {
             padding: 50px 0;
             &__image {
@@ -24,8 +17,9 @@
                         p {
                             position: relative;
                             padding: 10px 0 10px 20px;
+                            margin-bottom: 0;
                             cursor: pointer;
-                            .config-font ( @fuente2, 14px, 700, normal, inherit, 0px, #444 );
+                            .config-font ( @fuente2, 14px, 700, normal, 24px, 0.5px, #444 );
                             &::before {
                                 width: 14px;
                                 position: absolute;
@@ -65,55 +59,39 @@
                 }
             }
         }
-
     }
-
 }
-
 
 //
 //  Small Mobile
 //  _____________________________________________
-
-
 @media  (min-width: 480px) {
-
     body.cms-home {
-
         .marketing-merchandising {
             &__content {
                 &--container {
                     padding: 0 40px;
                     h2 {
-                        font-size: 50px;
+                        /*font-size: 50px;*/
                     }
                 }
             }
         }
-
     }
-
 }
-
 
 //
 //  Mobile
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
- 
-}
 
+}
 
 //
 //  Custom Tablet
 //  _____________________________________________
-
-
 @media  (min-width: 840px) {
-
     body.cms-home {
-
         .marketing-merchandising {
             &__content {
                 &--container {
@@ -123,22 +101,14 @@
                 }
             }
         }
-
     }
-
 }
-
-
-
 
 //
 //  Deskto
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
- 
     body#html-body.cms-home {
-
         .marketing-merchandising {
             padding: 100px 0;
             .pagebuilder-column-line {
@@ -149,24 +119,43 @@
             }
             &__content {
                width: 100%;
+                &--container {
+                    h2 {
+                       font-size: 58px;
+                        white-space: nowrap;
+                    }
+                }
             }
         }
-
     }
-
-
 }
-
-
 
 //
 //  Deskto Custom Big
 //  _____________________________________________
-
-@media  (min-width: 994px) {
- 
+@media  (min-width: 992px) {
     body#html-body.cms-home {
+        .marketing-merchandising {
+            .pagebuilder-column-line {
+                flex-direction: row;
+            }
+            &__image {
+                width: 50%;
+                order: 1;
+            }
+            &__content {
+                width: 50%;
+                order: 2;
+            }
+        }
+    }
+}
 
+//
+//  Deskto Custom Big
+//  _____________________________________________
+@media  (min-width: 994px) {
+    body#html-body.cms-home {
         .marketing-merchandising {
             .pagebuilder-column-line {
                 flex-direction: row;
@@ -178,36 +167,22 @@
             &__content {
                width: 50%;
                order: 1;
-                &--container {
-                    h2 {
-                        width: 110%;
-                    }
-                }
             }
         }
-
     }
-
-
 }
-
-
 
 //
 //  Deskto Custom Big More
 //  _____________________________________________
-
 @media  (min-width: 1200px) {
- 
     body#html-body.cms-home {
-
         .marketing-merchandising {
             padding: 150px 0;
             &__content {
                 &--container {
                     margin-left: 8.3333%;
                     h2 {
-                        width: 112%;
                         margin: 0;
                         margin-bottom: 50px;
                         font-size: 58px;
@@ -215,8 +190,5 @@
                 }
             }
         }
-
     }
-
-
 }
