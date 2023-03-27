@@ -5,18 +5,17 @@
 & when (@media-common = true) {
     #html-body.cms-home {
         .container-video {
+            background-color: @color-titulo;
             width: 83.33333333%;
             padding: 0 15px 80px;
             position: relative;
             left: 8.33333333%;
-            float: left;
+            //float: left;
             &__title{
                 padding: 0 0 80px;
                 text-align: center;
-                font-weight: 800;
-                font-size: 3rem;
-                color: #000;
                 text-transform: uppercase;
+                .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0, @color-oscuro );
             }
             &__feature-box{
                 max-width: 1000px;
@@ -49,7 +48,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: 1230px) {
     #html-body.cms-home {
         .container-video{
             &__title{
@@ -57,5 +56,6 @@
             }
         }
     }
+
 }
 
