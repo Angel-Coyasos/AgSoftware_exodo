@@ -33,13 +33,13 @@
 
             </container>
 
-            <referenceBlock name="header.panel.wrapper" remove="false"/>        
-</referenceContainer>
+            <referenceBlock name="header.panel.wrapper" remove="false"/>
+
+        </referenceContainer>
 
         <move element="page.top" destination="header-wrapper"  after="logo"/>
         <move element="header_right" destination="header-wrapper"  after="page.top"/>
         <move element="top.search" destination="header_right"  before="-"/>
-    
 
     </body>
 </page>
