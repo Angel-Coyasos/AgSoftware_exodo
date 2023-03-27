@@ -1,10 +1,7 @@
 require(['jquery', 'loader'], function($) {
     $(window).on('load', function() {
-        console.log('La página ha cargado completamente.');
-       /* console.log(loader);*/
+       /* console.log('La página ha cargado completamente.');*/
         $('#loader').fadeOut();
-        /*loader.hide('#loader');*/
-       /* $("#loader").loader("hide");*/
-        console.log('El widget Loader se ha ocultado.');
+        /*console.log('El widget Loader se ha ocultado.');*/
     });
 });
