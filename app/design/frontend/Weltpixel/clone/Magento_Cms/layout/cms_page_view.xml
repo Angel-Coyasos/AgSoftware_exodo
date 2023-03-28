@@ -55,6 +55,12 @@
 
                 <block name="slider.items" template="AgSoftware_SlickSlider::slider.phtml"/>
 
+                <block class="Magento\Cms\Block\Block" name="quote-2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">quote-2</argument>
+                    </arguments>
+                </block>
+
                 <block class="Magento\Cms\Block\Block" name="no-padding">
                     <arguments>
                         <argument name="block_id" xsi:type="string">no-padding</argument>
@@ -121,9 +127,15 @@
                     </arguments>
                 </block>
 
-                <block class="Magento\Cms\Block\Block" name="awesome-extencsions">
+                <block class="Magento\Cms\Block\Block" name="awesome-extensions">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">awesome-extencsions</argument>
+                        <argument name="block_id" xsi:type="string">awesome-extensions</argument>
+                    </arguments>
+                </block>
+
+                  <block class="Magento\Cms\Block\Block" name="heading-title-awards">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">heading-title-awards</argument>
                     </arguments>
                 </block>
 

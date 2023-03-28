@@ -66,7 +66,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
- 
+
 }
 
 
@@ -75,7 +75,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-  
+
     body.cms-home {
 
         .industry-partners {
@@ -96,11 +96,27 @@
             &--subtitle {
                 width: 106%;
                 font-size: 5.8rem;
-                
+
             }
         }
     }
 
+}
+
+//
+//  Small Desktop
+//  _____________________________________________
+
+@media  (min-width: 840px) {
+    body#html-body.cms-home {
+        div.industry-partners {
+            &__content {
+                .industry-partners--title {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
 }
 
 
@@ -109,9 +125,7 @@
 //  _____________________________________________
 
 @media  (min-width: 993px) {
-  
     body#html-body.cms-home {
-
         div.industry-partners {
             &__content {
                 width: 41%;
@@ -123,12 +137,11 @@
                 position: relative;
                 left: 16.66666667%;
             }
-            &--title {
-                padding: 100px 0 0;
+            .industry-partners--title {
+                padding: 0;
             }
         }
     }
-
 }
 
 
@@ -138,17 +151,16 @@
 //  _____________________________________________
 
 @media  (min-width: 1200px) {
-  
-    body.cms-home {
-        .industry-partners {
+    body#html-body.cms-home {
+        div.industry-partners {
             padding: 150px 0;
-            &--title {
-                margin-top: 120px;
-                padding: 0
+            &__content {
+                .industry-partners--title {
+                    margin-top: 120px;
+                }
             }
         }
     }
-
 }
 
 
@@ -157,22 +169,26 @@
 //  _____________________________________________
 
 @media  (min-width: 1366px) {
-  
-    body.cms-home {
-        .industry-partners {
+    body#html-body.cms-home {
+        div.industry-partners {
             &__image {
                 img {
                     float: left;
                 }
             }
-            &--title {
+            .industry-partners--title {
                 margin-top: 150px;
                 padding: 0
+            }
+            &__content {
+                .industry-partners--title {
+                    margin-top: 150px;
+                    padding: 0
+                }
             }
             &--text {
                 max-width: 570px;
             }
         }
     }
-
 }

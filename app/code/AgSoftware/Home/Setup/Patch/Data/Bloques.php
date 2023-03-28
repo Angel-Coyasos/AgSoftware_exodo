@@ -77,7 +77,7 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/overflowhidden.html'),
             "is_active" => "1"
         ];
-        $data[ 'awesome-extencsions' ] = [
+        $data[ 'build-growth' ] = [
             "title" => "build growth",
             "identifier" => "build-growth",
             "store_id" => "All Store Views",
@@ -88,7 +88,7 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "title" => "support documentation",
             "identifier" => "support-documentation",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/supportDocumentation'),
+            "content" => file_get_contents(__DIR__.'/html/supportDocumentation.html'),
             "is_active" => "1"
         ];
         /* Reservado para BLOQU slider */
@@ -183,14 +183,20 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
             "content" => file_get_contents(__DIR__.'/html/containerHeadingWlt.html'),
             "is_active" => "1"
         ];
-        $data[ 'awesome-extencsions' ] = [
-            "title" => "awesome extencsions",
-            "identifier" => "awesome-extencsions",
+        $data[ 'awesome-extensions' ] = [
+            "title" => "awesome extensions",
+            "identifier" => "awesome-extensions",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/awesomeExtencions.html'),
+            "content" => file_get_contents(__DIR__.'/html/awesomeExtensions.html'),
             "is_active" => "1"
         ];
-        /* REVERSERVADO PARA BLOQEU DEL BLOG POST */
+        $data[ 'heading-title-awards' ] = [
+            "title" => "heading title awards",
+            "identifier" => "heading-title-awards",
+            "store_id" => "All Store Views",
+            "content" => file_get_contents(__DIR__.'/html/heading-title-awards.html'),
+            "is_active" => "1"
+        ];
         $data[ 'post-list' ] = [
             "title" => "post list",
             "identifier" => "post-list",
