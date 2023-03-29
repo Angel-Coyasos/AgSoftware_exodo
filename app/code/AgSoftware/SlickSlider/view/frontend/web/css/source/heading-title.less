@@ -6,12 +6,22 @@
     .heading-title {
         text-align: center;
         &__title {
-            margin: 0 0 30px;
+            margin: 0 0 20px;
+            padding-bottom: 30px;
             color: @slick-dot-color;
-            font-size: 58px;
+            //font-size: 58px;
             font-weight: 900;
             line-height: 0.9;
             font-family: 'Open Sans',sans-serif;
+            
+        }
+        p {
+            font-family: 'Montserrat',sans-serif;
+        }
+        .subtitle-slide-2 {
+            padding: 0 15px;
+            padding-bottom: 30px;
+            margin-top: 0;
         }
     }
 
@@ -37,7 +47,6 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .slider-seption {
-        padding: 50px 0;
         .heading-title {
             &__title {
                 padding-bottom: 30px;
@@ -52,11 +61,11 @@
             .subtitle-slide-1 {
                 padding: 0 15px;
             }
-            .subtitle-slide-2 {
-                padding: 0 15px;
-                padding-bottom: 30px;
-                margin-top: 0;
-            }
+            // .subtitle-slide-2 {
+            //     padding: 0 15px;
+            //     padding-bottom: 30px;
+            //     margin-top: 0;
+            // }
         }
     }
 
@@ -80,9 +89,15 @@
 //  _____________________________________________
 
 
-@media  (min-width: 994px) {
+@media  (min-width: 768px) {
 
-
+    .slider-seption {
+        .heading-title {
+            &__title {
+                font-size: 58px;
+            }
+        }
+    }
 
 }
 
