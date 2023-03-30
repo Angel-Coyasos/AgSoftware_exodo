@@ -6,11 +6,13 @@
     .cms-home.cms-index-index {
         .partner-program {
             padding: 80px 15px 0;
+            background: #fafafa;
             .partner-title-1 {
                 .config-font ( @fuente1, 30px, 900, normal, .9, 0, @color-oscuro);
                  padding: 50px 15px 0 15px;
                  margin: 50px 0 0;
                  text-align: center;
+                 text-transform: uppercase;
             }
             .margin {
                 margin: 0;
@@ -18,12 +20,13 @@
             }
             .affiliate-cont {
                 margin: 50px 0 80px 0;
+                font-family:  @fuente2;
+                color: #303030;
                 box-shadow: e("0px 0px 97px -17px #b0b0b0");
                 .text-center {
                     text-align: center;
                     .logo-welt-partner {
                         padding: 50px 0;
-
                     }
                 }
                 .partner-title {
@@ -31,6 +34,7 @@
                     text-align: center;
                     padding: 0 0 25px;
                     margin: 0;
+                    text-transform: uppercase;
                 }
                 .prg-wok {
                     padding-top: 50px;
@@ -47,15 +51,16 @@
                 .btn-partner {
                     padding: 0 0 50px 0;
                     .button-now {
-                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-primario);
+                        display: inline-block;
                         padding: 10px 15px;
+                        margin: 0;
+                        border-radius: inherit;
                         background-color: @color-titulo;
                         border: @color-primario 1px solid;
                         cursor: pointer;
-                        display: inline-block;
-                        margin: 0;
-                        border-radius: inherit;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-primario);
                         vertical-align: middle;
+                        text-transform: uppercase;
                         &:hover {
                             color: @color-titulo;
                             background-color: #073756;
@@ -86,7 +91,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: 769px)  and (max-width: 1200px) {
     #html-body.cms-home {
         .partner-program {
             .partner-title-1 {
@@ -107,15 +112,21 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l)  {
+@media (min-width: 1200px)  {
     #html-body.cms-home {
         .partner-program {
+            .partner-title-1 {
+                font-size: 58px;
+            }
+            .margin {
+                margin: 0 0 150px;
+            }
             width: 83.33333333%;
             float: left;
             position: relative;
             left: 8.33333333%;
             .affiliate-cont {
-                margin-bottom: 150px;
+                margin: 0 auto 150px;
                 width: 55%;
             }
         }
