@@ -4,10 +4,11 @@
 
 & when (@media-common = true) {
     .heading-title-awards {
+        margin-top: 50px;
         padding: 0 15px;
         text-align: center;
         &__title {
-            margin-bottom: 50px;
+            margin: 0 0 50px;
             .config-font ( @fuente1, 30px, 900, initial, 0.9, 0, @color-oscuro );
             text-transform: uppercase;
         }
@@ -17,37 +18,27 @@
         }
     }
 }
-//
-//  Mobile
-//  _____________________________________________
 
-.media-width(@extremum, @break)
-    when
-    (@extremum = "max")
-    and
-    (@break = @screen__m) {
-    .cms-home.cms-index-index {
-    }
-}
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media  (min-width: 768px)  {
     .heading-title-awards {
         padding: 0 40px;
         &__title {
-            font-size: 50px;
+            font-size: 58px;
         }
        
     }
 }
 
-.media-width(@extremum, @break)
-    when
-    (@extremum = "min")
-    and
-    (@break = @screen__l) {
-    #html-body.cms-home {
+@media  (min-width: 769px)  {
+    .heading-title-awards {
+        margin-top: 0; 
     }
 }
+
+
+
+
