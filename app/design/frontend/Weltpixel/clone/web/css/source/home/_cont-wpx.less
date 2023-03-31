@@ -81,7 +81,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media  (min-width: 769px) and  (max-width: 1200px) {
     #html-body.cms-home {
         .cont-wpx {
             display: flex;
@@ -119,18 +119,30 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+@media  (min-width: 1200px){
     #html-body.cms-home {
         .cont-wpx {
+            &__content-description {
+                margin: 0 15px;
+                height: auto;
+            }
+            .margin-top {
+                margin: 0 15px;
+            }
 
             .pagebuilder-column-line {
                 display: flex;
             }
-
-            .space-content {
-                margin: 0;            
-            }
         }
     }
+}
+
+@media (min-width: 1440px) {
+    #html-body.cms-home {
+        .cont-wpx {
+            width: 83.33333333%;
+            margin: 0 auto;
+        }
+    } 
 }
 
