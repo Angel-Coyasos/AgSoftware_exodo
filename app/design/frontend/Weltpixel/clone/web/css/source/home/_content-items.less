@@ -17,14 +17,18 @@
                 .heading-title-awards {
                     margin: 0;
                     .config-font ( @fuente1, 30px, 900, normal, .9, 0, @color-oscuro);
+                    text-align: left;
+                    padding: 0;
                 }
                 .margin-title {
                     margin: 0 0 50px;
                     white-space: nowrap;
                 }
                 .aws-descr {
+                    font-family: @fuente2;
+                    margin-bottom: 30px;
                     p {
-                        margin-bottom: 30px;
+                        margin: 0;
                     }
                 }
             }
@@ -36,6 +40,9 @@
             }
             .order-1 {
                 order: 1;
+                img {
+                    float: right;
+                }
             }
         }
         
@@ -52,7 +59,7 @@
 //  Desktop
 //  _____________________________________________
 
-@media  (min-width: 768px) and (max-width: 1000px)  {
+@media  (min-width: 768px) and (max-width: 901px)  {
     #html-body.cms-home.cms-index-index   {
         .overflowhidden-items {
             padding-bottom: 100px;
@@ -73,7 +80,7 @@
     }
 }
 
-@media  (min-width: 1000px) and (max-width: 1400px)  {
+@media  (min-width: 901px)  {
      #html-body.cms-home.cms-index-index  {
         .overflowhidden-items {
             .pagebuilder-column-line[data-pb-style=A49WN7F]  {
@@ -82,10 +89,10 @@
             &__nopadding{
                 width: 50%;
                 h2.heading-title-awards {
-                    font-size: 58px;
+                    font-size: 50px;
                 }
                 .nopadding-top-mob-1200 {
-                    padding-top: 80px;
+                    margin-top: 50px;
                 }
                 .aws-descr {
                     max-width: 570px;
@@ -96,7 +103,6 @@
             }
             .order-2 {
                 order: 1;
-                margin-left: 4.2%;
             }
             .order-1 {
                 order: 2;
@@ -105,14 +111,22 @@
     }
 }
 
-@media  (min-width: 1200px) and (max-width: 1400px)  {
+@media  (min-width: 1200px) {
     #html-body.cms-home.cms-index-index  {
        .overflowhidden-items {
+            padding: 150px 0;
            &__nopadding{
+            h2.heading-title-awards {
+                font-size: 58px;
+            }
                .nopadding-top-mob-1200 {
                    padding-top: 150px;
+                   margin: 0;
                }
            }
+           .order-2 {
+            margin-left: 4.3333%;
+        }
        }
    }
 }

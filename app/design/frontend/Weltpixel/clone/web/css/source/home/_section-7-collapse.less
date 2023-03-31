@@ -10,7 +10,7 @@
             background: #fafafa;
             &__text-content {
                 .nopadding-collapsible {
-                    padding: 0 40px;
+                    padding: 0 15px;
                     &__title {
                         margin: 0 0 50px;
                         .config-font
@@ -67,6 +67,7 @@
                         }
                         .active-content {
                             padding: 0 0 15px 20px;
+                            font-family: @fuente2;
                             .acc-b-top {
                                 margin-top: 30px;
                             }
@@ -100,29 +101,40 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break)
-    when
-    (@extremum = "max")
-    and
-    (@break = @screen__m) {
-    
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+            padding: 50px 0;
+        }
+    }
 }
 //
 //  Desktop
 //  _____________________________________________
 
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    #html-body [data-pb-style=NFJQO8U], [data-pb-style=FN14H7E] {
+        flex-direction: column; 
+    }
     #html-body.cms-home.cms-index-index {
         .section-7-collapse {
-            .pagebuilder-column-line[data-pb-style="TEEGT38"] {
-                flex-direction: column;
-            }
+           
             &__img {
                 width: 100%;
             }
             &__text-content {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+            &__text-content {
                 .nopadding-collapsible {
+                    padding: 0 40px;
                     &__title {
                         font-size: 58px;
                     }
@@ -132,16 +144,11 @@
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 768px)  and (max-width: 1200px){
     #html-body.cms-home.cms-index-index {
         .section-7-collapse {
-            &__text-content {
-                .nopadding-collapsible {
-                    &__title {
-                        font-size: 58px;
-                    }
-                }
-            }
+            padding: 100px 0;
         }
     }
 }
+
