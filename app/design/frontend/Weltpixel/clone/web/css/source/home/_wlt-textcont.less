@@ -5,9 +5,8 @@
 & when (@media-common = true) {
     .cms-home.cms-index-index {
         .last-welt-container {
-            padding: 0 15px 50px;
-            margin-top: 50px;
-
+            background: #fafafa;
+            padding: 80px 15px 80px;
             .container-heading-wlt {
                 width: 100%;
                 max-width: 800px;
@@ -21,7 +20,7 @@
                 }
                 &::after {
                     margin: 0 auto;
-                    .card-quote-after ( initial, 80px, -50px, auto, 180deg );
+                    .card-quote-after ( initial, 0, -50px, 140px, 180deg );
                 }
                 &__title {
                     .config-font ( @fuente1, 2.4rem, 800, inherit, 1.1, 0, #303030 );
@@ -51,42 +50,58 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
-   .cms-home.cms-index-index  {
-        
-    }
-}
+@media (min-width: 375px) and  (max-width: 480px) {
+    #html-body.cms-home.cms-index-index  {
+        .last-welt-container {
+            .container-heading-wlt {
+                &::after {
+                margin: 0 auto;
+                .card-quote-after ( initial, 0, -50px, 0, 180deg );
+                }
+            }
+        }
+         
+     }
+ }
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media (min-width: 768px)  {
     .cms-home.cms-index-index {
         .last-welt-container {
-            padding: 100px 15px;
-
+            padding: 185px 15px;
             .container-heading-wlt {
                 margin: 0 auto;
-                padding: 70px;
+                padding: 50px 15px 0;
                 &::before {
-                    .card-quote-before ( 94px, 68px, initial, auto, -36px, 45px, 180deg  );
+                    .card-quote-before ( 94px, 68px, initial, 45px, -36px, auto, 180deg  );
                 }
                 &::after {
-                    .card-quote-after ( -50px, 140px, initial, auto, 0deg );
-                    border-left: 0 solid transparent;
-                    border-right: 38px solid transparent
-                    
+                    .card-quote-after ( -50px, 0, initial, 140px, 0deg );
+                    border-bottom:50px solid #fafafa;
+                    border-left: 38px solid transparent;
+                    border-right: 0 solid transparent;
                 }
             }
         }
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l)  {
-    #html-body.cms-home {
-       
+@media (min-width: 769px)  {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            .container-heading-wlt {
+                 padding: 70px;
+                &::after {
+                    .card-quote-after ( -50px, auto, initial, 140px, 0deg );
+                    border-bottom:50px solid #fafafa;
+                    border-left: 38px solid transparent;
+                    border-right: 0 solid transparent;
+                }
+            }
         }
-      
-
     }
+}
+
 
