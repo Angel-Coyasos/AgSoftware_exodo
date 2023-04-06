@@ -41,6 +41,9 @@
                             font-weight: 700;
                         }
                     }
+                    &:active {
+                        opacity: 0.8;
+                    }
                 }
                 [aria-expanded="false"] {
                     .title-buttons--close-expand {
@@ -80,15 +83,6 @@
             }
         }
     }
-}
-
-
-
-//
-//  Mobile
-//  _____________________________________________
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
 }
 
 //
@@ -143,7 +137,7 @@
 //  _____________________________________________
 @media  (min-width: 1200px) {
 
-    body.cms-ome {
+    body.cms-home {
         .customer-development {
             &__content {
                 [data-role="title"] {
@@ -156,4 +150,5 @@
             }
         }
     }
+
 }
