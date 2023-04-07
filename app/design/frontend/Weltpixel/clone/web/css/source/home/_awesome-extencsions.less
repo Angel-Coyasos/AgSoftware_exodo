@@ -153,6 +153,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     body#html-body.cms-home {
         .awesome-extensions {
+            padding-top: 100px;
             &__wrapper {
                 .pagebuilder-column-line {
                     padding: 0 40px;
@@ -247,6 +248,8 @@
             max-width: 100%;
         }
         .awesome-extensions {
+            padding-top: 0;
+            margin: 150px 0;
             &__sections {
                 padding: 0 150px;
             }
@@ -258,7 +261,7 @@
             }
             .quote-4 {
                 .pagebuilder-column-line {
-                    padding: 150px 15px;
+                    padding: 150px 0 100px 0;
                 }
             }
             &__section-magento2 {
@@ -268,6 +271,10 @@
                     }
                     &__sections-image {
                         text-align: left;
+                    }
+                    &--span {
+                        margin-top: 0;
+                        padding-top: 150px;
                     }
                 }
             }
