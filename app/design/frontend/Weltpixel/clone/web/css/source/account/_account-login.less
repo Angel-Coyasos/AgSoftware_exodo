@@ -4,52 +4,6 @@
 
 & when (@media-common = true) {
 
-    body {
-        .social-login-container {
-            .account-social-login {
-                .social-btn {
-                    .btn-social {
-                        height: 34px;
-                        cursor: pointer;
-                        outline: 0;
-                        margin: 0 auto;
-                        letter-spacing: 0.5px;
-                        transition: all .2s ease;
-                        border-radius: 2px;
-                        font-family: inherit;
-                        box-shadow: 0 0 5px #999;
-                    }
-                    .btn-facebook {
-                        .fa-facebook  {
-                            display: none;
-                            border-right: 1px solid #fff;
-                        }
-                        .fa-facebook-f {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            bottom: 0;
-                            width: 32px;
-                            line-height: 34px;
-                            text-align: center;
-                            border-right: 1px solid #fff;
-                        }
-                    }
-                    .btn-google {
-                        background-color: @color-claro;
-                        color: @color-oscuro;
-                        .fa-google {
-                            border-right: 1px solid #e7e7e7;
-                        }
-                        .fa-facebook-f {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     body.customer-account-login {
         .page-main {
             padding-top: 20px;
@@ -83,6 +37,11 @@
                 }
                 .account-social-login {
                     margin-bottom: 0;
+                    .actions-toolbar {
+                        width: 100%;
+                        margin-top: 0;
+                        margin-bottom: 7px;
+                    }
                 }
             }
             .login-container {
