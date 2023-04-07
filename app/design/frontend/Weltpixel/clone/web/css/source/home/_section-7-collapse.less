@@ -17,6 +17,7 @@
                             ( @fuente1, 30px, 900, normal, 0.9, 0, @color-oscuro);
                     }
                     &__container {
+                        letter-spacing: 0.5px;
                         .active-title {
                             .acctitle {
                                 .config-font
@@ -61,8 +62,8 @@
                                 }
                             }
                             .border-none {
-                                border-top: none;
-                                border-bottom: 1px dotted #ddd;
+                                border: none;
+                               // border-bottom: 1px dotted #ddd;
                             }
                         }
                         .active-content {
@@ -70,13 +71,15 @@
                             font-family: @fuente2;
                             .acc-b-top {
                                 margin-top: 30px;
+                                margin-bottom: 0;
                             }
                             .acc-b-bottom {
                                 margin-bottom: 30px;
                             }
                         }
                     }
-                    .nopadding-collapsible__container[aria-expanded="true"] {
+                }
+                .nopadding-collapsible__container[aria-expanded="true"] {
                         .icon-ok-circle {
                             &::before {
                                 content: "\F26B";
@@ -92,7 +95,6 @@
                             }
                         }
                     }
-                }
             }
         }
     }
