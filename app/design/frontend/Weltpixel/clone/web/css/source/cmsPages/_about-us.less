@@ -1,0 +1,249 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body#html-body.cms-about-us {
+
+        .page-main-full-width {
+            padding-top: 20px;
+            margin-top: 104px;
+            .column.main {
+                padding-bottom: 0;
+            }
+        }
+
+        /* ESTILOS GENERALES PARA LA PAGINA */
+        .about-us {
+
+            &__title, &__review {
+                width: 200px;
+                padding: 20px 0;
+                margin-bottom: 20px;
+                .config-font( @fuente1, 2rem, 900, inherit, 1.2, 0px, @color-oscuro );
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 2px;
+                    margin: 32px 0 24px;
+                    background-color: #073756;
+                }
+            }
+
+            &__review {
+                font-size: 42px;
+                line-height: 0.9;
+            }
+
+            &__text, &__testi-meta {
+                padding-right: 10%;
+                .config-font( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+            }
+
+            &__wrapper {
+                padding: 0 15px;
+            }
+
+            &__image {
+                padding: 0 15px;
+            }
+
+        }
+
+        /* ESTILOS ESPECIFICOS POR MODIFICADORES */
+        .bg-black {
+            background: @color-oscuro;
+            .about-us__review {
+                color: @color-claro;
+            }
+            .about-us__text {
+                color: @color-claro;
+            }
+        }
+
+        .about-us__text--blue {
+            color: #073756;
+            margin: 5px 0px 0px 0px;
+            text-transform: uppercase;
+            font-size: 1em;
+            line-height: 1.3125;
+            font-weight: 700;
+        }
+
+        .about-us__get-touch-btn--blue {
+            color: @color-claro;
+            background: @color-primario;
+            &:hover {
+                color: @color-primario;
+                background: @color-claro;
+            }
+        }
+
+        .about-us__get-touch-btn--white {
+            color: @color-primario;
+            background: @color-claro;
+            &:hover {
+                color: @color-claro;
+                background: @color-primario;
+            }
+        }
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .about {
+            padding: 80px 0 40px 15px;
+            &__image {
+                padding-left: 15px;
+            }
+        }
+
+        .our-mission {
+            padding: 80px 0 40px 15px;
+            &__review {
+                padding: 20px 0;
+            }
+            &__text {
+                font-size: 21px;
+                font-style: italic;
+                font-weight: 900;
+                letter-spacing: 1.5px;
+            }
+
+            &__image {
+                margin-top: 30px;
+            }
+        }
+
+        .meet-team {
+            padding: 80px 0 40px 0;
+            &__wrapper {
+                padding-left: 0;
+            }
+            &__review {
+                width: 100%;
+                /*padding: 0 20px;*/
+                text-align: center;
+                &:after {
+                    margin: 32px auto;
+                }
+            }
+            &__text {
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
+        .location {
+            padding: 80px 15px 40px;
+            &__review {
+                width: 100%;
+                padding: 75px 0 35px 0;
+                &:after {
+                    display: none;
+                }
+            }
+            &__title {
+                width: 100%;
+                padding: 0;
+                margin: 20px 0 10px 0;
+                text-transform: uppercase;
+                word-wrap: initial;
+                .config-font( @fuente2, 2.4rem, 400, normal, 1.1, 0px, @color-oscuro );
+                &:after {
+                    display: none;
+                }
+            }
+            &__section {
+                display: flex;
+                padding: 0 15px;
+            }
+            &__image {
+                width: 25%;
+            }
+            &__wrapper {
+                width: 75%;
+            }
+        }
+
+        .get-touch {
+            padding: 80px 0 40px 15px;
+            &__text {
+                padding: 0;
+                white-space: nowrap;
+            }
+            &__review {
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+                margin: 50px 20px 0;
+                padding: 16px;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid @color-primario;
+            }
+            &__image {
+                padding-right: 0;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    /*body#html-body.cms-privacy-policy {
+        .page-main-full-width {
+            padding-top: 0;
+        }
+        .privacy-policy {
+            &__title {
+                font-size: 58px;
+                margin-bottom: 40px;
+            }
+        }
+    }*/
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 1231px) {
+
+    /*body#html-body.cms-privacy-policy {
+        .privacy-policy{
+            &__title {
+                padding: 10px 0;
+                font-weight: 900;
+                line-height: 0.9;
+                color: @color-oscuro;
+            }
+        }
+    }*/
+
+}
