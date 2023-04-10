@@ -87,6 +87,8 @@
         .cont-wpx {
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: 0;
+            padding: 0 0 100px;
             .pagebuilder-column-line {
                 width: 100%;
                 padding: 0 15px;
@@ -147,3 +149,12 @@
     } 
 }
 
+@media (min-width: 1560px) {
+    #html-body.cms-home {
+        div.cont-wpx {
+            &__content-description {
+                height: 480px;
+            }
+        }
+    } 
+}
