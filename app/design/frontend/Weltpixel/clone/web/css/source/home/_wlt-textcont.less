@@ -15,6 +15,7 @@
                 text-align: center;
                 padding: 70px 25px;
                 position: relative;
+                letter-spacing: 0.5;
                 &::before {
                     .card-quote-before ( 60px, 60px, -36px, 0, initial, 0, 180deg  );
                 }
@@ -50,7 +51,7 @@
 //  Mobile
 //  _____________________________________________
 
-@media (min-width: 375px) and  (max-width: 480px) {
+@media (min-width: 320px) and  (max-width: 480px) {
     #html-body.cms-home.cms-index-index  {
         .last-welt-container {
             .container-heading-wlt {
@@ -63,6 +64,8 @@
          
      }
  }
+
+ 
 //
 //  Desktop
 //  _____________________________________________
@@ -108,6 +111,7 @@
 @media (min-width: 1200px)  {
     .cms-home.cms-index-index {
         .last-welt-container {
+            padding: 150px 0 0;
             .container-heading-wlt {
                  margin-bottom: 150px;
             }
