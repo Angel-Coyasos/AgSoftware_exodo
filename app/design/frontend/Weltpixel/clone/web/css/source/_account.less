@@ -46,6 +46,42 @@
                 }
             }
         }
+        .login-container, .form-create-account {
+            .actions-toolbar {
+                .primary {
+                    .primary {
+                        text-transform: uppercase;
+                        transition-duration: .3s;
+                        transition-property: background-color;
+                        background-color: @color-primario;
+                        border: 1px solid @color-primario;
+                        border-radius: 0;
+                        .config-font ( @fuente2, 12px, 400, normal, 3rem, 0, @color-titulo );
+                        span {
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            background-color: @color-claro;
+                            border: 1px solid @color-primario;
+                            color: @color-primario;
+                        }
+                    }
+                    .create {
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .secondary {
+                    width: 100%;
+                    margin: 0;
+                    a {
+                        .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0, #444 );
+                    }
+                }
+            }
+        }
+      
     }
 }
 
