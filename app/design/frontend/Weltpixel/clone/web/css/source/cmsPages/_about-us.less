@@ -1,7 +1,6 @@
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
 
     body#html-body.cms-about-us {
@@ -37,7 +36,7 @@
             }
 
             &__review {
-                font-size: 54px;
+                font-size: 58px;
                 line-height: 0.9;
             }
 
@@ -262,6 +261,56 @@
             }
         }
 
+        .living-space {
+
+            .about-us__review {
+                width: 100%;
+                padding: 100px 0 25px 0;
+                margin: 0 0 20px;
+                &:after {
+                    display: none;
+                }
+            }
+
+            .slider-seption {
+                padding: 0;
+                margin-bottom: -6px;
+            }
+
+            .slider {
+                width: 100%;
+            }
+
+            .slick-slide {
+                margin: 0;
+            }
+
+            .slick-prev {
+                left: 15px;
+            }
+
+            .slick-next {
+                right: 15px;
+            }
+
+            .slick-arrow {
+                &:before {
+                    font-size: 25px;
+                }
+                &:hover {
+                    background: rgba(252, 252, 252, 0.7);
+                }
+                &:hover:before {
+                    color: #555;
+                }
+            }
+
+            .slick-dots {
+                display: none!important;
+            }
+
+        }
+
         .location {
             padding: 80px 15px 40px;
             background: #ffffff;
@@ -367,7 +416,6 @@
 
 }
 
-
 //
 //  Mobile Personalizado
 //  _____________________________________________
@@ -387,17 +435,8 @@
 }
 
 //
-//  Mobile
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
-}
-
-//
 //  Deskto
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
     body#html-body.cms-about-us {
@@ -455,6 +494,9 @@
 
 }
 
+//
+//  Destop Personalizado
+//  _____________________________________________
 @media  (min-width: 992px) {
 
     body#html-body.cms-about-us {
