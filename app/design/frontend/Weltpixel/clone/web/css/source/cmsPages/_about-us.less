@@ -17,6 +17,10 @@
         /* ESTILOS GENERALES PARA LA PAGINA */
         .about-us {
 
+            &__container {
+                background: #fafafa;
+            }
+
             &__title, &__review {
                 width: 200px;
                 padding: 20px 0;
@@ -33,7 +37,7 @@
             }
 
             &__review {
-                font-size: 42px;
+                font-size: 54px;
                 line-height: 0.9;
             }
 
@@ -60,6 +64,9 @@
             }
             .about-us__text {
                 color: @color-claro;
+            }
+            .about-us__image {
+                text-align: right;
             }
         }
 
@@ -97,7 +104,11 @@
         /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
         .about {
             padding: 80px 0 40px 15px;
+            &__testi-meta {
+                text-align: right;
+            }
             &__image {
+                padding-right: 0;
                 padding-left: 15px;
             }
         }
@@ -106,6 +117,7 @@
             padding: 80px 0 40px 15px;
             &__review {
                 padding: 20px 0;
+                word-wrap: initial;
             }
             &__text {
                 font-size: 21px;
@@ -116,6 +128,9 @@
 
             &__image {
                 margin-top: 30px;
+                img {
+                    margin-right: 15%;
+                }
             }
         }
 
@@ -140,9 +155,12 @@
 
         .location {
             padding: 80px 15px 40px;
+            background: #ffffff;
             &__review {
                 width: 100%;
                 padding: 75px 0 35px 0;
+                text-transform: uppercase;
+                text-align: center;
                 &:after {
                     display: none;
                 }
@@ -180,8 +198,8 @@
             }
             a {
                 display: inline-block;
-                margin: 50px 20px 0 0;
-                padding: 16px;
+                margin: 50px 70px 0 0;
+                padding: 10px 24px;
                 font-size: 14px;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -191,6 +209,61 @@
             }
             &__image {
                 padding-right: 0;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (max-width: 468px) {
+
+    body#html-body.cms-about-us {
+
+        /* ESTILOS GENERALES PARA LA PAGINA */
+        .about-us {
+
+            &__review {
+                font-size: 42px;
+            }
+
+        }
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .our-mission {
+            &__image {
+                img {
+                    margin-right: 0;
+                }
+
+            }
+        }
+
+        .get-touch {
+            a {
+                padding: 16px;
+            }
+        }
+
+    }
+
+}
+
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (max-width: 730px) {
+
+    body#html-body.cms-about-us {
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .get-touch {
+            a {
+                margin-right: 20px;
             }
         }
 
@@ -212,6 +285,36 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
+    body#html-body.cms-about-us {
+
+        .about {
+            padding-bottom: 80px;
+        }
+
+        .our-mission {
+            padding-bottom: 80px;
+        }
+
+        .meet-team {
+            padding-bottom: 80px;
+        }
+
+        .location {
+            padding-bottom: 80px;
+            &__section {
+                width: 50%;
+                &--hq {
+                    float: left;
+                }
+            }
+        }
+
+        .get-touch {
+            padding-bottom: 80px;
+        }
+
+    }
+
 }
 
 //
@@ -219,34 +322,85 @@
 //  _____________________________________________
 @media  (min-width: 841px) {
 
-    /*body#html-body.cms-privacy-policy {
-        .page-main-full-width {
-            padding-top: 0;
-        }
-        .privacy-policy {
+    body#html-body.cms-about-us {
+
+        .about {
             &__title {
                 font-size: 58px;
-                margin-bottom: 40px;
+                word-wrap: initial;
+            }
+
+        }
+
+    }
+
+}
+
+@media  (min-width: 992px) {
+
+    body#html-body.cms-about-us {
+
+        .about {
+            display: flex;
+           &__wrapper {
+               width: 50%;
+           }
+            &__image {
+                width: 50%;
+                img {
+                    margin-top: 10%;
+                }
             }
         }
-    }*/
+
+        .our-mission {
+            &__wrapper {
+                width: 50%;
+            }
+        }
+
+        .get-touch {
+            display: flex;
+            &__wrapper {
+                width: 50%;
+            }
+            &__image {
+                width: 50%;
+                img {
+                    margin-top: 10%;
+                }
+            }
+        }
+
+    }
 
 }
 
 //
 //  Destop Personalizado
 //  _____________________________________________
-@media  (min-width: 1231px) {
+@media  (min-width: 1200px) {
 
-    /*body#html-body.cms-privacy-policy {
-        .privacy-policy{
-            &__title {
-                padding: 10px 0;
-                font-weight: 900;
-                line-height: 0.9;
-                color: @color-oscuro;
-            }
+    body#html-body.cms-about-us {
+
+        .about {
+            padding-left: 10%;
         }
-    }*/
+
+        .our-mission {
+            padding-left: 10%;
+        }
+
+        .meet-team {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .get-touch {
+            padding-left: 10%;
+        }
+
+    }
 
 }
