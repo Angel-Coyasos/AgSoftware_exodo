@@ -1,13 +1,35 @@
-console.log('viewed hidden');
-const recentlyViewed = document.querySelector('#recently-viewed');
+jQuery(function($) {
 
-function viewedHidden (  ) {
-    let scrollBottom = (document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight -120);
-    if ( scrollBottom ) {
-        recentlyViewed.classList.add('recently-viewed--hidden');
-    } else {
-        recentlyViewed.classList.remove('recently-viewed--hidden');
+    const recentlyViewed = $('#recently-viewed');
+
+    let productViewed = true;
+
+    function viewedHidden() {
+        let scrollBottom =
+            $(document).scrollTop() + $(window).height() >=
+            $(document).height() - 120;
+
+        if ( productViewed ) {
+
+            if (scrollBottom) {
+                recentlyViewed.addClass('animated slideInUp');
+                recentlyViewed.addClass('slideOutDown');
+                recentlyViewed.removeClass('slideInUp');
+                setTimeout(function() {
+                    recentlyViewed.addClass('recently-viewed--hidden');
+                }, 300);
+            } else {
+                recentlyViewed.addClass('slideInUp');
+                recentlyViewed.removeClass('slideOutDown');
+                setTimeout(function() {
+                    recentlyViewed.removeClass('recently-viewed--hidden');
+                }, 300);
+            }
+
+        }
+
     }
-}
 
-window.addEventListener('scroll', viewedHidden, false);
+    $(window).scroll(viewedHidden);
+
+});
