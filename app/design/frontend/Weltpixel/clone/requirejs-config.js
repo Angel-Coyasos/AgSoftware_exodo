@@ -7,7 +7,7 @@ var config = {
     deps: [
         'js/modal',
         'js/filtro',
-        /* 'js/checkout-cart/rowsNumber' */
+        'js/chevronTop'
     ],
 };
 
