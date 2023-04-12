@@ -6,7 +6,8 @@
 var config = {
     deps: [
         'js/modal',
-        'js/checkout-cart/rowsNumber'
+        'js/filtro',
+        /* 'js/checkout-cart/rowsNumber' */
     ],
 };
 
