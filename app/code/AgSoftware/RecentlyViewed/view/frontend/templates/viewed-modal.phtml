@@ -1,0 +1,37 @@
+<div id="viewed-modal" class="viewed-modal viewed-modal--inactive viewed-modal--bg-white">
+
+    <span class="viewed-modal__clear viewed-modal__clear--font">
+        <?= __("Clear All") ?>
+    </span>
+
+    <div class="viewed-modal__wrapper">
+
+        <?php if (!$_products = $block->getRecentlyViewedProducts()): ?>
+            <div class="message info empty">
+                <div><?= $block->escapeHtml(__('You have no recently viewed items.')) ?></div>
+            </div>
+        <?php else: ?>
+            <ol class="product-items widget-viewed-grid">
+                <?php foreach ($_products as $_item): ?>
+                    <li class="product-item">
+                        <a href="<?= $block->escapeUrl($_item->getProductUrl()) ?>" class="product-item-photo">
+                            <?= $block->getImage($_item, 'recently_viewed_products_grid_content_widget', ['class' => 'product-image-photo']) ?>
+                        </a>
+                        <div class="product-item-details">
+                            <strong class="product-item-name">
+                                <a href="<?= $block->escapeUrl($_item->getProductUrl()) ?>"><?= $block->escapeHtml($_item->getName()) ?></a>
+                            </strong>
+                            <?php if ($block->getReviewsSummaryHtml($_item)): ?>
+                                <?= $block->getReviewsSummaryHtml($_item, 'short') ?>
+                            <?php endif; ?>
+                            <?= $block->getProductPrice($_item) ?>
+                            <?= $block->getProductDetailsHtml($_item) ?>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+        <?php endif; ?>
+
+    </div>
+
+</div>

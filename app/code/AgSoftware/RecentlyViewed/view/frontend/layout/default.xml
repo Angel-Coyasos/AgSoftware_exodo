@@ -10,7 +10,18 @@
         <referenceContainer name="content">
 
             <container name="recently.viewed" htmlTag="div" htmlId="recently-viewed" htmlClass="recently-viewed recently-viewed--hidden">
-                <block name="viewed.float" template="AgSoftware_RecentlyViewed::viewed-float.phtml" before="-" />
+                <block name="viewed.float" template="AgSoftware_RecentlyViewed::viewed-float.phtml" before="viewed.modal" />
+                <block name="viewed.modal" template="AgSoftware_RecentlyViewed::viewed-modal.phtml" before="-" >
+                    <action method="setPageSize">
+                        <argument name="page_size" xsi:type="number">4</argument>
+                    </action>
+                    <action method="setDefaultDirection">
+                        <argument name="default_direction" xsi:type="string">desc</argument>
+                    </action>
+                    <action method="setCacheLifetime">
+                        <argument name="seconds" xsi:type="number">86400</argument>
+                    </action>
+                </block>
             </container>
 
         </referenceContainer>
