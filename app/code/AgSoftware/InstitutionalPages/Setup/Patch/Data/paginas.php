@@ -62,6 +62,27 @@ class Paginas implements \Magento\Framework\Setup\Patch\DataPatchInterface
 
         ];
 
+        $page_data['contact-us'] = [
+            'content_heading'=>'',
+            'title' => 'contact us',
+            'identifier' => 'contact-us',
+            'page_layout' => 'empty',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__.'/html/contact-us.html'),
+
+        ];
+
+        $page_data['term-and-conditions'] = [
+            'content_heading'=>'',
+            'title' => 'term and conditions',
+            'identifier' => 'term-and-conditions',
+            'page_layout' => 'empty',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__.'/html/term-and-conditions.html'),
+
+        ];
+
+
         foreach ( $page_data as $item) {
 
             $Institutionalpage = $this->page->create();
