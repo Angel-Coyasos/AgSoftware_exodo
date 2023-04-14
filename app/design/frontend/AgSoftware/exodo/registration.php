@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Weltpixel/clone', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/AgSoftware/exodo', __DIR__);
