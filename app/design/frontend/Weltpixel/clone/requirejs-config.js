@@ -6,6 +6,7 @@
 var config = {
     deps: [
         'js/modal',
+        'js/filtro',
         'js/chevronTop'
     ],
 };
