@@ -1,6 +1,7 @@
 jQuery(function($) {
 
     const recentlyViewed = $('#recently-viewed');
+    var modal = $('#viewed-modal');
 
     let productViewed = true;
 
@@ -17,6 +18,8 @@ jQuery(function($) {
                 recentlyViewed.removeClass('slideInUp');
                 setTimeout(function() {
                     recentlyViewed.addClass('recently-viewed--hidden');
+                    modal.addClass('viewed-modal--inactive');
+                    modal.removeClass('viewed-modal--active');
                 }, 300);
             } else {
                 recentlyViewed.addClass('slideInUp');
