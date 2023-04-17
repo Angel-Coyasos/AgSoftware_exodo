@@ -91,6 +91,15 @@ class Paginas implements \Magento\Framework\Setup\Patch\DataPatchInterface
             'content' => file_get_contents(__DIR__.'/html/careers.html'),
         ];
 
+        $page_data['support-center'] = [
+            'content_heading'=>'',
+            'title' => 'support center',
+            'identifier' => 'support-center',
+            'page_layout' => 'empty',
+            'is_active' => 1,
+            'content' => file_get_contents(__DIR__.'/html/support-center.html'),
+        ];
+
 
         foreach ( $page_data as $item) {
 
