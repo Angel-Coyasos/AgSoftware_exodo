@@ -16,6 +16,7 @@ jQuery(function($) {
                 recentlyViewed.addClass('recently-viewed--hidden');
                 modal.addClass('viewed-modal--inactive');
                 modal.removeClass('viewed-modal--active');
+                recentlyViewed.removeClass('slideOutDownModal');
             }, 500);
         } else {
             recentlyViewed.addClass('slideInUp');
