@@ -2,6 +2,17 @@
 // Mixing
 //
 
+.title-pag {
+ .config-font( @fuente3, 57px, 900, normal, 57px, 0px, #333333);
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.image (@background-image){
+    background-image: @background-image;
+    background-position: center;
+    background-size: cover;
+}
 
 //
 //  Common
@@ -10,17 +21,8 @@
 & when (@media-common = true) {
     body#html-body.cms-support-center {
         .column.main {
-            margin-top: 104px;
+            margin-top: 104px; // linea para ver el desarrollo hasta que se logre solcionar el header 
         }
-
-        /* general page styles */
-
-        h2 {
-            .config-font( @fuente3, 57px, 900, normal, 57px, 0px, #333333);
-            margin: 0;
-            padding-bottom: 40px;
-        }
-
         ul {
             list-style: none;
             margin: 0;
@@ -28,9 +30,7 @@
         }
 
         .section-search {
-            background-image: url(https://theme.zdassets.com/theme_assets/713347/ae15c6d68bbecc31b6eb5438ba749c5f89f312ab.png);
-            background-position: center;
-            background-size: cover;
+            .image(url(https://theme.zdassets.com/theme_assets/713347/ae15c6d68bbecc31b6eb5438ba749c5f89f312ab.png));
             height: 300px;
             padding: 0 20px;
             text-align: center;
@@ -43,9 +43,7 @@
                 max-width: 610px;
                 margin: 0 auto;
                 h2 {
-                    // .config-font( @fuente3, 57px, 900, normal, 57px, 0px, #333333);
-                    // margin: 0;
-                    // padding-bottom: 40px;
+                    .title-pag(); 
                 }
             }
             .search-full {
@@ -59,6 +57,9 @@
                     left: 15px;
                     top: 50%;
                     transform: translateY(-50%);
+                    font-size: 18px;
+                    background-color: @color-titulo;
+                    color: @color-primario;
                 }
 
                 input[type="search"] {
@@ -73,7 +74,7 @@
                     font-weight: 300;                
                     -webkit-appearance: none;
                     &:focus {
-                        border: 1px solid rgba(7, 55, 86, 1);
+                        border: 1px solid @color-primario;
                         color: #555;
                         box-shadow: none;
                     }
@@ -113,6 +114,10 @@
                             &__link {
                                 color: @color-primario;
                                 padding: 20px 30px;
+                                &:hover {
+                                    color: @color-titulo;
+                                    text-decoration: none;
+                                }
 
                                 h4 {
                                     margin: 0;
@@ -139,9 +144,7 @@
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
-                        // list-style: none;
-                        // margin: 0;
-                        // padding: 0;
+
 
                         &__item {
                             flex: 1 0 auto;
@@ -163,10 +166,11 @@
                     border-top: 1px solid #ddd;
                     padding: 30px 0;
 
-                    .title-recent {
+                    .title-support {
                         line-height: 1.5;
                         text-align: center;
                         margin: 0 0 10px;
+                        .title-pag();
                     }
 
                     .activity-list {
@@ -199,7 +203,7 @@
                                         display: flex;
                                         &::before {
                                             content: '\F265';
-                                            color: rgba(7, 55, 86, 1);
+                                            color: @color-primario;
                                             font-family: bootstrap-icons;
                                             display: inline-block;
                                             font-size: 15px;
@@ -220,29 +224,25 @@
                 border-top: 1px solid #ddd;
                 padding: 30px 0;
                 text-align: center;
-                //margin-bottom: 40px;
-                text-align: center;
 
                 .community-link {
-                    border: 1px solid #073756;
-                    color: #073756;
+                    border: 1px solid @color-primario;
+                    color: @color-primario;
                     padding: 15px;
                     margin: 50px;
                     display: inline-block;
                     border-radius: 3px;
                     text-decoration: none;
                     &:hover {
-                        background: #073756;
-                        color: #fff;
+                        background: @color-primario;
+                        color: @color-titulo;
                         text-decoration: none;
                     }
                 }
 
                 .community-image {
+                    .image(url(https://theme.zdassets.com/theme_assets/713347/df2c1fa0ccff128c9ddd70d5931a3a570d877a37.png));
                     min-height: 300px;
-                    background-image: url(https://theme.zdassets.com/theme_assets/713347/df2c1fa0ccff128c9ddd70d5931a3a570d877a37.png);
-                    background-position: center;
-                    background-repeat: no-repeat;
                     max-width: 100%;
                 }
             }
@@ -317,10 +317,10 @@
 }
 
 //
-//  Deskto
+//  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+@media  (min-width: 1024px) {
     body#html-body.cms-support-center {
         .section-search {
            margin-bottom: 60px;
@@ -340,6 +340,7 @@
                             flex: 0 0 auto;
                             padding-right: 30px;
                             width: 33%;
+                            margin: 0;
                         }
                     }
                 }
@@ -349,41 +350,21 @@
     }
 }
 
-//
-// Breakpoint for custom desktop
-//  _____________________________________________
+@media (min-width: 1160px) {
+    body#html-body.cms-support-center {
+        .section-search {
+           margin-bottom: 60px;
+        }
 
-@media  (min-width: 841px) {
-    body#html-body {
-        .about-ags {
-            padding: 5% 25%;
-            &__title {
-                padding: 10px 0;
-                font-weight: 900;
-                line-height: 0.9;
-            }
+        .container {
+          padding: 0;
+          width: 90%;
         }
     }
-
 }
 
-//
-// Breaking point for large custom desktop
-//  _____________________________________________
 
-@media  (min-width: 1231px) {
 
-    body#html-body.cms-careers {
-        .about-ags {
-            padding: 5% 25%;
-            &__title {
-                font-size: 58px;
-                margin-bottom: 40px;
-            }
-        }
-    }
-
-}
 
 
 
