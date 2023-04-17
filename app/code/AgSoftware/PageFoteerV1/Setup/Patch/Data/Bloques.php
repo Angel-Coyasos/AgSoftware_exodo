@@ -12,7 +12,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 
-class Bloques implements DataPatchInterface, PatchRevertableInterface 
+class Bloques implements DataPatchInterface, PatchRevertableInterface
 {
 
     /**
@@ -41,28 +41,34 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
      */
     public function apply()
     {
-        
+
         $this->moduleDataSetup->getConnection()->startSetup();
 
         /**
          * @var \Magento\Cms\Model\Block $cmsBlock
          */
-        
+
         $data = [];
         $data[ 'pree-footer-weltpixel' ] = [
             "title" => "pree footer weltpixel",
             "identifier" => "pree-footer-weltpixel",
+            "store_id" => "3",
             "content" => file_get_contents(__DIR__.'/html/preFooter.html'),
-            "is_active" => "1"
+            "is_active" => "1",
+            "offert_end_message" => "null",
+            "offert_timmer_css"	=> "null"
         ];
         $data[ 'footer-weltpixel' ] = [
             "title" => "footer weltpixel",
             "identifier" => "footer-weltpixel",
+            "store_id" => "3",
             "content" => file_get_contents(__DIR__.'/html/footer.html'),
-            "is_active" => "1"
+            "is_active" => "1",
+            "offert_end_message" => "null",
+            "offert_timmer_css"	=> "null"
         ];
 
-        
+
         foreach ( $data as $item) {
 
             $cmsBlockFooter = $this->cmsBlock->create();
@@ -104,5 +110,5 @@ class Bloques implements DataPatchInterface, PatchRevertableInterface
 
         ];
     }
-    
+
 }
