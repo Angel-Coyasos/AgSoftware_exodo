@@ -1,0 +1,188 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body{
+        // background-color: #090090!important;
+    }
+
+    .minicart-wrapper {
+        .showcart {
+            display: flex;
+            justify-content: space-around;
+            width: 40px;
+            &__mincart {
+                width: 15.38px;
+                i:before {
+                    font-size: 13.67px;
+                }
+            }
+            .counter {
+                min-width: 20px;
+                padding: 0 3px;
+                line-height: 23px;
+                color: #000;
+                background: #fff;
+                border: 1px solid #000;
+                span {
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+
+    .minicart-wrapper.active {
+
+        .block {
+
+            &-minicart {
+                position: fixed;
+                top: 0;
+                right: 0;
+                min-width: inherit;
+                width: 290px;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                transition: all .3s ease;
+                box-shadow: e('0 3px 3px rgba(0,0,0,.15)');
+                &:before, &:after {
+                    display: none;
+                }
+
+            }
+
+            &-title {
+                display: block;
+                min-height: 50px;
+                width: 100%;
+                height: 43px;
+                font-family: 'Montserrat',sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 43px;
+                text-align: center;
+                background: #073756;
+                color: #FFFFFF;
+                .text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 43px;
+                    letter-spacing: 0.5px;
+                }
+                .qty {
+                    display: none;
+                }
+            }
+
+            &-content {
+                padding: 15px;
+                height: e('calc(100% - 255px)');
+                width: 100%;
+
+                .action {
+                    min-width: 54px;
+                    min-height: 30px;
+                    height: 43px;
+                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    color: #fff;
+                    &:before {
+                        display: none;
+                    }
+                    span {
+                        position: relative;
+                        font-family: 'Montserrat',sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        letter-spacing: 0px;
+                    }
+                }
+
+                .subtitle {
+                    position: absolute;
+                    top: 40px;
+                    left: 0;
+                    right: 0;
+                    font-family: 'Montserrat',sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                    font-style: normal;
+                    word-break: break-all;
+                    white-space: nowrap;
+                    color: #303030;
+                }
+
+            }
+
+            #minicart-content-wrapper {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 480px) {
+
+    .minicart-wrapper.active {
+
+        .block {
+
+            &-minicart {
+                width: 320px;
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    .minicart-wrapper.active {
+
+        .block {
+
+            &-minicart {
+                width: 390px;
+            }
+
+        }
+
+    }
+
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
