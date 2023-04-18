@@ -5,10 +5,7 @@
 
 var config = {
     deps: [
-        'js/modal',
-        'js/filtro',
-        'js/chevronTop',
-        'js/headerDinamic',
+        'answer.js'
     ],
 };
 
