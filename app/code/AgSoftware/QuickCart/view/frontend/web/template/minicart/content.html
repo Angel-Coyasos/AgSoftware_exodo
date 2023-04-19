@@ -64,10 +64,6 @@
             <each args="getRegion('promotion')" render=""></each>
         </div>-->
 
-        <div class="custom-msg-wrapper">
-            <p class="custom-msg">Get 10% back in credit points for any purchase!</p>
-        </div>
-
         <if args="getCartParam('summary_count')">
             <!--<div class="items-total">
                 <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
@@ -80,6 +76,11 @@
                 <span translate="'Item in Cart'"></span>
                 &lt;!&ndash;/ko&ndash;&gt;
             </div>-->
+
+            <div class="custom-msg-wrapper">
+                <p class="custom-msg">Get 10% back in credit points for any purchase!</p>
+            </div>
+
              <div class="items-update-container"></div>
 
             <each args="getRegion('subtotalContainer')" render=""></each>
