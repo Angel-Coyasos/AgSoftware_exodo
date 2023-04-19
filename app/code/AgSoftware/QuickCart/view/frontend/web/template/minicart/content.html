@@ -28,7 +28,7 @@
 
 <div class="block-content">
 
-    <div data-action="scroll" class="minicart-items-wrapper quickcart-items-wrapper" style="height: 119px;">
+    <div data-action="scroll" class="minicart-items-wrapper quickcart-items-wrapper"> <!--style="height: 223px;" -->
 
         <if args="getCartParam('summary_count')">
             <strong class="subtitle" translate="'Recently added item(s)'"></strong>
@@ -59,24 +59,42 @@
 
     <div class="quickcart-bottom-container">
 
+        <!--<div id="minicart-widgets" class="minicart-widgets" if="regionHasElements('promotion')">
+
+            <each args="getRegion('promotion')" render=""></each>
+        </div>-->
+
+        <div class="custom-msg-wrapper">
+            <p class="custom-msg">Get 10% back in credit points for any purchase!</p>
+        </div>
+
         <if args="getCartParam('summary_count')">
-            <div class="items-total">
+            <!--<div class="items-total">
                 <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
                 <translate args="'of'" if="maxItemsToDisplay < getCartLineItemsCount()"></translate>
                 <span class="count" text="getCartParam('summary_count').toLocaleString(window.LOCALE)"></span>
-                <!-- ko if: (getCartParam('summary_count') > 1) -->
+                &lt;!&ndash; ko if: (getCartParam('summary_count') > 1) &ndash;&gt;
                 <span translate="'Items in Cart'"></span>
-                <!--/ko-->
-                <!-- ko if: (getCartParam('summary_count') === 1) -->
+                &lt;!&ndash;/ko&ndash;&gt;
+                &lt;!&ndash; ko if: (getCartParam('summary_count') === 1) &ndash;&gt;
                 <span translate="'Item in Cart'"></span>
-                <!--/ko-->
-            </div>
-            <!-- <div class="items-update-container"></div> -->
+                &lt;!&ndash;/ko&ndash;&gt;
+            </div>-->
+             <div class="items-update-container"></div>
 
             <each args="getRegion('subtotalContainer')" render=""></each>
             <each args="getRegion('extraInfo')" render=""></each>
 
-            <div class="actions" if="getCartParam('possible_onepage_checkout')">
+            <div class="actions action-viewcart" if="getCartParam('summary_count')">
+                <div class="secondary">
+                    <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+                        <span translate="'View and Edit Cart'"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="actions action-checkout" if="getCartParam('possible_onepage_checkout')">
+
                 <div class="primary">
                     <button
                         id="top-cart-btn-checkout"
@@ -89,10 +107,11 @@
                             },
                             click: closeMinicart()
                         "
-                        translate="'Proceed to Checkout'">
+                        translate="'Go to Checkout'">
                     </button>
                     <div data-bind="html: getCartParamUnsanitizedHtml('extra_actions')"></div>
                 </div>
+
             </div>
 
             <div class="items-update-container">
@@ -102,18 +121,6 @@
             </div>
 
         </if>
-
-        <div class="actions" if="getCartParam('summary_count')">
-            <div class="secondary">
-                <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-                    <span translate="'View and Edit Cart'"></span>
-                </a>
-            </div>
-        </div>
-
-        <div id="minicart-widgets" class="minicart-widgets" if="regionHasElements('promotion')">
-            <each args="getRegion('promotion')" render=""></each>
-        </div>
 
     </div>
 

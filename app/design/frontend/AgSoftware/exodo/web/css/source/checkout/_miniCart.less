@@ -99,9 +99,11 @@
             }
 
             &-content {
-                padding: 15px;
+            /*    padding: 15px;*/ //cuando no hay nada en el carro
                 height: e('calc(100% - 255px)');
+                height: 100%;
                 width: 100%;
+                padding-bottom: 20px;
 
                 .subtitle {
                     position: absolute;
@@ -123,6 +125,100 @@
             #minicart-content-wrapper {
                 height: 100%;
                 width: 100%;
+            }
+
+            .minicart-items-wrapper {
+                height: e("calc(100% - 255px)");
+                padding: 15px;
+                border: none;
+            }
+
+            .quickcart-bottom-container {
+
+                .custom-msg-wrapper {
+                    padding: 15px 20px;
+                    .custom-msg {
+                        color: #073756;
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-transform: none;
+                        letter-spacing: 0.5px !important;
+                        font-family: 'Montserrat',sans-serif;
+                        font-style: normal;
+                    }
+                }
+
+                .subtotal {
+                    margin: 0;
+                    padding: 20px;
+                    background: #F6F6F6;
+                    color: #000000;
+                    width: 100%;
+                    font-size: 12px;
+                    span.label {
+                        float: left;
+                        text-transform: initial;
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #000000;
+                        text-align: right;
+                        letter-spacing: 0.5px !important;
+                        font-family: 'Montserrat',sans-serif;
+                        font-style: normal;
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                    span.price-wrapper {
+                        .price {
+                            font-size: 16px;
+                            color: #000000;
+                            font-weight: 400;
+                            letter-spacing: 0.5px !important;
+                            font-family: 'Montserrat',sans-serif;
+                            font-style: normal;
+                        }
+                    }
+                }
+
+                .action-viewcart {
+                    .secondary {
+                        padding: 15px;
+                        text-align: center;
+                        .viewcart {
+                            color: #444;
+                            text-decoration: none;
+                            span {
+                                text-transform: initial;
+                                font-weight: 400;
+                                font-size: 12px;
+                                letter-spacing: 0.5px !important;
+                                font-family: 'Montserrat',sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .action-checkout {
+                    margin: 0;
+                    padding: 0 10px;
+                    width: 100%;
+                    .primary {
+                        .checkout {
+                            padding: 10px 0;
+                            width: 100%;
+                            min-width: 200px;
+                            background-color: #073756;
+                            border: 1px solid #073756;
+                            color: #fff;
+                            font-weight: 400;
+                            font-size: 12px;
+                            font-family: 'Montserrat',sans-serif;
+                            text-transform: uppercase;
+                            line-height: 30px;
+                        }
+                    }
+                }
             }
 
         }
