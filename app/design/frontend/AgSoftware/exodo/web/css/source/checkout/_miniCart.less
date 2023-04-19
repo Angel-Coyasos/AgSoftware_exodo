@@ -128,9 +128,115 @@
             }
 
             .minicart-items-wrapper {
-                height: e("calc(100% - 255px)");
+                height: e("calc(100% - 255px)!important");
                 padding: 15px;
                 border: none;
+                margin: 0;
+                .minicart-items {
+                    .product-item {
+                        padding-bottom: 0;
+                        border-top: none;
+                        border-bottom: 1px solid #cccccc;
+                        .product {
+
+                        }
+                        .product-item-photo {
+                            .product-image-wrapper {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .product-item-details {
+                            .product-item-name {
+                                max-width: 90%;
+                                a {
+                                    text-decoration: none;
+                                    color: #444;
+                                    font-size: 12px;
+                                    outline: none;
+                                    word-wrap: break-word;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                    font-family: 'Montserrat',sans-serif;
+                                    font-weight: 400;
+                                    letter-spacing: normal;
+                                }
+                            }
+                            .product.actions {
+                                .secondary {
+                                    a {
+                                        width: 16px;
+                                        height: 16px;
+                                        &:before {
+                                            content: '\e616';
+                                            font-weight: 400;
+                                            font-style: normal;
+                                            font-size: 16px;
+                                            line-height: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                            .product-item-pricing {
+                                .price-container {
+                                    float: right;
+                                    margin-top: 5px;
+                                    .price {
+                                        font-size: 12px;
+                                        margin: 0 0 10px;
+                                        font-weight: 400;
+                                        white-space: nowrap;
+                                        line-height: 1;
+                                        letter-spacing: normal;
+                                        color: #303030;
+                                        font-family: 'Montserrat',sans-serif;
+                                        font-style: normal;
+                                    }
+                                }
+                                .details-qty {
+                                    float: left;
+                                    margin-top: 5px;
+                                    .label {
+                                        line-height: 16px;
+                                        float: left;
+                                        padding: 0;
+                                        width: auto;
+                                        font-weight: 400;
+                                        display: inline-block;
+                                        font-size: 12px;
+                                        color: #303030;
+                                        font-family: 'Montserrat',sans-serif;
+                                        font-style: normal;
+                                        margin: 5px 0;
+                                    }
+                                    .less, .plus {
+                                        color: #000;
+                                        font-size: 13px;
+                                        float: left;
+                                        padding: 0 8px 8px;
+                                        margin: 5px 0;
+                                    }
+                                    input {
+                                        color: #000;
+                                        border: 0 none;
+                                        float: left;
+                                        height: auto;
+                                        line-height: 14px;
+                                        margin: 0;
+                                        opacity: 1;
+                                        padding: 0;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        width: auto;
+                                        max-width: 35px;
+                                        font-weight: 400;
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .quickcart-bottom-container {

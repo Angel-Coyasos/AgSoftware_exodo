@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<li class="item product product-item vamos-a-darle" data-role="product-item">
+<li class="item product product-item" data-role="product-item">
     <div class="product">
         <!-- ko if: product_has_url -->
         <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="product-item-photo">
@@ -57,12 +57,28 @@
             </div>
             <!-- /ko -->
 
+            <div class="product actions">
+                <!-- ko if: is_visible_in_site_visibility -->
+                <!--<div class="primary">
+                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit">
+                        <span data-bind="i18n: 'Edit'"></span>
+                    </a>
+                </div>-->
+                <!-- /ko -->
+                <div class="secondary">
+                    <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
+                       class="action delete">
+                        <span data-bind="i18n: 'Remove'"></span>
+                    </a>
+                </div>
+            </div>
+
             <div class="product-item-pricing">
                 <!-- ko if: canApplyMsrp -->
 
                 <div class="details-map">
                     <span class="label" data-bind="i18n: 'Price'"></span>
-                    <span class="value" data-bind="i18n: 'See price before order confirmation.'"></span>
+                    <!--<span class="value" data-bind="i18n: 'See price before order confirmation.'"></span>-->
                 </div>
                 <!-- /ko -->
                 <!-- ko ifnot: canApplyMsrp -->
@@ -74,7 +90,9 @@
                 <div class="details-qty qty">
                     <label class="label" data-bind="i18n: 'Qty', attr: {
                            for: 'cart-item-'+item_id+'-qty'}"></label>
-                    <span class="less" data-bind="click:$parent.less"> - </span>
+                    <span class="less" data-bind="click:$parent.less">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </span>
                     <input data-bind="attr: {
                            id: 'cart-item-'+item_id+'-qty',
                            'data-cart-item': item_id,
@@ -82,9 +100,11 @@
                            'data-cart-item-id': product_sku
                            }, value: qty"
                            type="number"
-                           size="4" 
+                           size="4"
                            class="item-qty cart-item-qty"/>
-                    <span class="plus" data-bind="click:$parent.plus"> + </span>
+                    <span class="plus" data-bind="click:$parent.plus">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
                 <button data-bind="attr: {
                            id: 'update-cart-item-'+item_id,
                            'data-cart-item': item_id,
@@ -97,21 +117,6 @@
                 </div>
             </div>
 
-            <div class="product actions">
-                <!-- ko if: is_visible_in_site_visibility -->
-                <div class="primary">
-                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit">
-                        <span data-bind="i18n: 'Edit'"></span>
-                    </a>
-                </div>
-                <!-- /ko -->
-                <div class="secondary">
-                    <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
-                       class="action delete">
-                        <span data-bind="i18n: 'Remove'"></span>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
     <div class="message notice" if="$data.message">
