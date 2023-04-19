@@ -18,14 +18,14 @@ define([ 'jquery' ], function ( $ ) {
                 let update = document.querySelector( `#update-cart-item-${id.item_id}` );
 
                 $( update ).trigger( "click" );
-        
-                let itemsTotal = document.querySelector( `.items-update-container` );
-                
+
+                /*let itemsTotal = document.querySelector( `.items-update-container` );
+
                 itemsTotal.style.display = 'block';
 
                 setTimeout( () => {
                     itemsTotal.style.display = 'none';
-                }, 3000);
+                }, 3000);*/
 
             }
 
@@ -39,21 +39,21 @@ define([ 'jquery' ], function ( $ ) {
             let update = document.querySelector( `#update-cart-item-${id.item_id}` );
 
             $( update ).trigger( "click" );
-    
-            let itemsTotal = document.querySelector(`.items-update-container`);
-            
+
+           /* let itemsTotal = document.querySelector(`.items-update-container`);
+
             itemsTotal.style.display = 'block';
 
             setTimeout(() => {
                 itemsTotal.style.display = 'none';
-            }, 3000 );
+            }, 3000 );*/
 
         },
-        
+
     };
 
     return function(target){
         return target.extend(mixins);
     }
-    
+
 });
