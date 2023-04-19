@@ -50,6 +50,9 @@
 
             &__image {
                 padding: 0 15px;
+                img {
+                    margin-top: 10%;
+                }
             }
 
         }
@@ -356,7 +359,7 @@
             a {
                 display: inline-block;
                 margin: 50px 70px 0 0;
-                padding: 10px 24px;
+                padding: 10px 40px;
                 font-size: 14px;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -366,6 +369,42 @@
             }
             &__image {
                 padding-right: 0;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (max-width: 378px) {
+
+    body#html-body.cms-about-us {
+
+        .get-touch {
+            a {
+                width: 132px;
+                padding: 16px;
+                text-align: center;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (min-width: 379px) {
+
+    body#html-body.cms-about-us {
+
+        .get-touch {
+            a {
+                width: 180px;
             }
         }
 
@@ -392,6 +431,8 @@
         /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
         .meet-team {
             &__images {
+                padding-left: 0;
+                padding-right: 0;
                padding-bottom: 40px;
             }
         }
@@ -402,12 +443,6 @@
                     margin-right: 0;
                 }
 
-            }
-        }
-
-        .get-touch {
-            a {
-                padding: 16px;
             }
         }
 
@@ -484,6 +519,7 @@
         .about {
             &__title {
                 font-size: 58px;
+                line-height: 0.9;
                 word-wrap: initial;
             }
 
