@@ -1,0 +1,430 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    div.minicart-agsoftware {
+
+        a.action.showcart {
+            display: flex;
+            justify-content: space-around;
+            width: 40px;
+            &__mincart {
+                width: 15.38px;
+                i:before {
+                    font-size: 13.67px;
+                }
+            }
+            span.counter.qty {
+                min-width: 20px;
+                padding: 0 3px;
+                line-height: 23px;
+                color: #000;
+                background: #fff;
+                border: 1px solid #000;
+                span {
+                    text-shadow: none;
+                }
+
+            }
+        }
+
+        .block {
+            &-minicart {
+                position: fixed;
+                top: 0;
+                right: -500px;
+                min-width: inherit;
+                width: 290px;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                transition: all .3s ease;
+                box-shadow: e('0 3px 3px rgba(0,0,0,.15)');
+                &:before, &:after {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .minicart-agsoftware.active {
+
+        a.action.showcart {
+            display: flex;
+            justify-content: space-around;
+            width: 40px;
+            &__mincart {
+                width: 15.38px;
+                i:before {
+                    font-size: 13.67px;
+                }
+            }
+            span.counter.qty {
+                min-width: 20px;
+                padding: 0 3px;
+                line-height: 23px;
+                color: #000;
+                background: #fff;
+                border: 1px solid #000;
+                span {
+                    text-shadow: none;
+                }
+
+            }
+        }
+
+        .block {
+
+            &-minicart {
+                position: fixed;
+                top: 0;
+                right: 0;
+                min-width: inherit;
+                width: 290px;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                transition: all .3s ease;
+                box-shadow: e('0 3px 3px rgba(0,0,0,.15)');
+                &:before, &:after {
+                    display: none;
+                }
+
+            }
+
+            &-title {
+                display: block;
+                min-height: 50px;
+                width: 100%;
+                height: 43px;
+                font-family: 'Montserrat',sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 43px;
+                text-align: center;
+                background: #073756;
+                color: #FFFFFF;
+                .text {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 43px;
+                    letter-spacing: 0.5px;
+                }
+                /*.qty {
+                    display: none;
+                }*/
+                .action {
+                    min-width: 54px;
+                    min-height: 30px;
+                    height: 43px;
+                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    color: #fff;
+                    &:before {
+                        display: none;
+                    }
+                    span {
+                        position: relative;
+                        font-family: 'Montserrat',sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        letter-spacing: 0px;
+                    }
+                }
+            }
+
+            &-content {
+            /*    padding: 15px;*/ //cuando no hay nada en el carro
+                height: e('calc(100% - 255px)');
+                height: 100%;
+                width: 100%;
+                padding-bottom: 20px;
+
+                .subtitle {
+                    position: absolute;
+                    top: 40px;
+                    left: 0;
+                    right: 0;
+                    font-family: 'Montserrat',sans-serif;
+                    font-size: 12px;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                    font-style: normal;
+                    word-break: break-all;
+                    white-space: nowrap;
+                    color: #303030;
+                }
+
+            }
+
+            #minicart-content-wrapper {
+                height: 100%;
+                width: 100%;
+            }
+
+            .minicart-items-wrapper {
+                height: e("calc(100% - 255px)!important");
+                padding: 15px;
+                border: none;
+                margin: 0;
+                .minicart-items {
+                    .product-item {
+                        padding-bottom: 0;
+                        border-top: none;
+                        border-bottom: 1px solid #cccccc;
+                        .product {
+
+                        }
+                        .product-item-photo {
+                            .product-image-wrapper {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .product-item-details {
+                            .product-item-name {
+                                max-width: 90%;
+                                a {
+                                    text-decoration: none;
+                                    color: #444;
+                                    font-size: 12px;
+                                    outline: none;
+                                    word-wrap: break-word;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                    font-family: 'Montserrat',sans-serif;
+                                    font-weight: 400;
+                                    letter-spacing: normal;
+                                }
+                            }
+                            .product.actions {
+                                .secondary {
+                                    a {
+                                        width: 16px;
+                                        height: 16px;
+                                        &:before {
+                                            content: '\e616';
+                                            font-weight: 400;
+                                            font-style: normal;
+                                            font-size: 16px;
+                                            line-height: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                            .product-item-pricing {
+                                .price-container {
+                                    float: right;
+                                    margin-top: 5px;
+                                    .price {
+                                        font-size: 12px;
+                                        margin: 0 0 10px;
+                                        font-weight: 400;
+                                        white-space: nowrap;
+                                        line-height: 1;
+                                        letter-spacing: normal;
+                                        color: #303030;
+                                        font-family: 'Montserrat',sans-serif;
+                                        font-style: normal;
+                                    }
+                                }
+                                .details-qty {
+                                    float: left;
+                                    margin-top: 5px;
+                                    .label {
+                                        line-height: 16px;
+                                        float: left;
+                                        padding: 0;
+                                        width: auto;
+                                        font-weight: 400;
+                                        display: inline-block;
+                                        font-size: 12px;
+                                        color: #303030;
+                                        font-family: 'Montserrat',sans-serif;
+                                        font-style: normal;
+                                        margin: 5px 0;
+                                    }
+                                    .less, .plus {
+                                        color: #000;
+                                        font-size: 13px;
+                                        float: left;
+                                        padding: 0 8px 8px;
+                                        margin: 5px 0;
+                                    }
+                                    input {
+                                        color: #000;
+                                        border: 0 none;
+                                        float: left;
+                                        height: auto;
+                                        line-height: 14px;
+                                        margin: 0;
+                                        opacity: 1;
+                                        padding: 0;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        width: auto;
+                                        max-width: 35px;
+                                        font-weight: 400;
+                                        margin: 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .quickcart-bottom-container {
+
+                .custom-msg-wrapper {
+                    padding: 15px 20px;
+                    .custom-msg {
+                        color: #073756;
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-transform: none;
+                        letter-spacing: 0.5px !important;
+                        font-family: 'Montserrat',sans-serif;
+                        font-style: normal;
+                    }
+                }
+
+                .subtotal {
+                    margin: 0;
+                    padding: 20px;
+                    background: #F6F6F6;
+                    color: #000000;
+                    width: 100%;
+                    font-size: 12px;
+                    span.label {
+                        float: left;
+                        text-transform: initial;
+                        font-weight: 400;
+                        font-size: 12px;
+                        color: #000000;
+                        text-align: right;
+                        letter-spacing: 0.5px !important;
+                        font-family: 'Montserrat',sans-serif;
+                        font-style: normal;
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                    span.price-wrapper {
+                        .price {
+                            font-size: 16px;
+                            color: #000000;
+                            font-weight: 400;
+                            letter-spacing: 0.5px !important;
+                            font-family: 'Montserrat',sans-serif;
+                            font-style: normal;
+                        }
+                    }
+                }
+
+                .action-viewcart {
+                    .secondary {
+                        padding: 15px;
+                        text-align: center;
+                        .viewcart {
+                            color: #444;
+                            text-decoration: none;
+                            span {
+                                text-transform: initial;
+                                font-weight: 400;
+                                font-size: 12px;
+                                letter-spacing: 0.5px !important;
+                                font-family: 'Montserrat',sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .action-checkout {
+                    margin: 0;
+                    padding: 0 10px;
+                    width: 100%;
+                    .primary {
+                        .checkout {
+                            padding: 10px 0;
+                            width: 100%;
+                            min-width: 200px;
+                            background-color: #073756;
+                            border: 1px solid #073756;
+                            color: #fff;
+                            font-weight: 400;
+                            font-size: 12px;
+                            font-family: 'Montserrat',sans-serif;
+                            text-transform: uppercase;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 480px) {
+
+    .minicart-wrapper.active {
+
+        .block {
+
+            &-minicart {
+                width: 320px;
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    .minicart-wrapper.active {
+
+        .block {
+
+            &-minicart {
+                width: 390px;
+            }
+
+        }
+
+    }
+
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

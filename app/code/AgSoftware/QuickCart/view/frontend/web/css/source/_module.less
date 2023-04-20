@@ -1,0 +1,165 @@
+//
+//  Variables
+//  _____________________________________________
+
+@color-successful: #006400;
+@background-successful: #e5efe5;
+
+
+
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+
+    .block-minicart {
+        .items-update {
+            &-container {
+                display: none;
+            }
+        }
+    }
+
+    //ESTILOS MODAL PARA ELIMINAR ITEM DEL MINICART
+    ._has-modal {
+        .modals-wrapper {
+            .modal-popup.confirm {
+                .modal-inner-wrap {
+                    max-width: 50rem;
+                    margin: 5rem auto;
+                    width: 75%;
+                    display: flex;
+                    background: #fff;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    height: auto;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    background-color: #fff;
+                    box-shadow: 0 0 12px 2px rgba(0,0,0,.35);
+                    opacity: 1;
+                    pointer-events: auto;
+                    .modal-header {
+                        .action-close {
+                            top: 0;
+                            right: 0;
+                            &:before {
+                                font-size: 14px;
+                                line-height: 14px;
+                                color: #757575;
+                                content: '\e616';
+                                font-family: 'luma-icons';
+                                margin: 0;
+                                vertical-align: top;
+                                display: inline-block;
+                                font-weight: 400;
+                                overflow: hidden;
+                                speak: none;
+                                text-align: center;
+                            }
+                        }
+                        .modal-title {
+                            display: block;
+                            font-size: 40px;
+                            text-transform: none;
+                            letter-spacing: 2px;
+                            line-height: 1.2;
+                            color: #073756;
+                            font-family: 'Open Sans',sans-serif;
+                            font-style: inherit;
+                            font-weight: 400;
+                        }
+                    }
+                    .modal-content {
+                        padding-left: 3rem;
+                        padding-right: 3rem;
+                        width: 100%;
+                        margin: 0;
+                    }
+                    .modal-footer {
+                        margin-top: auto;
+                        padding-bottom: 3rem;
+                        padding-top: 3rem;
+                        display: block;
+                        pointer-events: auto;
+                        .action-secondary {
+                            background-color: #fff;
+                            border: #073756 1px solid;
+                            -webkit-border-radius: 0px;
+                            transition-duration: .3s;
+                            transition-property: background-color;
+                            letter-spacing: 0px;
+                            text-transform: uppercase;
+                            padding: 10px 15px;
+                            color: #073756;
+                            cursor: pointer;
+                            display: inline-block;
+                            font-family: 'Montserrat',sans-serif;
+                            font-weight: 400;
+                            margin: 0;
+                            font-size: 1.4rem;
+                            line-height: 3rem;
+                            box-sizing: border-box;
+                            vertical-align: middle;
+                        }
+                        .action-dismiss {
+                            /* background-color: #fff;
+                             border: #073756 1px solid;
+                             -webkit-border-radius: 0px;
+                             transition-duration: .3s;
+                             transition-property: background-color;
+                             letter-spacing: 0px;
+                             text-transform: uppercase;
+                             padding: 10px 15px;
+                             color: #073756;
+                             cursor: pointer;
+                             display: inline-block;
+                             font-family: 'Montserrat',sans-serif;
+                             font-weight: 400;
+                             margin: 0;
+                             font-size: 1.4rem;
+                             line-height: 3rem;
+                             box-sizing: border-box;
+                             vertical-align: middle;*/
+                        }
+                        .action-accept {
+                            background-color: #073756;
+                            border: #073756 1px solid;
+                            -webkit-border-radius: 0px;
+                            transition-duration: .3s;
+                            transition-property: background-color;
+                            letter-spacing: 0px;
+                            cursor: pointer;
+                            display: inline-block;
+                            font-family: 'Montserrat',sans-serif;
+                            font-weight: 400;
+                            padding: 7px 15px;
+                            font-size: 1.4rem;
+                            line-height: 3rem;
+                            box-sizing: border-box;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
