@@ -1,0 +1,281 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    #html-body.cms-home {
+        .modals-wrapper {
+            #modal-content-0 {
+                #modal {
+                    display: none;
+                  }
+            }
+
+            .modal-answer {
+                .modal-inner-wrap {
+                    width: 100%;
+                    margin: 0;
+                    position:absolute;
+                    bottom: 0;
+                    padding: 0;
+                    overflow: initial;
+
+                    button.action-close {
+                        display: none;
+                    }
+                   
+                    .modal-content {
+                        width: 100%;
+                        margin: 0;
+                        background-color: #fff;
+                        position:absolute;
+                        bottom: 0;
+
+                        .container-float {
+                            &__newlsetter {
+                                .left-section {
+                                    padding-top: 22px;
+                                    margin-left: 1%;
+                                    float: left;
+                                    width: 33%;
+                                    line-height: 10px;
+                                    max-width: 100%;
+                                }
+    
+                                .answer-section {
+                                    &__middle {
+                                        width: 55%;
+                                        float: right;
+                                        text-align: left;
+                                        padding: 10px 15px 10px 10px;
+    
+                                        .title-answer {
+                                            padding: 30px 0;
+                                            text-align: left;
+                                            .config-font( @fuente2, 18px, bold, normal, 1.42857143, 0.5px, #303030);
+                                        }
+    
+                                        p {
+                                            font-family: @fuente2;
+                                        }
+                                    }
+    
+                                    &__rigth {
+                                        float: none;
+                                        width: 97%;
+                                        clear: both;
+                                        text-align: center;
+                                        margin: 0 auto;
+                                        max-width: 370px;
+                                        padding-top: 32px;
+    
+                                        p {
+                                            font-size: 24px;
+                                            font-family: 'Montserrat',sans-serif;
+                                        }
+    
+                                        .btn-float {
+                                            border: 2px solid #444;
+                                            background-color: transparent;
+                                            border-radius: 3px;
+                                            display: inline-block;
+                                            position: relative;
+                                            cursor: pointer;
+                                            outline: none;
+                                            white-space: nowrap;
+                                            margin: 5px;
+                                            padding: 0 22px;
+                                            height: 40px;
+                                            text-shadow: none;
+                                            text-decoration: none;
+                                            text-transform: uppercase;
+                                            .config-font( @fuente2, 1.4rem, 600, normal, 36px, 1px, #333 );
+                                            &:hover {
+                                                color: @color-primario;
+                                                background-color: #444;
+                                                border-color: transparent;
+                                                text-shadow: e("1px 1px 1px rgb(0 0 0 / 20%)");
+                                            }
+                                        }
+
+                                        .wp-button i {
+                                            position: relative;
+                                            top: -1px;
+                                            line-height: 1;
+                                            margin-right: 5px;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }                    
+                }
+                
+                .action-close:before, .modal-slide .action-close:before {
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}
+
+/* Breakingpoint for small mobile devices */
+
+@media (min-width: 320px) and (max-width: 374px) {
+     #html-body.cms-home {
+        .modals-wrapper {
+            .modal-inner-wrap {
+                max-height: 100vh;
+                background-color: #fff;
+
+                #modal-content-0 {
+                    position: relative;
+                }
+            }
+        }
+     }
+}
+
+/* Breakingpoint for mobile devices */
+
+@media (min-width: 374px) {
+    #html-body.cms-home {
+       .modals-wrapper {
+           .modal-inner-wrap {
+               max-height: 100vh;
+               background-color: transparent;
+           }
+       }
+    }
+}
+
+/* Breakingpoint for desktop devices */
+
+@media (min-width: 768px) and (max-width: 1052px)  {
+    #html-body.cms-home {
+       .modals-wrapper {
+           div.modal-inner-wrap {
+            #modal-content-0 {
+                overflow: hidden;
+
+                .container-float {
+                    &__newlsetter {
+                        .left-section {
+                            width: 100%;
+                            max-width: unset;
+
+                            .image-fade {
+                                max-width: 200px;
+                            }
+                        }
+
+                        .answer-section {
+                            &__middle {
+                                width: 100%;
+
+                                .title-answer {
+                                    padding: 0 0 20px;
+                                }
+                            }
+
+                            &__rigth {
+                                float: left;
+                                text-align: left;
+                            }
+                        }
+
+                    }
+                }
+            } 
+           }
+       }
+    }
+}
+
+/* Breakingpoint for custom desktop devices */
+
+@media (min-width: 1053px) {
+    #html-body.cms-home {
+       .modals-wrapper {
+           div.modal-inner-wrap {
+            #modal-content-0 {
+                padding: 0;
+
+                .container-float {
+                    &__newlsetter {
+                        .left-section {
+                            width: 20%;
+                            max-width: 200px;
+
+                            .image-fade {
+                                max-width: 200px;
+                            }
+                        }
+
+                        .answer-section {
+                            float: right;
+                            width: 80%;
+                            padding: 20px;
+
+                            &__middle {
+                                width: 100%;
+                                padding: 0;
+
+                                .title-answer {
+                                    padding: 30px 0;
+                                }
+
+                                p {
+                                    letter-spacing: 0.5px;
+                                }
+                            }
+
+                            &__rigth {
+                                float: left;
+                                text-align: left;
+                            }
+                        }
+
+                    }
+                }
+            } 
+           }
+       }
+    }
+}
+
+/* Custom breakpoints for large desktop devices */
+
+@media (min-width: 1152px) {
+    #html-body.cms-home {
+       .modals-wrapper {
+           div.modal-inner-wrap {
+            #modal-content-0 {
+                padding: 0;
+
+                .container-float {
+                    &__newlsetter {
+                        .answer-section {
+                            display: flex;
+
+                            &__middle {
+                                width: 55%;
+                                float: left;
+                                text-align: left;
+                            }
+
+                            &__rigth {
+                                float: right;
+                                margin-right: 3%;
+                            }
+                        }
+                    }
+                }
+            } 
+           }
+       }
+    }
+}
