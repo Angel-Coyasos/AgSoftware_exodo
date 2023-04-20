@@ -15,7 +15,7 @@ require(
                 click: function (){
                     this.closeModal();
                 }
-            }]
+            }],
         };
 
         modal(options, $('#popup-modal'));

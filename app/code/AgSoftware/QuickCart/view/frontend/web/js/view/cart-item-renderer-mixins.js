@@ -7,27 +7,11 @@ define([ 'jquery' ], function ( $ ) {
 
             let input = document.querySelector( `#cart-item-${id.item_id}-qty` );
 
-            if (input.value <= 1) {
+            input.value--;
 
-                input.value = 1;
+            let update = document.querySelector( `#update-cart-item-${id.item_id}` );
 
-            } else {
-
-                input.value--;
-
-                let update = document.querySelector( `#update-cart-item-${id.item_id}` );
-
-                $( update ).trigger( "click" );
-
-                /*let itemsTotal = document.querySelector( `.items-update-container` );
-
-                itemsTotal.style.display = 'block';
-
-                setTimeout( () => {
-                    itemsTotal.style.display = 'none';
-                }, 3000);*/
-
-            }
+            $( update ).trigger( "click" );
 
         },
         plus: function ( id ) {
@@ -40,13 +24,6 @@ define([ 'jquery' ], function ( $ ) {
 
             $( update ).trigger( "click" );
 
-           /* let itemsTotal = document.querySelector(`.items-update-container`);
-
-            itemsTotal.style.display = 'block';
-
-            setTimeout(() => {
-                itemsTotal.style.display = 'none';
-            }, 3000 );*/
 
         },
 
