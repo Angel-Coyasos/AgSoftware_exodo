@@ -1,0 +1,35 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-header {
+        .offer-header {
+            display: none;
+            &__link {
+                background-color: #01CBE1;
+                padding: 0;
+                position: relative;
+                top: 0;
+                width: 100%;
+                text-align: center;
+                z-index: 1;
+                min-height: 40px;
+            }
+        }
+        .offer-header2 {
+            display: none;
+        }
+    }
+    
+}
+
+@media (min-width: 1229px)  {
+    .page-header {
+        .offer-header {
+            display: block;
+        }
+    }
+}
+
+
