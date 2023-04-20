@@ -11,4 +11,3 @@ var config = {
         'js/headerDinamic',
     ],
 };
-
