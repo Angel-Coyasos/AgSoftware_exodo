@@ -16,6 +16,8 @@ require(
                     this.closeModal();
                 }
             }],
+
+            modalClass: 'modal-header'
         };
 
         modal(options, $('#popup-modal'));
@@ -24,3 +26,5 @@ require(
         });
     }
 );
+
+  
