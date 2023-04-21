@@ -298,7 +298,10 @@
         }
     }
     .modals-wrapper {
-        .modal-popup {
+        .modal-popup.modal-header {
+            opacity: 0;
+            transition: all .5s;
+            transform: translateY(-100px);
             .modal-inner-wrap {
                 width: 100%;
                 background-color: transparent;
@@ -326,6 +329,7 @@
                 .modal-content {
                     width: 80%;
                     margin: 50px auto 0 auto;
+            
                     .control {
                         margin: 0;
                         border: none;
@@ -388,6 +392,13 @@
                 }
             }
         }
+
+        .modal-header._show, .modal-header._show {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: .5s;
+        }
+
         .modals-overlay {
             background-color: rgba(25,25,25,.95);
         }
@@ -410,7 +421,6 @@
             min-height: 68px;
             border: none;
             margin: 0;
-            //z-index: 10;
             .header.content {
                 padding: 15px 15px 10px;
                 div.user{
@@ -561,7 +571,7 @@
             }
         }
         .modals-wrapper {
-            .modal-popup {
+            .modal-header{
                 .modal-inner-wrap {
                     .modal-content {
                         .block.block-search {
