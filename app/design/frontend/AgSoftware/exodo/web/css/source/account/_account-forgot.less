@@ -1,0 +1,153 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body.customer-account-forgotpassword {
+
+        .page-main {
+            padding-top: 20px;
+
+            .column {
+                padding-bottom: 0;
+            }
+
+        }
+
+        .page-title-wrapper {
+
+            .page-title {
+                margin-bottom: 20px;
+
+                span {
+                    text-transform: uppercase;
+                    .config-font (@fuente1, 2rem, 800, normal, 1.2, 0px, @color-primario);
+                }
+
+            }
+
+        }
+
+        .form.password.forget {
+
+            .note {
+                font-family: @fuente2;
+                margin: 0 0 20px;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body.customer-account-forgotpassword  {
+
+        .form.password.forget {
+            width: 100%;
+
+            .actions-toolbar {
+
+                .primary {
+                        width: 100%;
+
+                        .primary {
+                            width: 100%;
+                        }
+
+                    }
+
+            }
+
+        }
+    }
+}
+
+//
+//  Desktop Personalizado
+//  _____________________________________________
+
+@media (min-width: 841px) {
+
+    body#html-body.customer-account-forgotpassword {
+
+        .page-main {
+            max-width: 1200px;
+        }
+
+        .page-title-wrapper {
+
+            .page-title {
+                margin-bottom: 0;
+
+                .base {
+                    font-size: 58px;
+                }
+
+            }
+
+        }
+
+        .form.password.forget {
+            min-width: 600px;
+            width: 50%;
+            min-height: 300px;
+
+            .actions-toolbar {
+
+                .primary {
+                    width: auto;
+
+                    .primary {
+                        width: 100%;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media (min-width: 1231px) {
+
+    body#html-body.customer-account-forgotpassword{
+
+        .page-title-wrapper {
+
+            .page-title {
+                padding: 10px 0;
+
+                .base {
+                    color: @color-oscuro;
+                }
+
+            }
+
+        }
+
+    }
+
+}

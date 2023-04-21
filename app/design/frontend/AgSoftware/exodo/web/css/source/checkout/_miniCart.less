@@ -1,7 +1,6 @@
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
 
     div.minicart-agsoftware {
@@ -12,25 +11,31 @@
             //width: 40px;
             &__mincart {
                 width: 15.38px;
+
                 i:before {
                     font-size: 13.67px;
                 }
+
             }
+
             span.counter.qty {
                 min-width: 20px;
                 padding: 0 3px;
                 line-height: 23px;
-                color: #000;
-                background: #fff;
-                border: 1px solid #000;
+                color: @color-oscuro;
+                background: @color-titulo;
+                border: 1px solid @color-oscuro;
+
                 span {
                     text-shadow: none;
                 }
 
             }
+
         }
 
         .block {
+
             &-minicart {
                 position: fixed;
                 top: 0;
@@ -42,38 +47,47 @@
                 padding: 0;
                 transition: all .3s ease;
                 box-shadow: e('0 3px 3px rgba(0,0,0,.15)');
+
                 &:before, &:after {
                     display: none;
                 }
+
             }
+
         }
 
     }
 
     .minicart-agsoftware.active {
 
-        a.action.showcart {
+bin        a.action.showcart {
             display: flex;
             justify-content: space-around;
             width: 40px;
+
             &__mincart {
                 width: 15.38px;
+
                 i:before {
                     font-size: 13.67px;
                 }
+
             }
+
             span.counter.qty {
                 min-width: 20px;
                 padding: 0 3px;
                 line-height: 23px;
-                color: #000;
-                background: #fff;
-                border: 1px solid #000;
+                color: @color-oscuro;
+                background: @color-titulo;
+                border: 1px solid @color-oscuro;
+
                 span {
                     text-shadow: none;
                 }
 
             }
+
         }
 
         .block {
@@ -89,6 +103,7 @@
                 padding: 0;
                 transition: all .3s ease;
                 box-shadow: e('0 3px 3px rgba(0,0,0,.15)');
+
                 &:before, &:after {
                     display: none;
                 }
@@ -100,49 +115,51 @@
                 min-height: 50px;
                 width: 100%;
                 height: 43px;
-                font-family: 'Montserrat',sans-serif;
+                font-family: @fuente2;
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 43px;
                 text-align: center;
-                background: #073756;
-                color: #FFFFFF;
+                color: @color-titulo;
+                background: @color-primario;
+
                 .text {
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 43px;
                     letter-spacing: 0.5px;
                 }
-                /*.qty {
-                    display: none;
-                }*/
+
                 .action {
+                    right: 0;
                     min-width: 54px;
                     min-height: 30px;
                     height: 43px;
-                    right: 0;
                     margin: 0;
                     padding: 0;
-                    color: #fff;
+                    color: @color-titulo;
+
                     &:before {
                         display: none;
                     }
+
                     span {
                         position: relative;
-                        font-family: 'Montserrat',sans-serif;
+                        font-family: @fuente2;
                         font-size: 12px;
                         font-weight: 400;
                         line-height: 30px;
                         letter-spacing: 0px;
                     }
+
                 }
+
             }
 
             &-content {
-            /*    padding: 15px;*/ //cuando no hay nada en el carro
                 height: e('calc(100% - 255px)');
-                height: 100%;
                 width: 100%;
+                height: 100%;
                 padding-bottom: 20px;
 
                 .subtitle {
@@ -150,7 +167,7 @@
                     top: 40px;
                     left: 0;
                     right: 0;
-                    font-family: 'Montserrat',sans-serif;
+                    font-family: @fuente2;
                     font-size: 12px;
                     font-weight: 400;
                     letter-spacing: 0.5px;
@@ -163,212 +180,266 @@
             }
 
             #minicart-content-wrapper {
-                height: 100%;
                 width: 100%;
+                height: 100%;
             }
 
             .minicart-items-wrapper {
                 height: e("calc(100% - 255px)!important");
                 padding: 15px;
-                border: none;
                 margin: 0;
+                border: none;
+
                 .minicart-items {
+
                     .product-item {
                         padding-bottom: 0;
                         border-top: none;
                         border-bottom: 1px solid #cccccc;
-                        .product {
 
-                        }
                         .product-item-photo {
+
                             .product-image-wrapper {
                                 margin-bottom: 10px;
                             }
+
                         }
 
                         .product-item-details {
+                            position: relative;
+
                             .product-item-name {
                                 max-width: 90%;
+
                                 a {
-                                    text-decoration: none;
-                                    color: #444;
+                                    font-family: @fuente2;
                                     font-size: 12px;
-                                    outline: none;
-                                    word-wrap: break-word;
-                                    line-height: normal;
-                                    letter-spacing: normal;
-                                    font-family: 'Montserrat',sans-serif;
                                     font-weight: 400;
                                     letter-spacing: normal;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                    text-decoration: none;
+                                    text-transform: capitalize;
+                                    outline: none;
+                                    word-wrap: break-word;
+                                    color: #444;
                                 }
+
                             }
+
                             .product.actions {
+
                                 .secondary {
+
                                     a {
-                                        width: 16px;
-                                        height: 16px;
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        width: 15px;
+                                        height: 15px;
+                                        margin-top: 5px;
+
                                         &:before {
                                             content: '\e616';
                                             font-weight: 400;
                                             font-style: normal;
-                                            font-size: 16px;
-                                            line-height: 16px;
+                                            font-size: 12px;
+                                            line-height: 12px;
                                         }
+
                                     }
+
                                 }
+
                             }
+
                             .product-item-pricing {
+
                                 .price-container {
                                     float: right;
+                                    width: 30%;
                                     margin-top: 5px;
+
                                     .price {
-                                        font-size: 12px;
                                         margin: 0 0 10px;
+                                        font-family: @fuente2;
+                                        font-size: 12px;
                                         font-weight: 400;
-                                        white-space: nowrap;
                                         line-height: 1;
                                         letter-spacing: normal;
-                                        color: #303030;
-                                        font-family: 'Montserrat',sans-serif;
                                         font-style: normal;
+                                        white-space: nowrap;
+                                        color: #303030;
                                     }
+
                                 }
+
                                 .details-qty {
                                     float: left;
+                                    width: 70%;
                                     margin-top: 5px;
+
                                     .label {
-                                        line-height: 16px;
                                         float: left;
-                                        padding: 0;
-                                        width: auto;
-                                        font-weight: 400;
                                         display: inline-block;
-                                        font-size: 12px;
-                                        color: #303030;
-                                        font-family: 'Montserrat',sans-serif;
-                                        font-style: normal;
+                                        width: auto;
+                                        padding: 0;
                                         margin: 5px 0;
+                                        font-family: @fuente2;
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        line-height: 16px;
+                                        font-style: normal;
+                                        color: #303030;
                                     }
+
                                     .less, .plus {
-                                        color: #000;
-                                        font-size: 13px;
                                         float: left;
                                         padding: 0 8px 8px;
                                         margin: 5px 0;
-                                    }
-                                    input {
-                                        color: #000;
-                                        border: 0 none;
-                                        float: left;
-                                        height: auto;
-                                        line-height: 14px;
-                                        margin: 0;
-                                        opacity: 1;
-                                        padding: 0;
-                                        text-align: center;
                                         font-size: 13px;
-                                        width: auto;
-                                        max-width: 35px;
-                                        font-weight: 400;
-                                        margin: 5px 0;
+                                        color: @color-oscuro;
                                     }
+
+                                    input {
+                                        float: left;
+                                        max-width: 35px;
+                                        width: auto;
+                                        height: auto;
+                                        padding: 0;
+                                        margin: 5px 0;
+                                        font-size: 13px;
+                                        font-weight: 400;
+                                        line-height: 14px;
+                                        text-align: center;
+                                        border: 0 none;
+                                        opacity: 1;
+                                        color: @color-oscuro;
+                                    }
+
                                 }
+
                             }
+
                         }
+
                     }
+
                 }
+
             }
 
             .quickcart-bottom-container {
 
                 .custom-msg-wrapper {
                     padding: 15px 20px;
+
                     .custom-msg {
-                        color: #073756;
+                        font-family: @fuente2;
                         font-size: 12px;
                         font-weight: 400;
-                        text-transform: none;
-                        letter-spacing: 0.5px !important;
-                        font-family: 'Montserrat',sans-serif;
+                        letter-spacing: 0.5px;
                         font-style: normal;
+                        text-transform: none;
+                        color: @color-primario;
                     }
+
                 }
 
                 .subtotal {
-                    margin: 0;
-                    padding: 20px;
-                    background: #F6F6F6;
-                    color: #000000;
                     width: 100%;
+                    padding: 20px;
+                    margin: 0;
                     font-size: 12px;
+                    background: #F6F6F6;
+                    color: @color-oscuro;
+
                     span.label {
                         float: left;
-                        text-transform: initial;
-                        font-weight: 400;
+                        font-family: @fuente2;
                         font-size: 12px;
-                        color: #000000;
-                        text-align: right;
-                        letter-spacing: 0.5px !important;
-                        font-family: 'Montserrat',sans-serif;
+                        font-weight: 400;
+                        letter-spacing: 0.5px;
                         font-style: normal;
+                        text-align: right;
+                        text-transform: initial;
+                        color: @color-oscuro;
+
                         span {
                             font-size: 16px;
                         }
+
                     }
+
                     span.price-wrapper {
+
                         .price {
+                            font-family: @fuente2;
                             font-size: 16px;
-                            color: #000000;
                             font-weight: 400;
-                            letter-spacing: 0.5px !important;
-                            font-family: 'Montserrat',sans-serif;
+                            letter-spacing: 0.5px;
                             font-style: normal;
+                            color: @color-oscuro;
                         }
+
                     }
+
                 }
 
                 .action-viewcart {
+
                     .secondary {
                         padding: 15px;
                         text-align: center;
+
                         .viewcart {
-                            color: #444;
                             text-decoration: none;
+                            color: #444;
+
                             span {
-                                text-transform: initial;
-                                font-weight: 400;
+                                font-family: @fuente2;
                                 font-size: 12px;
-                                letter-spacing: 0.5px !important;
-                                font-family: 'Montserrat',sans-serif;
+                                font-weight: 400;
+                                letter-spacing: 0.5px;
+                                text-transform: initial;
                             }
+
                         }
+
                     }
+
                 }
 
                 .action-checkout {
-                    margin: 0;
-                    padding: 0 10px;
                     width: 100%;
+                    padding: 0 10px;
+                    margin: 0;
+
                     .primary {
+
                         .checkout {
-                            padding: 10px 0;
-                            width: 100%;
                             min-width: 200px;
-                            background-color: #073756;
-                            border: 1px solid #073756;
-                            color: #fff;
-                            font-weight: 400;
+                            width: 100%;
+                            padding: 10px 0;
+                            font-family: @fuente2;
                             font-size: 12px;
-                            font-family: 'Montserrat',sans-serif;
-                            text-transform: uppercase;
+                            font-weight: 400;
                             line-height: 30px;
+                            text-transform: uppercase;
+                            color: @color-titulo;
+                            background-color: @color-primario;
+                            border: 1px solid @color-primario;
                         }
+
                     }
+
                 }
+
             }
 
         }
-
 
     }
 
@@ -409,22 +480,5 @@
         }
 
     }
-
-}
-
-
-//
-//  Mobile
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
-}
-
-//
-//  Deskto
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
 }
