@@ -61,7 +61,7 @@
 
     .minicart-agsoftware.active {
 
-        a.action.showcart {
+bin        a.action.showcart {
             display: flex;
             justify-content: space-around;
             width: 40px;
@@ -207,6 +207,7 @@
                         }
 
                         .product-item-details {
+                            position: relative;
 
                             .product-item-name {
                                 max-width: 90%;
@@ -219,6 +220,7 @@
                                     line-height: normal;
                                     letter-spacing: normal;
                                     text-decoration: none;
+                                    text-transform: capitalize;
                                     outline: none;
                                     word-wrap: break-word;
                                     color: #444;
@@ -231,15 +233,21 @@
                                 .secondary {
 
                                     a {
-                                        width: 16px;
-                                        height: 16px;
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        width: 15px;
+                                        height: 15px;
+                                        margin-top: 5px;
 
                                         &:before {
                                             content: '\e616';
                                             font-weight: 400;
                                             font-style: normal;
-                                            font-size: 16px;
-                                            line-height: 16px;
+                                            font-size: 12px;
+                                            line-height: 12px;
                                         }
 
                                     }
@@ -252,6 +260,7 @@
 
                                 .price-container {
                                     float: right;
+                                    width: 30%;
                                     margin-top: 5px;
 
                                     .price {
@@ -270,6 +279,7 @@
 
                                 .details-qty {
                                     float: left;
+                                    width: 70%;
                                     margin-top: 5px;
 
                                     .label {
@@ -291,7 +301,7 @@
                                         padding: 0 8px 8px;
                                         margin: 5px 0;
                                         font-size: 13px;
-                                        color: @color-titulo;
+                                        color: @color-oscuro;
                                     }
 
                                     input {
@@ -307,7 +317,7 @@
                                         text-align: center;
                                         border: 0 none;
                                         opacity: 1;
-                                        color: @color-titulo;
+                                        color: @color-oscuro;
                                     }
 
                                 }
