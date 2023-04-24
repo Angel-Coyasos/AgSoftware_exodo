@@ -6,12 +6,12 @@
 -->
 <div class="block-title quickcart-top">
     <span class="text" translate="'My Cart'"></span>
-    <!--<span
+    <span
         class="qty empty"
         text="getCartParam('summary_count')"
         data-bind="css: { empty: !!getCartParam('summary_count') == false },
-                   attr: { title: $t('Items in Cart') }">
-    </span>-->
+                   attr: { title: $t('Items in Cart') }" style="display: none">
+    </span>
     <button type="button"
             id="btn-minicart-close"
             class="action close"
@@ -55,23 +55,23 @@
 
     <div class="quickcart-bottom-container">
 
-        <!--<div id="minicart-widgets" class="minicart-widgets" if="regionHasElements('promotion')">
+        <div id="minicart-widgets" class="minicart-widgets" if="regionHasElements('promotion')" style="display: none">
 
             <each args="getRegion('promotion')" render=""></each>
-        </div>-->
+        </div>
 
         <if args="getCartParam('summary_count')">
-            <!--<div class="items-total">
+            <div class="items-total" style="display: none">
                 <span class="count" if="maxItemsToDisplay < getCartLineItemsCount()" text="maxItemsToDisplay"></span>
                 <translate args="'of'" if="maxItemsToDisplay < getCartLineItemsCount()"></translate>
                 <span class="count" text="getCartParam('summary_count').toLocaleString(window.LOCALE)"></span>
-                &lt;!&ndash; ko if: (getCartParam('summary_count') > 1) &ndash;&gt;
+                <!-- ko if: (getCartParam('summary_count') > 1) -->
                 <span translate="'Items in Cart'"></span>
-                &lt;!&ndash;/ko&ndash;&gt;
-                &lt;!&ndash; ko if: (getCartParam('summary_count') === 1) &ndash;&gt;
+                <!--/ko-->
+                <!-- ko if: (getCartParam('summary_count') === 1) -->
                 <span translate="'Item in Cart'"></span>
-                &lt;!&ndash;/ko&ndash;&gt;
-            </div>-->
+                <!--/ko-->
+            </div>
 
             <div class="custom-msg-wrapper">
                 <p class="custom-msg">Get 10% back in credit points for any purchase!</p>
@@ -109,12 +109,6 @@
                     <div data-bind="html: getCartParamUnsanitizedHtml('extra_actions')"></div>
                 </div>
 
-            </div>
-
-            <div class="items-update-container">
-                <p class="items-update__text">
-                    update successful
-                </p>`
             </div>
 
         </if>
