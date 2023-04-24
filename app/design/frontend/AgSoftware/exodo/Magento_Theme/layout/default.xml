@@ -43,6 +43,8 @@
         </referenceContainer>
 
         <referenceContainer name="header.container">
+         <block name="offer.container" template="Magento_Theme::header-global-promo.phtml" before="-"/>
+
             <container name="header_right" htmlTag="div" htmlClass="header_right" before="-">
                 <block name="user" template="Magento_Theme::user.phtml" before="minicart"/>
             </container>
