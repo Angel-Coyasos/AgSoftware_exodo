@@ -1,18 +1,127 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .checkout-cart-index {
+
+        .page-main {
+            max-width: 1200px;
+            padding-top: 20px;
+        }
+
+        .page-title-wrapper {
+
+            .page-title {
+                margin-top: 0;
+                margin-bottom: 2rem;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
+            }
+
+        }
+
+        .columns {
+
+            .column.main {
+                min-height: auto;
+                padding-bottom: 0;
+            }
+
+            .cart-empty {
+
+                p {
+                    .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+                }
+
+                a {
+                    color: #444;
+                }
+
+            }
+
+        }
+
+    }
+
+}
 
 //
 //  Mobile
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
 }
 
-
-
 //
 //  Deskto
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .checkout-cart-index {
+
+        .page-footer {
+            margin-top: 25px;
+        }
+
+    }
+
+}
+
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    .checkout-cart-index {
+
+        .page-title-wrapper {
+
+            .page-title {
+                margin-bottom: 0;
+                font-size: 58px;
+            }
+
+        }
+
+        .columns {
+
+            .column.main {
+                min-height: 300px;
+                padding-bottom: 0;
+            }
+
+        }
+
+        .page-footer {
+            margin-top: 0;
+        }
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media (min-width: 1231px) {
+
+    body#html-body.checkout-cart-index {
+
+        .page-title-wrapper {
+
+            .page-title {
+                padding: 10px 0;
+
+                .base {
+                    color: @color-oscuro;
+                }
+
+            }
+
+        }
+
+    }
 
 }
