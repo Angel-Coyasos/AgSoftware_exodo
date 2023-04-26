@@ -1,5 +1,6 @@
 @import "checkout/_miniCart.less";
 @import "checkout/_checkout-succes.less";
+@import "checkout/_checkout-payment.less";
 
 //
 //  Common
@@ -7,10 +8,35 @@
 
 & when (@media-common = true) {
 
-    body{
-        // background-color: #090090!important;
-    }
+    body.checkout-index-index {
 
+        .opc-progress-bar {
+
+            .opc-progress-bar-item._active {
+
+                &:before {
+                    background: #073756;
+                    border-color: #073756;
+                }
+
+                span {
+
+                    &:before {
+                        background: #073756;
+                        border-color: #073756;
+                    }
+
+                    &:after {
+                        border-color: #073756;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 }
 

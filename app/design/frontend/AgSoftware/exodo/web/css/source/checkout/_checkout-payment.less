@@ -1,0 +1,289 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .checkout-index-index {
+
+        .page-main {
+            padding: 15px;
+            margin-top: 104px;
+        }
+
+        .columns {
+
+            .column.main {
+
+                .checkout-container {
+
+                    .authentication-wrapper {
+                        z-index: 999;
+                    }
+
+                    .action-auth-toggle {
+                        display: inline;
+                        padding: 0;
+                        text-transform: uppercase;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        text-decoration: none;
+                        transition-duration: .3s;
+                        transition-property: background-color;
+                        .config-font ( @fuente2, 1.4rem, 400, inherit, 30px, 0px, @color-oscuro );
+                    }
+
+                    .opc-estimated-wrapper {
+
+                        .estimated-label, .estimated-price {
+                            letter-spacing: 0.5px;
+                            font-family: @fuente2;
+                        }
+
+                        .minicart-wrapper {
+
+                            .counter {
+                                background-color: #fff;
+                                border: 1px solid #000;
+                                color: #000;
+                                line-height: 23px;
+                            }
+
+                        }
+
+                    }
+
+                    .opc-wrapper {
+                        .checkout-payment-method {
+                            .fieldset {
+
+                                .opc-payment {
+                                    padding: 0 15px;
+                                }
+
+                                .step-title {
+                                    font-family: 'Montserrat',sans-serif;
+                                    font-weight: 400;
+                                    color: #303030;
+                                }
+
+                                .payment-method {
+
+                                    &-title {
+                                        padding: 15px 0;
+                                        span {
+                                            font-family: 'Montserrat',sans-serif;
+                                        }
+                                    }
+
+                                    &-content {
+                                        .actions-toolbar {
+                                            margin: 0;
+                                            .action.primary.checkout {
+                                                padding: 10px 20px;
+                                                background-color: #073756;
+                                                border: 1px solid #073756;
+                                                color: #fff;
+                                                transition-duration: .3s;
+                                                transition-property: background-color;
+                                                font-family: 'Montserrat',sans-serif;
+                                                font-weight: 400;
+                                                text-transform: uppercase;
+                                                font-size: 1.8rem;
+                                                line-height: 2.2rem;
+                                                span {
+                                                    font-family: 'Montserrat',sans-serif;
+                                                    font-size: 14px;
+                                                    font-weight: 400;
+                                                    line-height: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &-billing-address{
+                                        display: none;
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    div.payment-option {
+                        padding-top: 75px;
+                        &-title {
+                            border: none;
+                            .action.action-toggle {
+                                font-size: 1.4rem;
+                                color: #073756;
+                                font-family: 'Montserrat',sans-serif;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .checkout-index-index {
+
+        .page-main {
+            margin-top: 0;
+        }
+
+        .opc-progress-bar {
+            display: none;
+        }
+
+        .columns {
+
+            .column.main {
+
+                .checkout-container {
+
+                    .opc-wrapper {
+                        padding: 0;
+                        .checkout-payment-method {
+                            .fieldset {
+
+                                .payment-method {
+
+                                    &-content {
+                                        padding: 0;
+                                        .actions-toolbar {
+                                            width: 100%;
+                                            .primary {
+                                                width: 100%;
+                                                .action.primary.checkout {
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    .opc-estimated-wrapper {
+                        display: block;
+                    }
+
+                    .opc-summary-wrapper {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    .checkout-index-index {
+
+        .page-main {
+            max-width: 1200px;
+        }
+
+        .opc-progress-bar {
+            display: block;
+        }
+
+        .columns {
+
+            .column.main {
+
+                .checkout-container {
+
+                    .authentication-wrapper {
+                        margin-top: 0;
+                    }
+
+                    .opc-estimated-wrapper {
+                        display: none;
+                    }
+
+                    .opc-wrapper {
+                        padding-right: 30px;
+                        .checkout-payment-method {
+                            .fieldset {
+
+                                .payment-method {
+
+                                    &-content {
+                                        padding: 0;
+                                        .actions-toolbar {
+                                            width: auto;
+                                            .primary {
+                                                width: auto;
+                                                .action.primary.checkout {
+                                                    width: auto;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    .opc-summary-wrapper {
+                        display: block;
+                        .opc-block-shipping-information {
+                            display: none;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media (min-width: 1231px) {
+
+    body#html-body.checkout-cart-index {
+
+    }
+
+}
