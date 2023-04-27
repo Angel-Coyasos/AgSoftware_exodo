@@ -1,0 +1,72 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    #html-body.checkout-cart-index {
+    .page-title-wrapper {
+        .page-title {
+            .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
+            text-transform: uppercase;
+        }
+    }
+        .cart-container {
+            .cart-summary {
+                .social-login-container {
+                    width: 100%;
+                    margin-bottom: unset;
+                    margin-top: 10px;
+                    display: block;
+                    padding: 0;
+                    max-width: 623px;
+                    margin: 10px 0 unset;
+                }
+
+                .social-collapse{
+                        strong {
+                            .config-font( @fuente2, 12px, 600, normal,  1.42857143, 0.5px, #303030 );
+                            text-transform: uppercase;
+                        }
+                    }
+
+                .block.shipping {
+                    display: none;
+                }
+            }
+        }
+}
+   
+
+}
+
+//
+// Break point for custom desktop
+//  _____________________________________________
+
+@media  (min-width: 841px) {
+    .checkout-cart-index {
+        .page-title-wrapper   {
+            .page-title {
+                    font-size: 58px;
+                    margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+//
+// Breaking point for large custom desktop
+//  _____________________________________________
+
+@media  (min-width: 1231px) {
+    .checkout-cart-index  {
+        .page-title-wrapper {
+            .page-title {
+                    padding: 10px 0;
+                    font-weight: 900;
+                    line-height: 0.9;
+                    color: @color-oscuro;
+            }
+        }
+    }
+}
