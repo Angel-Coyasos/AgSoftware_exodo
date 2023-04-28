@@ -11,13 +11,21 @@
 
             <container name="success.wrapper" htmlTag="div" htmlClass="success__wrapper" before="-">
 
-                <block name="image.success" template="Magento_Checkout::image-success.phtml"/>
+                <block name="success.image" template="Magento_Checkout::image-success.phtml"/>
+
+                <!--<block name="checkout.success" template="Magento_Checkout::checkout-success.phtml"/>
+
+                <block name="newsletter.success" template="Magento_Checkout::newsletter-checkout.phtml"/>
+
+                <block name="order.success" template="Magento_Checkout::order.phtml"/>-->
 
             </container>
 
         </referenceContainer>
 
-        <move element="page.main.title" destination="success.wrapper"  before="image.success"/>
+        <move element="page.main.title" destination="success.wrapper"  after="image.success"/>
+        <move element="checkout.success" destination="success.wrapper"  after="page.main.title"/>
+        <move element="checkout.registration" destination="success.wrapper"  after="checkout.success"/>
 
     </body>
 </page>
