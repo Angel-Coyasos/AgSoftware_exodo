@@ -69,7 +69,9 @@
         .columns {
 
             .column.main {
-
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
             }
 
             .success__wrapper {
@@ -90,11 +92,96 @@
                     padding-bottom: 10px;
                 }
 
+                .registration-checkout-succes {
+                    display: none;
+                }
+
+                .newsletter-checkout-succes {
+                    margin: 0 auto;
+                    margin-bottom: 64px;
+                    text-align: center;
+
+                    .icon_thank_you_03 {
+                        width: 55px;
+                        height: 55px;
+                        margin: 0 auto 21px auto;
+                        background-image: url(https://www.weltpixel.com/static/version1679594893/frontend/Pearl/weltpixel_custom/en_US/WeltPixel_ThankYouPage/images/icon_03.svg);
+                    }
+
+                    .newsletter-description {
+                        margin-bottom: 10px;
+                        font-family: 'Montserrat',sans-serif;
+                        font-size: 15px;
+                        font-weight: 700;
+                        text-align: center;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .form {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .field {
+                            max-width: 260px;
+                            width: 100%;
+                            .label {
+                                width: auto;
+                            }
+
+                            .control {
+
+                                &:before {
+                                    line-height: 50px;
+                                    font-size: 20px;
+                                    margin-left: 24px;
+                                }
+
+                                input {
+                                    height: 50px;
+                                    letter-spacing: inherit;
+                                    padding-left: 60px;
+                                    font-family: 'Montserrat',sans-serif;
+                                }
+
+                            }
+
+                        }
+
+                        .actions {
+
+                            .subscribe {
+                                height: 50px;
+                                background-color: #073756;
+                                border: 1px solid #073756;
+                                color: #fff;
+                                transition-duration: .3s;
+                                transition-property: background-color;
+                                border-radius: 0;
+                                &:hover {
+                                    background-color: #fff;
+                                    color: #073756;
+                                }
+                                span {
+                                    margin-top: -2px;
+                                    display: block;
+                                    line-height: 30px;
+                                    text-transform: uppercase;
+                                    font-family: 'Montserrat',sans-serif;
+                                    font-weight: 400;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    }
+
+                }
+
             }
 
         }
-
-    }
 
 }
 
@@ -114,6 +201,23 @@
 
         .page-footer {
             margin-top: 25px;
+        }
+
+    }
+
+    .checkout-onepage-success {
+
+        .columns {
+
+            .success__wrapper {
+
+                .newsletter-checkout-succes {
+                   max-width: 100%;
+
+                }
+
+            }
+
         }
 
     }
@@ -148,6 +252,32 @@
 
         .page-footer {
             margin-top: 0;
+        }
+
+    }
+
+    .checkout-onepage-success {
+
+        .columns {
+
+            .success__wrapper {
+
+                .newsletter-checkout-succes {
+                    width: 35%;
+                    margin: 0 auto 65px;
+
+                    .form {
+
+                        .actions {
+                            width: auto;
+                        }
+
+                    }
+
+                }
+
+            }
+
         }
 
     }
