@@ -2,7 +2,6 @@ let nav = document.querySelector('#offer');
 let pageheader = document.querySelector('.page-header');
 
 
-
 function menus(){
     let Desplazamiento_Actual = window.pageYOffset;
 
