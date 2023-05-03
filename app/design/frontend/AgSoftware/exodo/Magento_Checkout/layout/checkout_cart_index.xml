@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>checkout cart</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <!-- creo contenedor de los botones del social login -->
+            <container name="social-login-container" htmlTag="div" htmlClass="social-login-container" before="-"></container>
+
+            <!-- Bloque collapsible donde se realizara el llamado de social login -->
+            <block name="social-login-collapse" before="-" template="Mageplaza_SocialLogin::form/socialcollapse.phtml">
+            <!-- llamado del bloque por defecto que contiene el social login-->
+                <block class="Mageplaza\SocialLogin\Block\Popup\Social" before="-" ifconfig="sociallogin/general/enabled" name="social-login-popup-authentication-social-login" template="Mageplaza_SocialLogin::form/social.phtml">
+                    <block class="Mageplaza\SocialLogin\Block\Popup" name="social-login-request-info" before="-" as="request.info" template="Mageplaza_SocialLogin::popup/form/email.phtml"/>
+                </block>
+            </block>
+
+            <!-- bloque con texto descriptivo-->
+            <block  name="summary.description" template="Magento_Theme::description.phtml"/>
+
+            <block  name="block.Apply" template="Magento_Checkout::cart/appli.phtml"/>
+            
+
+        </referenceContainer>
+
+        
+
+        <!-- movemos el bloque que contiene nuestra seccion collapse al contenedor general del social login-->
+        <move element="social-login-collapse" destination="social-login-container"  before="-"/>
+
+        <!-- movemos el bloque al contenedor que queremos visualizarlo-->
+        <move element="social-login-container" destination="cart.summary"  before="-"/>
+        
+        <!-- Ubicacion de bloque al container que deseamos que se renderice-->
+        <move element="summary.description" destination="cart.summary"   after="checkout.cart.summary.title"/>
+
+        <move element="block.Apply" destination="checkout.cart.container"  after="checkout.cart.coupon" />
+
+
+        <!-- remuevo bloque flotante -->
+        <referenceBlock name="block.float"  remove="true"/>
+
+   </body>
+</page>
