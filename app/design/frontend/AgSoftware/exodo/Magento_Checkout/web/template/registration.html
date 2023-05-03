@@ -1,0 +1,44 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- ko foreach: getRegion('messages') -->
+<!-- ko template: getTemplate() --><!-- /ko -->
+<!--/ko-->
+<div class="registration-checkout-succes">
+    <!-- ko if: isFormVisible -->
+    <p data-bind="i18n: 'You can track your order status by creating an account.'"></p>
+    <!--<p><span data-bind="i18n: 'Email Address'"></span>: <span data-bind="text: getEmailAddress()"></span></p>-->
+    <a class="action primary" data-bind="attr: { href: getUrl() }">
+        <span data-bind="i18n: 'Create an Account'"></span>
+    </a>
+    <!--/ko-->
+</div>
+
+<!-- SECTION NEWSLLETER -->
+<div class="newsletter-checkout-succes content block newsletter">
+    <div class="icon_thank_you_03"></div>
+    <div class="newsletter-description">Stay secure! Receive Important Updates for your Magento extension
+        (recommended)
+    </div>
+    <form class="form subscribe" novalidate="novalidate" action="#" method="post"
+          id="newsletter-checkout-validate-detail">
+        <div class="field newsletter">
+            <label class="label" for="newsletter">
+                <span>Sign Up for Our Newsletter:</span>
+            </label>
+            <div class="control">
+                <input type="email" data-bind="textInput: getEmailAddress()"
+                       value="`<span data-bind='text: getEmailAddress()'></span>`">
+            </div>
+        </div>
+        <div class="actions">
+            <button class="action subscribe primary" title="Subscribe" type="submit">
+                <span>Subscribe</span>
+            </button>
+        </div>
+    </form>
+</div>
+<!-- SECTION NEWSLLETER -->

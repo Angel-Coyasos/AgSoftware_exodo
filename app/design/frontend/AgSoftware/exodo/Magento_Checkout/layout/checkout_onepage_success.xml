@@ -1,0 +1,31 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.bin
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="content">
+
+            <container name="success.wrapper" htmlTag="div" htmlClass="success__wrapper" before="-">
+
+                <block name="success.image" template="Magento_Checkout::image-success.phtml"/>
+
+                <!--<block name="checkout.success" template="Magento_Checkout::checkout-success.phtml"/>
+
+                <block name="newsletter.success" template="Magento_Checkout::newsletter-checkout.phtml"/>
+
+                <block name="order.success" template="Magento_Checkout::order.phtml"/>-->
+
+            </container>
+
+        </referenceContainer>
+
+        <move element="page.main.title" destination="success.wrapper"  after="image.success"/>
+        <move element="checkout.success" destination="success.wrapper"  after="page.main.title"/>
+        <move element="checkout.registration" destination="success.wrapper"  after="checkout.success"/>
+
+    </body>
+</page>

@@ -16,8 +16,6 @@
         </referenceContainer>
 
         <referenceContainer name="content">
-
-            <block name="main.loader" template="AgSoftware_Loader::loader.phtml" before="recently.viewed" />
             <block name="chevron.up" template="AgSoftware_ChevronUp::chevron-up.phtml" before="-" />
             <block name="block.float"  template="Agsoftware_Answer::float.phtml" before="-"/>
         </referenceContainer>
