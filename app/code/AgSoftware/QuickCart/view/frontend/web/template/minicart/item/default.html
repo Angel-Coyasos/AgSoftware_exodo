@@ -59,11 +59,11 @@
 
             <div class="product actions">
                 <!-- ko if: is_visible_in_site_visibility -->
-                <!--<div class="primary">
+                <div class="primary" style="display: none">
                     <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit">
                         <span data-bind="i18n: 'Edit'"></span>
                     </a>
-                </div>-->
+                </div>
                 <!-- /ko -->
                 <div class="secondary">
                     <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
@@ -78,7 +78,7 @@
 
                 <div class="details-map">
                     <span class="label" data-bind="i18n: 'Price'"></span>
-                    <!--<span class="value" data-bind="i18n: 'See price before order confirmation.'"></span>-->
+                    <span class="value" data-bind="i18n: 'See price before order confirmation.'" style="display: none"></span>
                 </div>
                 <!-- /ko -->
                 <!-- ko ifnot: canApplyMsrp -->

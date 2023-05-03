@@ -1,0 +1,23 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="opc-block-summary" data-bind="blockLoader: isLoading">
+
+    <span data-bind="i18n: 'Order Summary'" class="title"></span>
+
+    <div class="caption__container">
+        <div class="caption">
+            <strong data-bind="i18n: 'You earn'" ></strong>
+            <b data-bind="i18n: '10% back in Reward Points'"></b>
+            <strong data-bind="i18n: 'for completing your purchase!'"></strong>
+        </div>
+    </div>
+
+    <!-- ko foreach: elems() -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+
+</div>
