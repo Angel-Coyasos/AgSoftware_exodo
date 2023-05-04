@@ -66,6 +66,10 @@
 
     .checkout-onepage-success {
 
+        .page-main {
+            background-color: #f9f9f9;
+        }
+
         .columns {
 
             .column.main {
@@ -90,6 +94,19 @@
                 .success__image {
                     padding-top: 10px;
                     padding-bottom: 10px;
+                }
+
+                .checkout-success {
+
+                    p {
+                        font-family: 'Montserrat',sans-serif;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .actions-toolbar {
+                        display: none;
+                    }
+
                 }
 
                 .registration-checkout-succes {
@@ -148,6 +165,7 @@
                         }
 
                         .actions {
+                            width: auto;
 
                             .subscribe {
                                 height: 50px;
@@ -177,11 +195,212 @@
 
                     }
 
+                .order-info {
+
+                    .product-grid{
+                        max-width: 1024px;
+                        margin: 0 auto;
+
+                        .order-items {
+                            border-top: 0;
+
+                            .table-order-items {
+                                border-top: 1px solid #eee;
+                                border-bottom: 1px solid #eee;
+                                margin-top: 40px;
+                                margin-bottom: 40px;
+                            }
+
+                            tbody {
+
+                                .order-item-row {
+                                    text-align: left;
+
+                                    .col {
+                                        text-align: left;
+                                    }
+
+                                    .col.name {
+
+                                        .product-item-photo {
+                                            font-family: 'Montserrat',sans-serif;
+                                            text-decoration: none;
+                                            letter-spacing: 0.5px;
+                                            color: #444;
+                                        }
+
+                                        .item-options {
+                                            font-family: 'Montserrat',sans-serif;
+                                            letter-spacing: 0.5px;
+                                            dt {
+                                                margin-top: 5px;
+                                            }
+                                        }
+
+                                    }
+
+                                    .col.price, col.qty, col.subtotal {
+                                        text-align: center;
+                                    }
+
+                                }
+
+                            }
+
+                            tfoot {
+                                background-color: #f9f9f9;
+                                .subtotal {
+                                    border-top: 1px solid #eee;
+                                    .textalign-right {
+                                        border: 0;
+                                        font-family: 'Montserrat',sans-serif;
+                                        text-align: right;
+                                        letter-spacing: 0.5px;
+                                    }
+                                }
+
+                                .grand_total {
+                                    border-top: 1px solid #eee;
+                                    .textalign-right {
+                                        font-family: 'Montserrat',sans-serif;
+                                        text-align: right;
+                                        letter-spacing: 0.5px;
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
                 }
 
             }
 
         }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (max-width: 639px) {
+
+    .checkout-onepage-success {
+        .columns {
+            .success__wrapper {
+                .order-info {
+                    .product-grid{
+                        .order-items {
+                            tbody {
+
+                                .order-item-row {
+
+                                    .col {
+                                        display: inline-block;
+                                    }
+                                    .col.image {
+                                        .product-item-photo {
+                                            span {
+                                                max-width: 115px;
+                                            }
+                                        }
+                                    }
+                                    .col.sku {
+                                        display: none;
+                                    }
+                                    .col.price {
+                                        display: none;
+                                    }
+                                    .col.qty {
+                                        display: none;
+                                    }
+                                    .col.subtotal {
+                                        display: none;
+                                    }
+
+                                }
+
+                                .order-item-row-mobile {
+                                    display: inline-table;
+                                    width: 100%;
+                                    font-family: 'Montserrat',sans-serif;
+                                    .col {
+                                        display: table-cell;
+                                        margin: 10px 0;
+                                        padding: 10px;
+                                        border-bottom: 0 none;
+                                        span.price, span.content, span.price {
+                                            font-weight: 400;
+                                        }
+                                    }
+                                    .col.price {
+                                        text-align: left;
+                                    }
+                                    .col.qty {
+                                        text-align: center;
+                                    }
+                                    .col.subtotal {
+                                        text-align: right;
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 640px) {
+
+    .checkout-onepage-success {
+        .columns {
+            .success__wrapper {
+                .order-info {
+                    .product-grid{
+                        .order-items {
+                            tbody {
+
+                                .order-item-row {
+                                    .col {
+                                        span.price, span.content, span.price {
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                                .order-item-row-mobile {
+                                    display: none;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 }
 
@@ -311,6 +530,32 @@
                             font-weight: 900;
                             color: @color-oscuro;
                         }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    body#html-body.checkout-onepage-success {
+
+        .columns {
+
+            .success__wrapper {
+
+                .page-title-wrapper {
+
+                    .page-title {
+                        padding: 10px 0;
+
+                        .base {
+                            font-weight: 900;
+                            color: @color-oscuro;
+                        }
+
                     }
 
                 }
