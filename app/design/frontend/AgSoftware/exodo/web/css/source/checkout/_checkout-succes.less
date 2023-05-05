@@ -67,7 +67,7 @@
     .checkout-onepage-success {
 
         .page-main {
-            background-color: #f9f9f9;
+            background-color: @color-claro;
         }
 
         .columns {
@@ -99,7 +99,7 @@
                 .checkout-success {
                     margin-bottom: 64px;
                     p {
-                        font-family: 'Montserrat',sans-serif;
+                        font-family: @fuente2;
                         letter-spacing: 0.5px;
                     }
 
@@ -127,7 +127,7 @@
 
                     .newsletter-description {
                         margin-bottom: 10px;
-                        font-family: 'Montserrat',sans-serif;
+                        font-family: @fuente2;
                         font-size: 15px;
                         font-weight: 700;
                         text-align: center;
@@ -146,6 +146,7 @@
                             }
 
                             .control {
+                                position: relative;
 
                                 &:before {
                                     line-height: 50px;
@@ -157,7 +158,15 @@
                                     height: 50px;
                                     letter-spacing: inherit;
                                     padding-left: 60px;
-                                    font-family: 'Montserrat',sans-serif;
+                                    font-family: @fuente2;
+                                }
+
+                                .newsletter-checkout-error {
+                                    position: absolute;
+                                    right: 0;
+                                    left: 0;
+                                    margin: 0 auto;
+                                    width: 200px;
                                 }
 
                             }
@@ -169,22 +178,22 @@
 
                             .subscribe {
                                 height: 50px;
-                                background-color: #073756;
-                                border: 1px solid #073756;
-                                color: #fff;
+                                background-color: @color-primario;
+                                border: 1px solid @color-primario;
+                                color: @color-titulo;
                                 transition-duration: .3s;
                                 transition-property: background-color;
                                 border-radius: 0;
                                 &:hover {
-                                    background-color: #fff;
-                                    color: #073756;
+                                    background-color: @color-titulo;
+                                    color: @color-primario;
                                 }
                                 span {
                                     margin-top: -2px;
                                     display: block;
                                     line-height: 30px;
                                     text-transform: uppercase;
-                                    font-family: 'Montserrat',sans-serif;
+                                    font-family: @fuente2;
                                     font-weight: 400;
                                 }
                             }
@@ -223,14 +232,14 @@
                                     .col.name {
 
                                         .product-item-photo {
-                                            font-family: 'Montserrat',sans-serif;
+                                            font-family: @fuente2;
                                             text-decoration: none;
                                             letter-spacing: 0.5px;
                                             color: #444;
                                         }
 
                                         .item-options {
-                                            font-family: 'Montserrat',sans-serif;
+                                            font-family: @fuente2;
                                             letter-spacing: 0.5px;
                                             dt {
                                                 margin-top: 5px;
@@ -248,12 +257,12 @@
                             }
 
                             tfoot {
-                                background-color: #f9f9f9;
+                                background-color: @color-claro;
                                 .subtotal {
                                     border-top: 1px solid #eee;
                                     .textalign-right {
                                         border: 0;
-                                        font-family: 'Montserrat',sans-serif;
+                                        font-family: @fuente2;
                                         text-align: right;
                                         letter-spacing: 0.5px;
                                     }
@@ -262,7 +271,7 @@
                                 .grand_total {
                                     border-top: 1px solid #eee;
                                     .textalign-right {
-                                        font-family: 'Montserrat',sans-serif;
+                                        font-family: @fuente2;
                                         text-align: right;
                                         letter-spacing: 0.5px;
                                     }
@@ -327,7 +336,7 @@
                                 .order-item-row-mobile {
                                     display: inline-table;
                                     width: 100%;
-                                    font-family: 'Montserrat',sans-serif;
+                                    font-family: @fuente2;
                                     .col {
                                         display: table-cell;
                                         margin: 10px 0;
