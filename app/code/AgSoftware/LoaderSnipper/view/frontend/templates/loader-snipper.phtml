@@ -1,8 +1,8 @@
-<div id="loader" data-role="loader" class="loading-mask main-loader">
+<div id="loaderSnipper" data-role="loader" class="loading-mask main-loader">
 
     <!--PARA TENER UN LOADER UTILIZANDO ALGUN GIF DESCOMENTA EL SIGUIENTE CODIGO.-->
     <div class="loader-image">
-        <img src="https://www.weltpixel.com/static/version1679594893/frontend/Pearl/weltpixel_custom/en_US/images/loader-1.gif" alt="Loading...">
+        <img src="<?php echo $this->getViewFileUrl('AgSoftware_LoaderSnipper::images/loader.gif') ?>" alt="Loader">
     </div>
 
 
@@ -19,13 +19,3 @@
     </div>-->
 
 </div>
-
-<script>
-    require(['jquery', 'loader'], function ($) {
-        'use strict';
-
-        $('#loader').loader({
-            icon: 'AgSoftware_Loader/images/loader.gif'
-        });
-    });
-</script>
