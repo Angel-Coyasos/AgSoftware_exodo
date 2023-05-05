@@ -1,4 +1,4 @@
-require(['jquery', 'loader'], function($) {
+jQuery(function($) {
 
     $(window).on('load', function() {
         $("#loaderSnipper").hide();

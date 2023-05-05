@@ -1,7 +1,5 @@
 var config = {
-    map: {
-        '*': {
-            loader: 'AgSoftware_LoaderSnipper/js/loaderSnipper'
-        }
-    }
+    deps: [
+        'AgSoftware_LoaderSnipper/js/loaderSnipper'
+    ],
 };
