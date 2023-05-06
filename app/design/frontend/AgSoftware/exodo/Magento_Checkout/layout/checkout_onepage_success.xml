@@ -19,6 +19,9 @@
 
             <block name="order.success" template="Magento_Checkout::order-success.phtml"/>
 
+            <block class="Magento\Newsletter\Block\Subscribe" name="newsletter.checkout" template="Magento_Checkout::newsletter-checkout.phtml"/>
+            <!--<block class="Magento\Checkout\Block\Success" name="success.custom" template="Magento_Checkout::success-custom.phtml"/>-->
+
             <!--<container name="orders.succes" htmlTag="div" htmlClass="success__order">
                 <block class="Magento\Sales\Block\Order\Items" name="order.items" template="Magento_Sales::order/items.phtml">
                     <block class="Magento\Sales\Block\Order\Item\Renderer\DefaultRenderer" name="item_unit_price" template="Magento_Sales::items/price/unit.phtml" />
@@ -32,8 +35,9 @@
 
         <move element="page.main.title" destination="success.wrapper"  after="image.success"/>
         <move element="checkout.success" destination="success.wrapper"  after="page.main.title"/>
-        <move element="checkout.registration" destination="success.wrapper"  after="checkout.success"/>
+        <move element="newsletter.checkout" destination="success.wrapper"  after="checkout.success"/>
         <move element="order.success" destination="success.wrapper"  after="checkout.registration"/>
+        <referenceBlock name="checkout.registration" remove="true"/>
 
     </body>
 </page>

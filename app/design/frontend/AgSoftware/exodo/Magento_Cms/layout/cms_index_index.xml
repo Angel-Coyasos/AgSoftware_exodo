@@ -9,7 +9,7 @@
     <body>
         <referenceContainer name="content">
 
-            <block name="main.loader" template="AgSoftware_Loader::loader.phtml" before="recently.viewed" />
+            <block name="main.loader" template="AgSoftware_LoaderSnipper::loader-snipper.phtml" before="recently.viewed" />
 
             <container name="blocks.home.container" htmlTag="div" htmlClass="blocks-home__container">
 
