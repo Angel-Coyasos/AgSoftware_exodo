@@ -8,7 +8,7 @@
     <body>
 
         <!--<referenceContainer name="content">
-            <block name="main.loader" template="AgSoftware_Loader::loader.phtml" before="-" />
+            <block name="main.loader" template="AgSoftware_Loader::loader-snipper.phtml" before="-" />
         </referenceContainer>-->
 
     </body>

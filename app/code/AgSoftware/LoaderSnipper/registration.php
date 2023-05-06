@@ -5,5 +5,5 @@
  */
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'AgSoftware_Loader', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'AgSoftware_LoaderSnipper', __DIR__);
 
