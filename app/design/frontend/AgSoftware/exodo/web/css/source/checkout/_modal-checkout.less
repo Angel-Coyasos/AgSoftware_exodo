@@ -1,0 +1,120 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .checkout-index-index {
+       .modals-wrapper {
+        .modal-popup.modal-slide {
+            left: 44px;
+            .modal-inner-wrap {
+                background-color: #f4f4f4;
+                padding: 0;
+
+                .modal-header {
+                    padding: 30px 30px 12px;
+
+                    .modal-title {
+                        .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
+                        text-transform: uppercase;
+                    }
+
+                    .action-close {
+                        right: 0;
+                        top: 0;
+                        padding: 0;
+                        margin: 15px;
+                    }
+                }
+
+                .modal-content {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0px 30px 26px;
+                    .config-font( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030);
+
+                    .form-shipping-address {
+                        .address {
+                            .field {
+                                input {
+                                    font-family: @fuente2;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .modal-footer {
+                    .action.primary, .action.secondary {
+                        padding: 7px 15px;
+                        margin-top: 0;
+                        .btn-checkout(@color-titulo, @color-primario);
+                        width: auto;
+
+                    }
+                }
+            }
+        }
+           .modals-overlay {
+            background-color: rgba(51,51,51,.55);
+           }
+       }
+       
+
+    }
+
+}
+
+
+//
+// Breakpoints for different devices
+//  _____________________________________________
+
+@media  (min-width: 841px) {
+    .checkout-index-index  {
+        .modals-wrapper {
+            .modal-popup.modal-slide {
+                .modal-inner-wrap {
+                    .modal-header {
+                        .modal-title {
+                            font-size: 58px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+@media  (min-width: 1231px) {
+    .checkout-index-index  {
+        .modals-wrapper {
+            .modal-popup.modal-slide {
+                .modal-inner-wrap {
+                    background-color: #fff;
+                    .modal-header {
+                        .modal-title {
+                            padding: 10px 0;
+                            font-weight: 900;
+                            line-height: 0.9;
+                            color: @color-oscuro;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+@media  (max-width: 1400px){
+    .checkout-index-index  {
+        .modals-wrapper {
+            .modal-popup.modal-slide {
+                .modal-inner-wrap {
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
