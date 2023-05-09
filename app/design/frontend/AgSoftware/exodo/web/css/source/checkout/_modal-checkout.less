@@ -26,7 +26,7 @@
                     }
                 }
 
-                .modal-content {
+                .modal-content { // Modal cuando el usuario esta logeado
                     width: 100%;
                     margin: 0;
                     padding: 0px 30px 26px;
@@ -41,8 +41,9 @@
                             }
                         }
                     }
-
                 }
+                
+                
 
                 .modal-footer {
                     .action.primary, .action.secondary {
@@ -60,6 +61,65 @@
            }
        }
        
+       .authentication-dropdown { //modal para que el usuario realice el ingreso
+        .modal-inner-wrap {
+            .modal-content {
+                .block-customer-login {
+                    color: #000;
+
+                    .block-title {
+                        strong {
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            color: #000;
+                        }
+                    }
+
+                    .block-content {
+                        font-size: 12px;
+
+                        form[data-role="login"] {
+
+                            .fieldset {
+                                #recaptcha-checkout-login-wrapper {
+                                    display: none;
+                                }
+                            }
+
+                            .actions-toolbar {
+                                .primary .action-login{
+                                    padding: 10px 20px;
+                                    margin: 0;
+                                    border: none;
+                                    background: 0.0;
+
+                                    span {
+                                        .config-font( @fuente2, 1.6rem, 400, normal,  30px, 0px, #000);
+                                        text-transform: uppercase;
+                                    }
+                                }
+
+                                .secondary {
+                                    margin-top: 0;
+
+                                    .action-remind {
+                                        color: #444;
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+                
+                        
+
+                        
+                    
+                
+            }
+        }
+        
+    }
 
     }
 
