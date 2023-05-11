@@ -1,9 +1,9 @@
 /* Mixing */
 
-.btn-checkout {
+.btn-checkout (@background, @border-color){
     width: 100%;
-    background-color: @color-titulo;
-    border: @color-primario 1px solid;
+    background-color: @background;
+    border: @border-color 1px solid;
     -webkit-border-radius: 0px;
     transition-duration: .3s;
     transition-property: background-color;
@@ -17,22 +17,21 @@
         border: @color-primario 1px solid;
         color: @color-titulo;
         box-shadow: none;
+        text-decoration: none;
     }
 }
-
-
-
 
 //
 //  Common
 //  _____________________________________________
 & when (@media-common = true) {
     #html-body.checkout-cart-index {
+        .config-font( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030);
+
         .page-main {
             max-width: 1200px;
-            margin: 0 auto;
         }
-        .config-font( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030);
+
     .page-title-wrapper {
         .page-title {
             .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
@@ -193,7 +192,7 @@
                     background-color: @color-titulo;
 
                     button[type="submit"] {
-                        .btn-checkout();
+                        .btn-checkout(@color-titulo, @color-primario);
                         padding: 10px 15px;
                         margin: 0 0 10px;
                     }
@@ -245,7 +244,7 @@
                             .actions-toolbar {
                                 .primary {
                                     .apply[type="button"] {
-                                        .btn-checkout();
+                                        .btn-checkout(@color-titulo, @color-primario);
                                         margin-left: 10px;
                                         cursor: pointer;
                                         padding: 7px 15px;

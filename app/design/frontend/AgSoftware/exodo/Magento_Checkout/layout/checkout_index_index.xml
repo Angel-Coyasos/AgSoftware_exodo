@@ -1,10 +1,12 @@
+<?xml version="1.0"?>
 <!--
-/**
- * Copyright © Magento, Inc. All rights reserved.bin
- * See COPYING.txt for license details.
- */
+    /**
+     * Copyright © Magento, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
     <body>
 
         <referenceBlock name="block.float" remove="true"/>
@@ -13,4 +15,18 @@
         <referenceBlock name="page.top" remove="true"/>
 
     </body>
+
+    <head>
+        <title>checkout</title>
+    </head>
+    <body>
+
+        <!-- remuevo bloque flotante -->
+        <referenceBlock name="block.float"  remove="true"/>
+
+        <!-- remueve bloque contenedor del carrito, lupa y login -->
+        <referenceBlock name="header_right"  remove="true"/>
+
+   </body>
+
 </page>

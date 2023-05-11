@@ -1,0 +1,195 @@
+// Modal-checkout
+@import "./_modal-checkout.less";
+
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    .checkout-index-index {
+        .config-font( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030);
+
+        // .page-wrapper {
+        //     .page-header {
+        //         header .nav-sections {
+        //             display: none;
+        //         }
+        //     }
+        // }
+
+        #checkout-loader.loading-mask {
+            display: none;
+        }
+
+        .checkout-container {
+
+            .opc-estimated-wrapper { 
+                .minicart-wrapper {
+                    .showcart {
+                        font-family: @fuente2;
+                        &__mincart {
+                            i {
+                                vertical-align: top;
+                                line-height: 30px;
+                                font-size: 18px;
+                                color: #333;
+                            }
+                        }
+                        .counter.qty {
+                            .counter-number {
+                                display: block;
+                                line-height: 22px;
+                                font-size: 14px;
+                                padding: 0 3px;
+                                text-shadow: none;
+                                color: #000;
+                            }
+                        }
+                    }
+
+                    .action.showcart::before {
+                        display:none;
+                    } 
+                }
+            }
+
+            .opc-summary-wrapper { //  
+                .modal-inner-wrap {
+                    .modal-content {
+                        .opc-block-summary {
+                            .caption__container {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .opc-wrapper {
+                .checkout-shipping-address{
+                    .step-title {
+                        font-weight: 400;
+                    }
+                    .step-content {
+                        .addresses .control {
+                            .selected-item {
+                                border-color: @color-primario;
+                                font-family: 'Montserrat';
+                                font-size: 1.4rem;
+                                line-height: 30px;
+                                letter-spacing: 0.5px;
+                                &:after {
+                                    background-color: @color-primario ;
+                                }
+                            }
+                        }
+
+                        .new-address-popup {
+                            .action-show-popup {
+                                .btn-checkout(@color-titulo, @color-primario);
+                                padding: 10px 15px;
+                                width: auto;
+                            }
+
+                            .action-show-popup > span:before {
+                                color: @color-primario;
+                            }
+
+                            .action-show-popup:hover > span:before {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .checkout-shipping-method {
+                    .step-title {
+                        display: none;
+                    }
+
+                    .step-content {
+                        .methods-shipping {
+                            #checkout-shipping-method-load {
+                                display: none;
+                            }
+                            .actions-toolbar .primary {
+                                .action {
+                                    .btn-checkout(@color-primario, @color-primario);
+                                    padding: 10px 20px;
+                                    color: #fff;
+                                    &:hover {
+                                        background-color: #fff;
+                                        border: @color-primario 1px solid;
+                                        color: @color-primario;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+       
+
+    }
+
+}
+
+
+//
+// Breakpoints for different devices
+//  _____________________________________________
+
+@media  (min-width: 768px) {
+    .checkout-index-index  {
+        .checkout-container {
+            .opc-wrapper {
+                width: 66.6667%;
+            }
+        }
+    }
+}
+
+@media  (min-width: 768px) and (max-width:1438px) {
+    .checkout-index-index  {
+        .checkout-container {
+            .opc-wrapper {
+                .checkout-shipping-address{
+                    .step-content {
+                        .addresses .control {
+                            .selected-item {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  (max-width: 1439){
+    .checkout-index-index  {
+        .checkout-container {
+            .opc-wrapper {
+                .checkout-shipping-address{
+                    .step-content {
+                        .addresses .control {
+                            .selected-item {
+                                width: 33.33333333%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  (max-width: 1229px){
+    .checkout-index-index  {
+        .page-wrapper {
+            overflow-x: hidden;
+        }
+    }
+}
