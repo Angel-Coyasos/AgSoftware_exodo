@@ -1,5 +1,6 @@
-
-  jQuery(function($) {
+require([
+    "jquery"
+], function($) {
     $('a[data-scroll]').on('click', function(event) {
         var target = $($(this).attr('data-scroll-target'));
         if (target.length) {
@@ -8,6 +9,6 @@
             scrollTop: target.offset().top
           }, 1000);
         }
-      });
-  });
+    });
+});
 

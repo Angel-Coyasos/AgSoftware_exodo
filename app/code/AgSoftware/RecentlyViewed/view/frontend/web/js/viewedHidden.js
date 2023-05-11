@@ -1,4 +1,6 @@
-jQuery(function($) {
+require([
+    "jquery"
+], function($) {
 
     const recentlyViewed = $('#recently-viewed');
     var modal = $('#viewed-modal');

@@ -1,4 +1,6 @@
-jQuery(function($) {
+require([
+    "jquery"
+], function($) {
 
     const chevronButton = $('#chevronButton');
 
