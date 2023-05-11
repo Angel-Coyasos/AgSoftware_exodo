@@ -26,6 +26,7 @@
 
         <!-- remueve bloque contenedor del carrito, lupa y login -->
         <referenceBlock name="header_right"  remove="true"/>
+        <referenceBlock name="offer.container"  remove="true"/>
 
    </body>
 
