@@ -17,9 +17,14 @@ require([
         modalClass: 'modal-answer'
     };
 
-    var popup = modal(options, $('#modal'));
-    $("#btn-float").click(function() {
-        $('#modal').modal('openModal');
-        $('#modal').removeClass('modal-popup');
-    });
+    if ( $('.floating-father').length ) {
+
+        var popup = modal(options, $('#modal'));
+        $("#btn-float").click(function() {
+            $('#modal').modal('openModal');
+            $('#modal').removeClass('modal-popup');
+        });
+
+    }
+
 });

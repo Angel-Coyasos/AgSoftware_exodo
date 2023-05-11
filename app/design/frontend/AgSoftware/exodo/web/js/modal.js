@@ -20,11 +20,15 @@ require(
             modalClass: 'modal-header'
         };
 
-        modal(options, $('#popup-modal'));
-        $("#modal-btn").on('click',function(){
-            $("#popup-modal").modal("openModal");
-        });
+        if ( $('.container-search').length ) {
+
+            modal(options, $('#popup-modal'));
+            $("#modal-btn").on('click',function(){
+                $("#popup-modal").modal("openModal");
+            });
+
+        }
+
     }
 );
 
-  

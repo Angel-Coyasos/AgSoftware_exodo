@@ -1,4 +1,6 @@
-jQuery(function($) {
+require([
+    "jquery"
+], function($) {
 
     $(document).ready(function() {
         var viewed = $('#viewed');

@@ -38,6 +38,10 @@
         <move element="newsletter.checkout" destination="success.wrapper"  after="checkout.success"/>
         <move element="order.success" destination="success.wrapper"  after="checkout.registration"/>
         <referenceBlock name="checkout.registration" remove="true"/>
+        <referenceBlock name="block.float" remove="true"/>
+        <referenceBlock name="recently.viewed" remove="true"/>
+        <!--<referenceBlock name="header_right" remove="true"/>
+        <referenceBlock name="page.top" remove="true"/>-->
 
     </body>
 </page>
