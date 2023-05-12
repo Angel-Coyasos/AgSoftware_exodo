@@ -2,30 +2,21 @@ require([
     "jquery"
 ], function($) {
 
-    const recentlyViewed = $('#recently-viewed');
-    var modal = $('#viewed-modal');
+    const modal = $('#viewed-modal');
+    const viewedFloat = $('#viewedFloat');
+    const rvcontaier = $('#rv-contaier');
 
     function viewedHidden() {
-        let scrollBottom =
-            $(document).scrollTop() + $(window).height() >=
-            $(document).height() - 120;
+        let scrollBottom = $(document).scrollTop() + $(window).height() >= $(document).height() - 120;
 
         if (scrollBottom) {
-            recentlyViewed.addClass('animated slideInUp');
-            recentlyViewed.addClass('slideOutDown');
-            recentlyViewed.removeClass('slideInUp');
-            setTimeout(function() {
-                recentlyViewed.addClass('recently-viewed--hidden');
-                modal.addClass('viewed-modal--inactive');
-                modal.removeClass('viewed-modal--active');
-                recentlyViewed.removeClass('slideOutDownModal');
-            }, 500);
+            viewedFloat.slideUp('slow');
+            if ( modal.css('display') === 'block' ) {
+                modal.slideUp('slow');
+                rvcontaier.toggleClass('rv-active');
+            }
         } else {
-            recentlyViewed.addClass('slideInUp');
-            recentlyViewed.removeClass('slideOutDown');
-            setTimeout(function() {
-                recentlyViewed.removeClass('recently-viewed--hidden');
-            }, 500);
+            viewedFloat.slideDown('slow');
         }
 
     }

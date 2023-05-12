@@ -3,7 +3,6 @@ require([
 ], function($) {
 
     const viewedClear = $('#viewed-clear');
-
     const recentlyViewed = $('#recently-viewed');
 
     function viewedClearAll () {
@@ -13,6 +12,5 @@ require([
     }
 
     viewedClear.on('click', viewedClearAll);
-
 
 });

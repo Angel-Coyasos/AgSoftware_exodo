@@ -1,17 +1,30 @@
-/*
-    ANIMATION FLOAT RECENTLY VIEWED
-*/
-@import "_viewed-animation.less";
+/**
+ * VARIABLES
+ */
+@color-primario: #073756;
+@color-oscuro:  #000;
+@color-claro: #f9f9f9;
+@color-titulo: #fff;
+@color-texto: #cccccc;
+@fuente1: 'Open Sans', sans-serif;
+@fuente2: 'Montserrat', sans-serif;
+@fuente3: sans-serif;
+@fuente-buton: 'Raleway',sans-serif;
+@background-gay: #fafafa;
 
-/*
-    MODAL
-*/
+/**
+ * ARCHIVOS IMPORTADOS
+ *
+ * ESTILOS FLOAT: _viewed-float.less
+ * ESTILOS MODAL: _viewed-modal.less
+ *
+ */
+
 @import "_viewed-float.less";
-
-/*
-    MODAL
-*/
 @import "_viewed-modal.less";
+
+
+
 
 //
 //  Common
@@ -25,11 +38,19 @@
         width: 100%;
         z-index: 10;
         transition: all .3s;
+    }
 
-        &--hidden {
-            display: none;
-        }
+    .rv-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 100;
+    }
 
+    .rv-active {
+        height: 100%;
     }
 
 }
