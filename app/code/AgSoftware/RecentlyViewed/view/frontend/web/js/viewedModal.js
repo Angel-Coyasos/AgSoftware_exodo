@@ -3,34 +3,34 @@ require([
 ], function($) {
 
     $(document).ready(function() {
-        var viewed = $('#viewed');
-        var modal = $('#viewed-modal');
-        const recentlyViewed = $('#recently-viewed');
+        const viewed = $('#viewed');
+        const modal = $('#viewed-modal');
+        const rvcontaier = $('#rv-contaier');
 
         function viewedModal() {
 
-            if ( modal.hasClass('viewed-modal--active') ) {
-                recentlyViewed.addClass('animated');
-                recentlyViewed.addClass('slideOutDownModal');
-                recentlyViewed.removeClass('slideInUpModal');
-                setTimeout(function() {
-                    modal.removeClass('viewed-modal--active');
-                    modal.addClass('viewed-modal--inactive');
-                }, 500);
+            modal.slideToggle('slow');
+
+            if ( modal.hasClass('active')  ) {
+                modal.addClass('inactive');
+                modal.removeClass('active');
+                rvcontaier.toggleClass('rv-active');
             } else {
-                recentlyViewed.addClass('slideInUpModal');
-                recentlyViewed.removeClass('slideOutDownModal');
-                modal.addClass('viewed-modal--active');
-                modal.removeClass('viewed-modal--inactive');
-                /*setTimeout(function() {
-                    modal.addClass('viewed-modal--active');
-                    modal.removeClass('viewed-modal--inactive');
-                }, 500);*/
+                modal.addClass('active');
+                modal.removeClass('inactive');
+                rvcontaier.toggleClass('rv-active');
             }
 
         }
 
         viewed.click(viewedModal);
+
+        $(window).on('click', function(event) {
+            if (event.target === rvcontaier[0]) {
+                viewedModal();
+            }
+        });
+
 
     });
 
