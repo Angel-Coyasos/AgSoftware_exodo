@@ -1,34 +1,51 @@
-## Pull Request Template
+## Nombre de la rama
 
-### Summary
+[Rama en la que has trabajado: **nombre_de_la_rama**]
 
-A brief summary of the changes in this pull request.
+## Módulo de trabajo
 
-### Changes
+[Nombre del módulo o área específica en la que has trabajado.]
 
-A detailed list of the changes in this pull request.
+## Descripción del problema o necesidad
 
-### Testing
+[Descripción clara y concisa del problema o la necesidad que esta funcionalidad abordará.]
 
-How have you tested these changes?
+## Descripción de la solución propuesta
 
-### Screenshots (optional)
+[Explica la solución propuesta de manera clara y concisa. Puedes incluir detalles técnicos si es necesario.]
 
-If applicable, please add screenshots of the changes in this pull request.
+## Beneficios y justificación
 
-### References
+[Describe los beneficios que esta nueva funcionalidad brindará al proyecto o a los usuarios. También proporciona cualquier justificación adicional para incluir esta funcionalidad.]
 
-Any relevant references, such as issue numbers, tickets, or documentation.
+## Requisitos funcionales
 
-### Checklist
+[Especifica los requisitos funcionales para la nueva funcionalidad. Por ejemplo, si la funcionalidad afecta la interfaz de usuario, describe cómo debería comportarse y qué acciones deberían ser posibles.]
 
-Please check the following boxes to indicate that you have completed the following steps:
+## Requisitos no funcionales
 
-* I have followed the coding style guide.
-* I have tested my changes locally.
-* I have added unit tests for my changes.
-* I have updated the documentation.
+[Especifica cualquier requisito no funcional, como rendimiento, seguridad, accesibilidad, internacionalización, etc.]
 
-### Comments
+## Plan de implementación sugerido
 
-Please add any additional comments here.
+[Proporciona un plan de implementación sugerido para la nueva funcionalidad. Puede incluir una lista de tareas o pasos recomendados.]
+
+## Impacto en otras áreas del proyecto
+
+[Indica si la nueva funcionalidad tiene algún impacto en otras áreas del proyecto, como módulos existentes, bases de datos, API, documentación, pruebas, etc.]
+
+## Archivos modificados
+
+[Lista de archivos que has modificado como parte de esta funcionalidad.]
+
+## Estado del desarrollo
+
+[Indica el estado actual de desarrollo de la funcionalidad: **en progreso**, **completa**, **pendiente de revisión**, etc.]
+
+## Capturas de pantalla o ejemplos visuales (opcional)
+
+[Si es relevante, puedes agregar capturas de pantalla, diagramas o cualquier otro recurso visual que ayude a comprender mejor la propuesta.]
+
+## Otros comentarios (opcional)
+
+[Cualquier comentario adicional, enlaces relacionados o información complementaria.]
