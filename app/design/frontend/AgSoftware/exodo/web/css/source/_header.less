@@ -297,113 +297,6 @@
             }
         }
     }
-    .modals-wrapper {
-        .modal-popup.modal-header {
-            opacity: 0;
-            transition: all .5s;
-            transform: translateY(-100px);
-            .modal-inner-wrap {
-                width: 100%;
-                background-color: transparent;
-                box-shadow: none;
-                margin: 0;
-                transition: transform .5s ease-in-out;
-                .modal-header {
-                    position: relative;
-                    h1{
-                        display: none;
-                    }
-                    .action-close {
-                        position: absolute;
-                        top: 8px;
-                        right: 2px;
-                        &::before {
-                            font-size: 26px;
-                            line-height: inherit;
-                            color: #f8f8f8;
-                            font-weight: 400;
-                            overflow: visible;
-                        }
-                    }
-                }
-                .modal-content {
-                    width: 80%;
-                    margin: 50px auto 0 auto;
-            
-                    .control {
-                        margin: 0;
-                        border: none;
-                        .input-text{
-                            height: 66px;
-                            padding: 0 35px 0 20px;
-                            position: inherit;
-                            background-color: #222 ;
-                            color: #f8f8f8;
-                            border: 3px solid #f8f8f8;
-                            .config-font ( @fuente2, 1.8rem, 400, normal, 1.42857143, 0, @color-titulo );
-                            &::placeholder {
-                                color: #f8f8f8;
-                            }
-                            &:focus {
-                                box-shadow: none;
-                            }
-                        }
-                        .description {
-                            text-transform: uppercase;
-                            .config-font ( @fuente2, 1.6rem, 400, normal, 1.42857143, 0, @color-titulo );
-                            p.search-description {
-                                padding: 10px 20px;
-                                .descripcion1 {
-                                    &:before {
-                                        content: "# Type at least 3 character to search";
-                                        color: #F8F8F8;
-                                        margin-right: 20px;
-                                    }
-                                }
-                                .descripcion2 {
-                                    &:before {
-                                        content: "# Hit enter to search";
-                                        color: #F8F8F8;
-                                        margin-right: 20px;
-                                    }
-                                }
-                                .descripcion3 {
-                                    a {
-                                        &:before {
-                                            content: "# For Support Center click HERE";
-                                            color: @color-titulo;
-                                            font-weight: 800;
-                                            &:hover {
-                                                text-decoration: none;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .nested {
-                            display: none;
-                        }
-                    }
-                }
-
-                .modal-footer {
-                    display: none;
-                }
-            }
-        }
-
-        .modal-header._show, .modal-header._show {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: .5s;
-        }
-
-        .modals-overlay {
-            background-color: rgba(25,25,25,.95);
-        }
-    }
-
 }
 
 
@@ -439,39 +332,7 @@
             }
         }
     }
-    .modals-wrapper {
-        aside.modal-popup.modal-slide {
-            left: 0;
-            div.modal-inner-wrap {
-                background-color: rgba(25,25,25,-0.05);
-                padding: 0 8px;
-                .modal-header {
-                    padding: 0;
-                    .action-close {
-                        top: -2px;
-                        right: -7px;
-                    }
-                }
-                .modal-content {
-                    width: 95%;
-                    margin: 80px auto;
-                    padding: 0;
-                    .control {
-                        .description {
-                            font-size: 1.2rem;
-                            .search-description {
-                                display: flex;
-                                flex-direction: column;
-                            }
-                        }
-                        .actions {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+
     .modal-popup.modal-slide .modal-inner-wrap {
         transform: translateY(-100%);
     }
@@ -567,35 +428,6 @@
                             }
                         }
                     }
-                }
-            }
-        }
-        .modals-wrapper {
-            .modal-header{
-                .modal-inner-wrap {
-                    .modal-content {
-                        .block.block-search {
-                            width: 100%;
-                            .block-content {
-                                .actions {
-                                    .action.search {
-                                        opacity: inherit;
-                                        background-color: #000;
-                                        padding: 12px 22px;
-                                        border: none;
-                                        margin-top: 5px;
-                                        margin-right: 4px;
-                                        right: 0;
-                                        &::before {
-                                            color: #f8f8f8;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-
                 }
             }
         }
