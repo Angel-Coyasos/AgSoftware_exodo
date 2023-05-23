@@ -1,3 +1,54 @@
+/**
+  *
+  * MIXINS
+  *
+  * LINK-ANCLA: PARA LOS ESTILOS DE LOS LINK DE LAS SECCIONES DEL FOOTER.
+  * TEXT_INFORMATION: PARA LOS ESTILOS DEL COPY RIGHT DEL FOOTER
+  *
+  */
+
+.link-ancla {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 2.7;
+    letter-spacing: .1rem;
+    color: @color-texto;
+    text-transform: uppercase;
+}
+
+.text-information {
+    position: relative;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 9px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-left: 40px;
+    margin-top: 15px;
+    color: @color-texto;
+    &::before {
+        position: absolute;
+        left: 0;
+        content: '\F3E8';
+        font-family: 'bootstrap-icons';
+        font-size: 24.5px;
+        line-height: 25px;
+    }
+    span {
+        font-weight: 700;
+        &:before {
+            content: ' | ';
+            font-weight: 400;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+
 //
 //  Common
 //  _____________________________________________
