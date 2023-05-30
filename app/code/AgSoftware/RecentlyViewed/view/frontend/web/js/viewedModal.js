@@ -6,6 +6,8 @@ require([
         const viewed = $('#viewed');
         const modal = $('#viewed-modal');
         const rvcontaier = $('#rv-contaier');
+        const chevronButtom =  $('#chevronUp')[0] || $('#chevronUp i')[0];
+
 
         function viewedModal() {
 
@@ -26,7 +28,7 @@ require([
         viewed.click(viewedModal);
 
         $(window).on('click', function(event) {
-            if (event.target === rvcontaier[0]) {
+            if ( event.target === rvcontaier[0] || event.target === chevronButtom ) {
                 viewedModal();
             }
         });

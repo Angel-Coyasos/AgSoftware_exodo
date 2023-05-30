@@ -8,6 +8,6 @@ var config = {
         'js/modal',
         'js/filtro',
         'js/chevronTop',
-        'js/headerDinamic',
+        'js/headerDinamic'
     ],
 };

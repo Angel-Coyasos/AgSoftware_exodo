@@ -17,7 +17,7 @@ require(['jquery', 'jquery/ui', 'slick'], function($) {
                     },
                 },
                 {
-                    breakpoint:1280,
+                    breakpoint: 1024,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,

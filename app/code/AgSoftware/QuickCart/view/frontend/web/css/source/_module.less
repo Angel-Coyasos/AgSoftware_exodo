@@ -17,6 +17,7 @@
         a.action.showcart {
             display: flex;
             justify-content: space-around;
+            gap: 5px;
 
             &__mincart {
                 width: 15.38px;
@@ -252,6 +253,7 @@
 
                                         &:before {
                                             content: '\e616';
+                                            color: #444;
                                             font-weight: 400;
                                             font-style: normal;
                                             font-size: 12px;
@@ -324,6 +326,22 @@
                                         border: 0 none;
                                         opacity: 1;
                                         color: @color-oscuro;
+                                    }
+
+                                    .spinner {
+                                        display: none;
+                                        width: 10px;
+                                        height: 10px;
+                                        background-color: transparent;
+                                        margin: 4px 12px 4px 13px;
+                                        float: left;
+                                        border: 1px solid #000;
+                                        border-radius: 50%;
+                                        border-bottom: 0 none;
+                                        border-top: 0 none;
+                                        top: 4px;
+                                        position: relative;
+                                        animation: sk-rotateplane 1.2s infinite ease-in-out;
                                     }
 
                                 }
@@ -560,4 +578,24 @@
         }
     }
 
+}
+
+
+@-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: rotate(0deg) }
+    50% { -webkit-transform: rotate(-180deg) }
+    100% { -webkit-transform: rotate(360deg) }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotateX(0deg);
+    } 50% {
+          transform: rotate(-180deg);
+          -webkit-transform: rotate(-180deg)
+      } 100% {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
 }
