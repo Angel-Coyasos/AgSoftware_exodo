@@ -12,7 +12,6 @@ define(['jquery'], function($) {
             spinner.show();
             input.hide();
 
-
             input.val(parseInt(input.val()) - 1);
 
             update.trigger("click");
@@ -31,7 +30,6 @@ define(['jquery'], function($) {
 
             spinner.show();
             input.hide();
-
 
             input.val(parseInt(input.val()) + 1);
 
