@@ -1,4 +1,4 @@
-## Nombre de la rama
+## Nombre del Ticket
 
 [Rama en la que has trabajado: **nombre_de_la_rama**]
 
@@ -6,46 +6,28 @@
 
 [Nombre del módulo o área específica en la que has trabajado.]
 
-## Descripción del problema o necesidad
-
-[Descripción clara y concisa del problema o la necesidad que esta funcionalidad abordará.]
-
-## Descripción de la solución propuesta
-
-[Explica la solución propuesta de manera clara y concisa. Puedes incluir detalles técnicos si es necesario.]
-
-## Beneficios y justificación
-
-[Describe los beneficios que esta nueva funcionalidad brindará al proyecto o a los usuarios. También proporciona cualquier justificación adicional para incluir esta funcionalidad.]
-
-## Requisitos funcionales
-
-[Especifica los requisitos funcionales para la nueva funcionalidad. Por ejemplo, si la funcionalidad afecta la interfaz de usuario, describe cómo debería comportarse y qué acciones deberían ser posibles.]
-
-## Requisitos no funcionales
-
-[Especifica cualquier requisito no funcional, como rendimiento, seguridad, accesibilidad, internacionalización, etc.]
-
-## Plan de implementación sugerido
-
-[Proporciona un plan de implementación sugerido para la nueva funcionalidad. Puede incluir una lista de tareas o pasos recomendados.]
-
-## Impacto en otras áreas del proyecto
-
-[Indica si la nueva funcionalidad tiene algún impacto en otras áreas del proyecto, como módulos existentes, bases de datos, API, documentación, pruebas, etc.]
-
-## Archivos modificados
-
-[Lista de archivos que has modificado como parte de esta funcionalidad.]
-
 ## Estado del desarrollo
 
 [Indica el estado actual de desarrollo de la funcionalidad: **en progreso**, **completa**, **pendiente de revisión**, etc.]
 
-## Capturas de pantalla o ejemplos visuales (opcional)
+## Descripción
+[Proporciona una descripción detallada de los cambios que realizaste y explica por qué son importantes. Puedes incluir enlaces a problemas relacionados, solicitudes de funciones (issues) o cualquier otro contexto relevante.]
 
-[Si es relevante, puedes agregar capturas de pantalla, diagramas o cualquier otro recurso visual que ayude a comprender mejor la propuesta.]
+## Cambios realizados
+[Enumera de manera concisa los cambios que realizaste en tu solicitud de extracción. Puedes mencionar las funcionalidades agregadas, modificaciones o correcciones específicas. Si tienes muchos cambios, considera agruparlos en secciones para facilitar su revisión.]
 
-## Otros comentarios (opcional)
+## Capturas de pantalla
+[Si tus cambios incluyen modificaciones visuales o mejoras en la interfaz de usuario, considera agregar capturas de pantalla o GIFs animados para mostrar visualmente los cambios que has realizado.]
 
-[Cualquier comentario adicional, enlaces relacionados o información complementaria.]
+## Comprobación previa
+ He revisado y seguido las pautas de contribución del proyecto.
+ He realizado las pruebas necesarias para asegurarme de que mi código funciona correctamente.
+ He actualizado la documentación, si es necesario.
+Asignación de revisores
+[@revisor1, @revisor2] por favor, revisen estos cambios.
+
+## Tareas adicionales
+ Mencionar cualquier tarea adicional o pendiente relacionada con esta solicitud de extracción.
+ 
+## Contexto adicional
+[Agrega aquí cualquier información adicional relevante sobre el contexto de tus cambios.]
