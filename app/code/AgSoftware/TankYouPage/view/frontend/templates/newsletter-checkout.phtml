@@ -6,8 +6,8 @@
 
 /** @var \Magento\Newsletter\Block\Subscribe $block */
 
-/** @var \Magento\Checkout\Block\Registration $block */
-
+/** @var \Magento\Checkout\Block\Registration $registrationBlock */
+$registrationBlock = $block->getLayout()->getBlock('checkout.registration');
 ?>
 
 <div class="newsletter-checkout-succes content block newsletter">
@@ -15,8 +15,7 @@
     <div class="icon_thank_you_03"></div>
 
     <div class="newsletter-description">
-        <?= $block->escapeHtml(__('Stay secure! Receive Important Updates for your Magento extension
-        (recommended)')) ?>
+        <?= $block->escapeHtml(__('Stay secure! Receive Important Updates for your Magento extension (recommended)')) ?>
     </div>
 
     <form class="form subscribe"
@@ -34,8 +33,14 @@
 
             <div class="control">
 
+                <?php if ($registrationBlock && $registrationBlock->getEmailAddress()): ?>
+                    <?php $email = $registrationBlock->getEmailAddress(); ?>
+                <?php else: ?>
+                    <?php $email = 'Email Invalid'; ?>
+                <?php endif; ?>
+
                 <input name="email" type="email" id="newsletter-checkout"
-                       value="<?= __('Email@Of.Test') ?>"
+                       value="<?= $block->escapeHtml($email) ?>"
                        placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
                        data-mage-init='{"mage/trim-input":{}}'
                        data-validate="{required:true, 'validate-email':true}"

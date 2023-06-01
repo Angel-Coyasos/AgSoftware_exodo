@@ -7,36 +7,25 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
+        <referenceBlock name="checkout.success">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">AgSoftware_ThankYouPage::custom-success.phtml</argument>
+            </action>
+        </referenceBlock>
+
         <referenceContainer name="content">
-
-            <container name="success.wrapper" htmlTag="div" htmlClass="success__wrapper" before="-">
-
-                <block name="success.image" template="Magento_Checkout::image-success.phtml"/>
-
-
-
+            <container name="success.wrapper" htmlTag="div" htmlClass="success__wrapper">
+                <block name="success.image" template="AgSoftware_ThankYouPage::image-success.phtml"/>
+                <block class="Magento\Newsletter\Block\Subscribe" name="newsletter.checkout" template="AgSoftware_ThankYouPage::newsletter-checkout.phtml"/>
+                <block name="order.success" template="AgSoftware_ThankYouPage::order-success.phtml"/>
             </container>
-
-            <block name="order.success" template="Magento_Checkout::order-success.phtml"/>
-
-            <block class="Magento\Newsletter\Block\Subscribe" name="newsletter.checkout" template="Magento_Checkout::newsletter-checkout.phtml"/>
-            <!--<block class="Magento\Checkout\Block\Success" name="success.custom" template="Magento_Checkout::success-custom.phtml"/>-->
-
-            <!--<container name="orders.succes" htmlTag="div" htmlClass="success__order">
-                <block class="Magento\Sales\Block\Order\Items" name="order.items" template="Magento_Sales::order/items.phtml">
-                    <block class="Magento\Sales\Block\Order\Item\Renderer\DefaultRenderer" name="item_unit_price" template="Magento_Sales::items/price/unit.phtml" />
-                    <block class="Magento\Sales\Block\Order\Item\Renderer\DefaultRenderer" name="item_row_total" template="Magento_Sales::items/price/row.phtml" />
-                    <block class="Magento\Sales\Block\Order\Item\Renderer\DefaultRenderer" name="order.items.default" template="Magento_Sales::order/items/renderer/default.phtml"/>
-                    <block class="Magento\Sales\Block\Order\Totals" name="order.items.totals" template="Magento_Sales::order/totals.phtml"/>
-                </block>
-            </container>-->
-
         </referenceContainer>
 
         <move element="page.main.title" destination="success.wrapper"  after="image.success"/>
         <move element="checkout.success" destination="success.wrapper"  after="page.main.title"/>
         <move element="newsletter.checkout" destination="success.wrapper"  after="checkout.success"/>
-        <move element="order.success" destination="success.wrapper"  after="checkout.registration"/>
+        <move element="order.success" destination="success.wrapper"  after="newsletter.checkout"/>
+        <move element="checkout.registration" destination="success.wrapper"  after="-"/>
 
         <referenceBlock name="checkout.registration" remove="false"/>
         <referenceBlock name="block.float" remove="true"/>
