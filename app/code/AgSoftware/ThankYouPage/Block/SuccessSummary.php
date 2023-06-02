@@ -43,13 +43,37 @@ class SuccessSummary extends Template
         return $orderItems;
     }
 
+    public function getOrderSubtotal()
+    {
+        $order = $this->_checkoutSession->getLastRealOrder();
+        return $order->getSubtotal();
+    }
+
+    public function getOrderTotal()
+    {
+        $order = $this->_checkoutSession->getLastRealOrder();
+        return $order->getGrandTotal();
+    }
+
+    public function getOrderNumber()
+    {
+        $order = $this->_checkoutSession->getLastRealOrder();
+        $orderNumber = $order->getIncrementId();
+        return ltrim($orderNumber, '0');
+    }
+
     protected function getImageUrl($product)
     {
-        $image = $this->_imageHelper->init($product, 'product_thumbnail')
-            ->setImageFile($product->getFile())
-            ->resize(50, 50)
-            ->getUrl();
+        $image = $product->getImage();
+        if ($image) {
+            $imageUrl = $this->_imageHelper->init($product, 'product_thumbnail')
+                ->setImageFile($image)
+                ->resize(165, 165)
+                ->getUrl();
+            return $imageUrl;
+        } else {
+            return $this->getViewFileUrl('Magento_Catalog::images/product/placeholder/thumbnail.jpg');
 
-        return $image;
+        }
     }
 }
