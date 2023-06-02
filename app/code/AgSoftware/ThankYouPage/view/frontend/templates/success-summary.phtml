@@ -1,0 +1,60 @@
+<?php $orderData = $block->getOrderData(); ?>
+
+<div class="order-info">
+    <div class="product-grid">
+        <div class="table-wrapper order-items">
+            <table class="data table table-order-items" id="table-order-items">
+                <thead>
+                    <tr>
+                        <th class="col image textalign-left">Image</th>
+                        <th class="col name textalign-left">Product Name</th>
+                        <th class="col sku textalign-left">SKU</th>
+                        <th class="col price textalign-right">Price</th>
+                        <th class="col qty textalign-center">Qty</th>
+                        <th class="col subtotal textalign-right">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($orderData as $product) : ?>
+                        <tr id="order-item-row-62174" class="order-item-row">
+                            <td class="col image textalign-left">
+                                <a href="<?php echo $product['product_url']; ?>" title="<?php echo $product['product_url']; ?>" tabindex="-1" class="product-item-photo"> 
+                                    <span class="product-image-container product-image-container-97" style="width:165px;">
+                                        <span class="product-image-wrapper" style="padding-bottom: 100%;">
+                                            <img class="product-image-photo lazy"  width="165" height="165" alt="<?php echo $product['name']; ?>" style="max-width: 100%;" src="<?php echo $product['image_url']; ?>">
+                                        </span>
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="col name textalign-left">
+                                <a href="<?php echo $product['product_url']; ?>" title="<?php echo $product['name']; ?>" tabindex="-1" class="product-item-name"> 
+                                    <?php echo $product['name']; ?> 
+                                </a>
+                                <dl class="item-options">
+                                    <dt>Downloads</dt>
+                                    <dd> Magento 2 Social Login, Version 1.11.15 (Mar 22, 2023)<br></dd>
+                                </dl>
+                            </td>
+                            <td class="col sku textalign-left" data-th="SKU"><?php echo $product['sku']; ?></td>
+                            <td class="col price textalign-right" data-th="Price"><span class="price-excluding-tax" data-label="Excl. Tax"><span class="cart-price"><span class="price"><?php echo $product['price']; ?></span></span></span></td>
+                            <td class="col qty textalign-center" data-th="Qty">
+                                <div class="items-qty"><span class="content"><?php echo $product['qty']; ?></span></div>
+                            </td>
+                            <td class="col subtotal textalign-right" data-th="Subtotal"><span class="price-excluding-tax" data-label="Excl. Tax"><span class="cart-price"><span class="price"><?php echo $product['subtotal']; ?></span></span></span></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+                <tfoot>
+                    <tr class="subtotal">
+                        <th colspan="5" class="mark textalign-right" scope="row">Subtotal</th>
+                        <td class="amount textalign-right"><span class="price"><span class="price">$0.00</span></span></td>
+                    </tr>
+                    <tr class="grand_total">
+                        <th colspan="5" class="mark textalign-right" scope="row"><strong>Grand Total</strong></th>
+                        <td class="amount textalign-right"><strong><span class="price"><span class="price">$0.00</span></span></strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

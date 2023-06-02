@@ -3,6 +3,7 @@
     <module name="AgSoftware_ThankYouPage">
         <sequence>
             <module name="Magento_Checkout"/>
+            <module name="Magento_Sales"/>
         </sequence>
     </module>
 </config>

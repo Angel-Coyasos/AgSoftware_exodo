@@ -17,14 +17,16 @@
             <container name="success.wrapper" htmlTag="div" htmlClass="success__wrapper">
                 <block name="success.image" template="AgSoftware_ThankYouPage::image-success.phtml"/>
                 <block class="Magento\Newsletter\Block\Subscribe" name="newsletter.checkout" template="AgSoftware_ThankYouPage::newsletter-checkout.phtml"/>
-                <block name="order.success" template="AgSoftware_ThankYouPage::order-success.phtml"/>
+               <block class="AgSoftware\ThankYouPage\Block\SuccessSummary" name="success.summary" template="AgSoftware_ThankYouPage::success-summary.phtml"/>
+
             </container>
+
         </referenceContainer>
 
         <move element="page.main.title" destination="success.wrapper"  after="image.success"/>
         <move element="checkout.success" destination="success.wrapper"  after="page.main.title"/>
         <move element="newsletter.checkout" destination="success.wrapper"  after="checkout.success"/>
-        <move element="order.success" destination="success.wrapper"  after="newsletter.checkout"/>
+        <move element="success.summary" destination="success.wrapper"  after="newsletter.checkout"/>
         <move element="checkout.registration" destination="success.wrapper"  after="-"/>
 
         <referenceBlock name="checkout.registration" remove="false"/>
