@@ -152,36 +152,51 @@
                             .table-order-items {
                                 margin-top: 40px;
                                 margin-bottom: 40px;
-                                border-top: 1px solid #eee;
                                 border-bottom: 1px solid #eee;
                             }
 
                             tbody {
-
+                                border-top: 1px solid #eee;
                                 .order-item-row {
                                     text-align: left;
+                                    border-bottom: none;
 
                                     .col {
                                         text-align: left;
                                     }
 
+                                    .col.image {
+                                        .product-item-photo {
+                                            img {
+                                                width: 115px !important;
+                                                height: 115px !important;
+                                            }
+                                        }
+                                    }
+
                                     .col.name {
 
-                                        .product-item-photo {
+                                        .product-item-name {
                                             font-family: @fuente2;
                                             letter-spacing: 0.5px;
                                             text-decoration: none;
+                                            text-transform: capitalize;
                                             color: #444;
                                         }
 
                                         .item-options {
                                             font-family: @fuente2;
                                             letter-spacing: 0.5px;
+                                            text-transform: capitalize;
                                             dt {
                                                 margin-top: 5px;
                                             }
                                         }
 
+                                    }
+
+                                    .col.sku {
+                                        text-transform: capitalize;
                                     }
 
                                     .col.price, col.qty, col.subtotal {
@@ -273,6 +288,7 @@
                                     display: inline-table;
                                     width: 100%;
                                     font-family: @fuente2;
+                                    border-bottom: 1px solid #eee;
                                     .col {
                                         display: table-cell;
                                         margin: 10px 0;
@@ -323,11 +339,23 @@
                             tbody {
 
                                 .order-item-row {
+                                    border-bottom: 1px solid #eee;
+
                                     .col {
                                         span.price, span.content, span.price {
                                             font-weight: 400;
                                         }
                                     }
+
+                                    .col.image {
+                                        .product-item-photo {
+                                            img {
+                                                width: 165px !important;
+                                                height: 165px !important;
+                                            }
+                                        }
+                                    }
+
                                 }
                                 .order-item-row-mobile {
                                     display: none;
@@ -346,13 +374,6 @@
         }
 
     }
-
-}
-
-//
-//  Mobile
-//  _____________________________________________
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
 }
 
@@ -379,7 +400,6 @@
     }
 
 }
-
 
 //
 //  Small Mobile

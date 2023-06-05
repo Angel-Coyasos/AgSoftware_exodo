@@ -37,6 +37,8 @@ class SuccessSummary extends Template
                 'qty' => $item->getQtyOrdered(),
                 'subtotal' => $item->getRowTotal(),
                 'image_url' => $this->getImageUrl($product),
+                'version' => $product->getData('version'),
+                'type' => $product->getTypeId(),
             ];
         }
 

@@ -31,27 +31,48 @@
                                     <?php echo $product['name']; ?>
                                 </a>
                                 <dl class="item-options">
-                                    <dt><?= __('Downloads') ?> </dt>
-                                    <dd><?= __('Magento 2 Social Login, Version 1.11.15 (Mar 22, 2023)')?><br></dd>
+                                    <dt><?php echo $product['type']; ?></dt>
+                                    <dd class="product-version"><?php echo $product['version']; ?><br></dd>
                                 </dl>
                             </td>
                             <td class="col sku textalign-left" data-th="SKU"><?php echo $product['sku']; ?></td>
                             <td class="col price textalign-right" data-th="Price">
                                 <span class="price-excluding-tax" data-label="Excl. Tax">
                                     <span class="cart-price">
-                                        <span class="price"><?php echo $product['price']; ?></span>
+                                        <span class="price"><?php echo number_format($product['price'], 2); ?></span>
                                     </span>
                                 </span>
                             </td>
                             <td class="col qty textalign-center" data-th="Qty">
                                 <div class="items-qty">
-                                    <span class="content"><?php echo $product['qty']; ?></span>
+                                    <span class="content"><?php echo number_format($product['qty'], 2); ?></span>
                                 </div>
                             </td>
                             <td class="col subtotal textalign-right" data-th="Subtotal">
                                 <span class="price-excluding-tax" data-label="Excl. Tax">
                                     <span class="cart-price">
-                                        <span class="price"><?php echo $product['subtotal']; ?></span>
+                                        <span class="price"><?php echo number_format($product['subtotal'], 2); ?></span>
+                                    </span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr id="order-item-row-mobile-<?php echo $block->getOrderNumber(); ?>" class="order-item-row-mobile">
+                            <td colspan="2" class="col price textalign-left" data-th="Price">
+                                <span class="price-excluding-tax" data-label="Excl. Tax">
+                                    <span class="cart-price">
+                                        <span class="price"><?php echo round($product['price'], 2); ?></span>
+                                    </span>
+                                </span>
+                            </td>
+                            <td colspan="2" class="col qty textalign-center" data-th="Qty">
+                                <div class="items-qty">
+                                    <span class="content"><?php echo round($product['qty'], 2); ?></span>
+                                </div>
+                            </td>
+                            <td colspan="2" class="col subtotal textalign-right" data-th="Subtotal">
+                                <span class="price-excluding-tax" data-label="Excl. Tax">
+                                    <span class="cart-price">
+                                        <span class="price"><?php echo round($product['subtotal'], 2); ?></span>
                                     </span>
                                 </span>
                             </td>
@@ -63,7 +84,7 @@
                         <th colspan="5" class="mark textalign-right" scope="row"><?= __('Subtotal') ?></th>
                         <td class="amount textalign-right">
                             <span class="price">
-                                <span class="price"> <?php echo $block->getOrderSubtotal(); ?> </span>
+                                <span class="price"> <?php echo number_format($block->getOrderSubtotal(), 2); ?> </span>
                             </span>
                         </td>
                     </tr>
@@ -74,7 +95,7 @@
                         <td class="amount textalign-right">
                             <strong>
                                 <span class="price">
-                                    <span class="price"> <?php echo $block->getOrderTotal(); ?> </span>
+                                    <span class="price"> <?php echo number_format($block->getOrderTotal(), 2);  ?> </span>
                                 </span>
                             </strong>
                         </td>
