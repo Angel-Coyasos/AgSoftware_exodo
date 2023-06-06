@@ -88,6 +88,16 @@
                             </span>
                         </td>
                     </tr>
+                    <?php if( $block->getShippingCost() > 0 ): ?>
+                    <tr class="shipping">
+                        <th colspan="5" class="mark textalign-right" scope="row"><?= __('Shipping & Handling') ?></th>
+                        <td class="amount textalign-right">
+                            <span class="price">
+                                <span class="price"> <?php echo number_format($block->getShippingCost(), 2);  ?> </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
                     <tr class="grand_total">
                         <th colspan="5" class="mark textalign-right" scope="row">
                             <strong><?= __('Grand Total') ?></strong>

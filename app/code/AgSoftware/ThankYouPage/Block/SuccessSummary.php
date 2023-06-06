@@ -64,6 +64,12 @@ class SuccessSummary extends Template
         return ltrim($orderNumber, '0');
     }
 
+    public function getShippingCost()
+    {
+        $order = $this->_checkoutSession->getLastRealOrder();
+        return $order->getShippingAmount();
+    }
+
     protected function getImageUrl($product)
     {
         $image = $product->getImage();

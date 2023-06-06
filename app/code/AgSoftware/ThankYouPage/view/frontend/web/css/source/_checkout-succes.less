@@ -29,8 +29,9 @@
                         .config-font ( @fuente1, 2.2rem, 400, inherit, 30px, 0px, @color-primario );
                     }
                     .action.print {
-                        bottom: 0;
                         position: fixed;
+                        right: 0;
+                        bottom: 0;
                         padding: 10px 15px;
                         font-weight: 900;
                         text-decoration: none;
@@ -226,6 +227,15 @@
                                         text-align: right;
                                         letter-spacing: 0.5px;
                                         border: 0;
+                                    }
+                                }
+
+                                .shipping {
+                                    border-top: 1px solid #eee;
+                                    .textalign-right {
+                                        font-family: @fuente2;
+                                        text-align: right;
+                                        letter-spacing: 0.5px;
                                     }
                                 }
 
