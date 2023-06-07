@@ -124,10 +124,13 @@
                                 font-size: 1.4rem;
                                 color: @color-oscuro;
                                 font-family: 'Montserrat',sans-serif;
+                                &:hover {
+                                    color: @color-primario;
+                                }
                             }
                         }
                         &-content {
-                            .form-discount {
+                            .form-discount, .form-reward {
 
                                 .payment-option-inner {
                                     .input-text {
@@ -162,6 +165,42 @@
 
                             }
                         }
+                    }
+
+                    div.payment-option.rewards-add {
+                        padding-top: 0;
+
+                        .payment-option-content {
+
+                            .amrewards-points-rate {
+                                margin-bottom: 5px;
+                                padding-right: 30px;
+                            }
+
+                            .form-reward {
+
+                                .payment-option-inner {
+                                    .input-text {
+                                        min-height: 46px;
+                                        border-right: 1px solid #c2c2c2;
+                                    }
+                                }
+
+                                .actions-toolbar {
+                                    margin-top: 20px;
+                                    .primary {
+                                        width: 100%;
+                                        .action-apply {
+                                            width: 100%;
+                                            min-height: 46px;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
                     }
 
                     .opc-summary-wrapper {
@@ -307,6 +346,24 @@
 
                             }
                         }
+                    }
+
+                    div.payment-option.rewards-add {
+                        .payment-option-content {
+                            .form-reward {
+                                .actions-toolbar {
+                                    .primary {
+                                        width: auto;
+                                        .action-apply {
+                                            width: auto;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
                     }
 
                     .opc-summary-wrapper {
