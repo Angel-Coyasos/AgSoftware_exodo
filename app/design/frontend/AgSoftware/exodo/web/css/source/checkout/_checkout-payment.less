@@ -12,8 +12,10 @@
         .columns {
 
             .column.main {
+                padding-bottom: 0;
 
                 .checkout-container {
+                    margin-bottom: 0;
 
                     .authentication-wrapper {
                         z-index: 999;
@@ -77,6 +79,7 @@
                                     &-content {
                                         .actions-toolbar {
                                             margin: 0;
+                                            padding: 0 0 20px 22px;
                                             .action.primary.checkout {
                                                 padding: 10px 20px;
                                                 background-color: #073756;
@@ -119,7 +122,7 @@
                             border: none;
                             .action.action-toggle {
                                 font-size: 1.4rem;
-                                color: #073756;
+                                color: @color-oscuro;
                                 font-family: 'Montserrat',sans-serif;
                             }
                         }
@@ -157,6 +160,21 @@
                                     }
                                 }
 
+                            }
+                        }
+                    }
+
+                    .opc-summary-wrapper {
+                        .modal-inner-wrap {
+                            .modal-content {
+                                .opc-block-summary {
+                                    .items-in-cart {
+                                        span {
+                                            color: #303030;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

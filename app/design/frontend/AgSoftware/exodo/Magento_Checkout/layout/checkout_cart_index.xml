@@ -28,7 +28,7 @@
             <block  name="summary.description" template="Magento_Theme::description.phtml"/>
 
             <!-- bloque collapsible contedor del boton apply -->
-            <block  name="block.Apply" template="Magento_Checkout::cart/appli.phtml"/>
+            <block  name="block.Apply" template="Magento_Checkout::cart/apply.phtml"/>
 
 
         </referenceContainer>

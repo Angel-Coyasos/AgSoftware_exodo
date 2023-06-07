@@ -1,0 +1,52 @@
+<div data-bind="if: isVisible">
+    <div class="payment-option _collapsible opc-payment-additional rewards-add" data-bind="mageInit: {'collapsible':{'openedState': '_active'}}" data-collapsible="true" role="tablist">
+    <div class="payment-option-title field choice" data-role="title" role="tab" aria-selected="false" aria-expanded="false" tabindex="0">
+        <span class="action action-toggle" id="block-reward-heading" role="heading" aria-level="2">
+            <!-- ko i18n: 'Apply Rewards'--><span>Apply Reward Points</span><!-- /ko -->
+        </span>
+    </div>
+    <div class="payment-option-content" data-role="content" aria-labelledby="block-reward-heading" role="tabpanel" aria-hidden="true" style="display: none;">
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() -->
+        <div data-role="checkout-messages" class="messages" data-bind="visible: isVisible(), click: removeAll">
+            <!-- ko foreach: messageContainer.getErrorMessages() --><!-- /ko-->
+            <!-- ko foreach: messageContainer.getSuccessMessages() --><!-- /ko-->
+        </div>
+        <!-- /ko -->
+        <!--/ko-->
+        <!-- ko if: noticeMessage().length > 0 --><!-- /ko -->
+        <div class="pointsLeft" data-role="title">
+            <!-- ko i18n: 'You Have '--><span>You Have </span><!-- /ko -->
+            <strong data-bind="text: getRewardsCount()">0</strong>
+            <!-- ko i18n: ' points left '--><span> reward points available, 1 point = $1.</span><!-- /ko -->
+        </div>
+        <div class="amrewards-points-rate" data-role="title">
+            <span data-bind="text: getRateForCurrency()">1</span>
+            <!-- ko i18n: ' for every'--><span>credit point =</span><!-- /ko -->
+            <span data-bind="text: getPointsRate()">1</span>
+            <span data-bind="text: getCurrentCurrency()">USD</span>
+            <!-- ko if: isRewardsTooltipEnabled --><!-- /ko -->
+        </div>
+        <form class="form form-reward amrewards-discount-form" id="discount-reward-form">
+            <div class="payment-option-inner">
+                <input type="hidden" name="remove" id="remove-amreward" value="0">
+                <div class="field">
+                    <div class="control">
+                        <input class="input-text" type="text" id="amreward_amount" name="amreward_amount" data-validate="{'required-entry':true}" data-bind="value: pointsUsed, attr:{placeholder: $t('Enter reward amount')}, enable: canApply()" placeholder="Enter reward amount">
+                        <!-- ko if: disableElem() && !isApplied() --><!-- /ko -->
+                    </div>
+                </div>
+                <div class="actions-toolbar amrewards-actions">
+                    <div class="primary">
+                        <!-- ko ifnot: isApplied() -->
+                        <button class="action action-apply" type="submit" data-bind="'value': $t('Apply Reward'), click: apply, disable: disableElem" value="Apply Reward">
+                            <span><!-- ko i18n: 'Apply Reward'--><span>Apply Reward</span><!-- /ko --></span>
+                        </button>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
