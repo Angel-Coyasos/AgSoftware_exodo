@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+?>
+<?php /** @var $block \Magento\Checkout\Block\Onepage\Success */ ?>
+<div class="checkout-success">
+    <?php if ($block->getOrderId()) :?>
+        <?php if ($block->getCanViewOrder()) :?>
+            <p><?= $block->escapeHtml(__('Great news! Your order <strong>%1</strong> is now confirmed and your products are ready for download under: <b>My Account &gt; Downloadable Products.</b>', $block->escapeHtml($block->getOrderId())), ['strong', 'b']) ?></p>
+        <?php  else :?>
+            <p><?= $block->escapeHtml(__('Great news! Your order <strong>%1</strong> is now confirmed and your products are ready for download under: <b>My Account &gt; Downloadable Products.</b>', $block->escapeHtml($block->getOrderId())), ['strong', 'b']) ?></p>
+        <?php endif;?>
+        <p><?= $block->escapeHtml(__('If you don\'t have an account yet, we just created one for you. Follow the instructions in the <b>Welcome Email</b> and set a password for it.'), ['b']) ?></p>
+    <?php endif;?>
+
+    <?= $block->getAdditionalInfoHtml() ?>
+
+    <div class="actions-toolbar btn-success">
+        <div class="primary">
+            <a class="action primary continue" href="<?= $block->escapeUrl($block->getContinueUrl()) ?>"><span><?= $block->escapeHtml(__('Continue Shopping')) ?></span></a>
+        </div>
+    </div>
+</div>

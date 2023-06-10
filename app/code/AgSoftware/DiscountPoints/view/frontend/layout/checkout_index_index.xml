@@ -1,28 +1,7 @@
 <?xml version="1.0"?>
-<!--
-    /**
-     * Copyright © Magento, Inc. All rights reserved.
-     * See COPYING.txt for license details.
-     */
--->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-
-    <head>
-        <title>checkout</title>
-    </head>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-
-        <!-- remuevo bloque flotante -->
-        <referenceBlock name="block.float"  remove="true"/>
-
-        <!-- remuevo bloque recently viewed -->
-        <referenceBlock name="recently.viewed" remove="true"/>
-
-        <!-- remueve bloque contenedor del carrito, lupa y login -->
-        <referenceBlock name="header_right"  remove="true"/>
-        <referenceBlock name="offer.container"  remove="true"/>
-
-        <referenceBlock name="checkout.root">
+        <!--<referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
                     <item name="components" xsi:type="array">
@@ -56,8 +35,6 @@
                     </item>
                 </argument>
             </arguments>
-        </referenceBlock>
-
-   </body>
-
+        </referenceBlock>-->
+    </body>
 </page>

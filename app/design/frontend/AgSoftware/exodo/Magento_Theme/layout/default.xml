@@ -9,7 +9,7 @@
     <body>
 
         <referenceContainer name="content">
-            <block name="recently_viewed" template="AgSoftware_RecentlyViewed::recently_viewed.phtml"/>
+            <block name="recently.viewed" template="AgSoftware_RecentlyViewed::recently_viewed.phtml"/>
             <block name="chevron.up" template="AgSoftware_ChevronUp::chevron-up.phtml" before="-" />
             <block name="block.float"  template="Agsoftware_Answer::float.phtml" before="-"/>
             <block name="visitor_count" template="AgSoftware_HappyCustomer::visitor_count.phtml" />

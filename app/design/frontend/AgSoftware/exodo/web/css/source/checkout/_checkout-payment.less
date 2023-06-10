@@ -12,8 +12,10 @@
         .columns {
 
             .column.main {
+                padding-bottom: 0;
 
                 .checkout-container {
+                    margin-bottom: 0;
 
                     .authentication-wrapper {
                         z-index: 999;
@@ -77,6 +79,7 @@
                                     &-content {
                                         .actions-toolbar {
                                             margin: 0;
+                                            padding: 0 0 20px 22px;
                                             .action.primary.checkout {
                                                 padding: 10px 20px;
                                                 background-color: #073756;
@@ -119,12 +122,15 @@
                             border: none;
                             .action.action-toggle {
                                 font-size: 1.4rem;
-                                color: #073756;
+                                color: @color-oscuro;
                                 font-family: 'Montserrat',sans-serif;
+                                &:hover {
+                                    color: @color-primario;
+                                }
                             }
                         }
                         &-content {
-                            .form-discount {
+                            .form-discount, .form-reward {
 
                                 .payment-option-inner {
                                     .input-text {
@@ -157,6 +163,57 @@
                                     }
                                 }
 
+                            }
+                        }
+                    }
+
+                    div.payment-option.rewards-add {
+                        padding-top: 0;
+
+                        .payment-option-content {
+
+                            .amrewards-points-rate {
+                                margin-bottom: 5px;
+                                padding-right: 30px;
+                            }
+
+                            .form-reward {
+
+                                .payment-option-inner {
+                                    .input-text {
+                                        min-height: 46px;
+                                        border-right: 1px solid #c2c2c2;
+                                    }
+                                }
+
+                                .actions-toolbar {
+                                    margin-top: 20px;
+                                    .primary {
+                                        width: 100%;
+                                        .action-apply {
+                                            width: 100%;
+                                            min-height: 46px;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    .opc-summary-wrapper {
+                        .modal-inner-wrap {
+                            .modal-content {
+                                .opc-block-summary {
+                                    .items-in-cart {
+                                        span {
+                                            color: #303030;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -289,6 +346,24 @@
 
                             }
                         }
+                    }
+
+                    div.payment-option.rewards-add {
+                        .payment-option-content {
+                            .form-reward {
+                                .actions-toolbar {
+                                    .primary {
+                                        width: auto;
+                                        .action-apply {
+                                            width: auto;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
                     }
 
                     .opc-summary-wrapper {
