@@ -64,6 +64,7 @@
 
                                         p {
                                             font-family: @fuente2;
+                                            letter-spacing: 0.5px;
                                         }
                                     }
 
@@ -177,6 +178,7 @@
            div.modal-inner-wrap {
             #modal-content-0 {
                 overflow: hidden;
+                padding: 0 2.6rem 0;
 
                 .container-float {
                     &__newlsetter {
@@ -192,15 +194,40 @@
                         .answer-section {
                             &__middle {
                                 width: 100%;
+                                padding: 0;
 
                                 .title-answer {
-                                    padding: 0 0 20px;
+                                    padding: 0 0 10px; //padding: 0 0 20px
                                 }
                             }
 
                             &__rigth {
                                 float: left;
                                 text-align: left;
+                                padding-top: 20px;
+                            }
+                        }
+
+                    }
+                }
+            } 
+           }
+       }
+    }
+}
+
+@media (min-width: 769px) {
+    #html-body {
+       .modals-wrapper {
+           div.modal-inner-wrap {
+            #modal-content-0 {
+                .container-float {
+                    &__newlsetter {
+                        .answer-section {
+                            &__middle {
+                                .title-answer {
+                                   font-size: 24px;
+                                }
                             }
                         }
 

@@ -40,6 +40,7 @@
     }
         .cart-container {
             .cart-summary {
+                padding: 1px 0 25px;
                 .summary.title {
                     font-family: @fuente2;
                 }
@@ -57,6 +58,7 @@
                         .block-content {
                             .actions-toolbar {
                                 width:100%;
+                                margin: 0;
                             }
                         }
                     }
@@ -168,13 +170,19 @@
                                     font-family: @fuente2;
                                     color: #303030;
                                 }
-                                    .price-excluding-tax {
-                                        .cart-price {
-                                            .price {
-                                                font-weight: 400;
-                                            }
+                                .price-excluding-tax {
+                                    .cart-price {
+                                        .price {
+                                            font-weight: 400;
                                         }
                                     }
+                                }
+                                .product-item-details {
+                                    .item-options {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+                                }
                             }
 
                             .item-actions {
@@ -184,6 +192,10 @@
                             }
                         }
                     }
+                }
+
+                .cart.table-wrapper .actions-toolbar > .action-edit:before, .action-delete:before {
+                    color: #303030;
                 }
 
                 .main.actions {
@@ -289,6 +301,33 @@
 //
 // Break point for custom desktop
 //  _____________________________________________
+@media  (max-width: 840px) {
+    #html-body.checkout-cart-index {
+        
+        .page-main {
+           padding: 20px 0 0;
+        }
+       
+        .cart-container {
+            
+            .cart-summary, .form-cart {
+                width: auto;
+                float: none;
+                position: inherit;
+
+                .summary {
+                    display: none;
+                }
+
+                .checkout-methods-items {
+                    padding: 0 15px;
+                }
+            }           
+        }
+    }
+
+}
+
 
 @media  (min-width: 841px) {
     #html-body.checkout-cart-index {
@@ -302,7 +341,7 @@
 
             .page-title {
                     font-size: 58px;
-                    margin-bottom: 40px;
+                    margin-bottom: 0;
             }
         }
 
@@ -328,7 +367,6 @@
                         #discount-coupon-form, .discount-coupon-apply {
                             .fieldset {
                                 .actions-toolbar {
-                                    //width: auto;
                                     .primary {
                                         text-align: inherit;
                                     }
