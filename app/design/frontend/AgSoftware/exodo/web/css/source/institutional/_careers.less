@@ -9,8 +9,14 @@
 
 & when (@media-common = true) {
     body#html-body.cms-careers {
+        .page-wrapper {
+            .page-footer {
+                padding-top: 0;
+            }
+        }
         .column.main {
             padding-top: 20px;
+            padding-bottom: 0;
         }
 
         .container-black {
@@ -151,6 +157,7 @@
         .about-ags {
             padding: 5% 25%;
             &__title {
+                font-size: 58px;
                 padding: 10px 0;
                 font-weight: 900;
                 line-height: 0.9;

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<block name="support.index" class="AgSoftware\InstitutionalPages\Block\Support\Index" template="AgSoftware_InstitutionalPages::support/index.phtml"/>
+			<block name="footer.inst"  template="AgSoftware_InstitutionalPages::footer/footer.phtml" after="-"/>
+
+			<!-- remuevo bloque flotante -->
+			<referenceBlock name="block.float"  remove="true"/>
+			<!-- remueve bloque contenedor del carrito, lupa y login -->
+			<referenceBlock name="header_right"  remove="true"/>
+			<!-- Remueve el footer -->
+			<referenceBlock name="footer"  remove="true"/>
+			<!-- Remueve el bloque de oferta -->
+			<referenceBlock name="offer.container"  remove="true"/>
+			<!-- remueve el flotanta de la parte inferior -->
+			<referenceBlock name="recently_viewed"  remove="true"/>
+		</referenceContainer>
+	</body>
+</page>
