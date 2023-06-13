@@ -7,6 +7,6 @@ var config = {
     deps: [
         'js/filtro',
         'js/chevronTop',
-        'js/headerDinamic',
+        'js/headerDinamic'
     ],
 };

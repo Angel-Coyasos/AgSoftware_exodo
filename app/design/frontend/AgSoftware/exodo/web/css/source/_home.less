@@ -1,6 +1,40 @@
+/**
+  *
+  * IMPORT FILES OF STYLES OF THE HOME PAGE BLOCK.
+  *
+  * You can know which is the block style file by its title.
+  *
+  * MAGENTO THEMES AND EXTENSIONS => _themes-and.extencions.less
+  * LET'S CHECK IT OUT => _one-minute-installation.less
+  * GOOGLE ANALYTICS 4. GET YOUR HEAD START => _google-Analytics-4.less
+  * STACK. MAGENTO 2 EXTENCION BUNDLE => _bg-overflowauto.less
+  * PEARL. MOST POPULAR MAGENTO2 THEME, PREMIUM MAGENTO SOLUCTION MAGENTO 2 EXTENCIONS => _overflowhidden.less
+  * PEAR. THEME FOR MAGENTO 2 BUILT FOR GROWTH => _build-growth.less
+  * THE BEST MAGENTO 2 DOCUMENTATION. SUPPORT CENTER => _support-documentation.less";
+  * AWESOME MAGENTO 2 STORES CREATED WITH PEARL => _section-wrapper-slider.less
+  * INCREDIBLE CUSTOMER SERVICE => _quote-2.less
+  * MAGENTO AWARDS => _container-awards.less
+  * INDUSTRY PARTNERS => _industry-partners.less";
+  * MAGENTO 2, NEXCESS, SECTION.IO, YOTPO => _cont-wpx.less
+  * MAGENTO CUSTOM DEVELOPMENT => _customer-development.less
+  * FLEXIBLE DESING FOR ANY INDUSTRY ANY SIZE => _section-7-collapse.less
+  * MARKETING & MERCHANDISING => _marketing-merchandising.less
+  * SPEED. SECURITY. STABILITY => _section-7-collapse.less
+  * PAYMENT. FRAUD DETECTION. TAX. AUTOMATION. CUSTOMER SUPPORT. => _customer-support.less
+  * AGILE DEVELOPMENT YOU CAN TRUST => _agile-development.less
+  * WE DID HUNDREDS OF INTEGRATIONS =>
+  * WELTPIXELT AWESOME EXTENSIONS => _awesome-extencsions.less
+  * WLTPIXELT STANDS OUT ABOVE THE REST=>
+  * RECENTLY WELTPIXELT BLOG POST => _heading-title-awards & _post-list.less
+  * PARTNER PROGRAM => _program.less
+  *
+  * OFFERT BLOCK OF HEADER: _offert-header.less
+  *
+  */
+
 @import "./home/_themes-and.extencions.less";
 @import "./home/_one-minute-installation.less";
-@import "./home/_google-Analytics-4";
+@import "./home/_google-Analytics-4.less";
 @import "./home/_bg-overflowauto.less";
 @import "./home/_container-awards.less";
 @import "./home/_overflowhidden.less";
@@ -21,6 +55,59 @@
 @import "./home/_content-items.less";
 @import "./home/_section-7-collapse.less";
 @import "./home/_heading-title-awards";
+@import "./home/_offert-header.less";
+
+/**
+  *
+  * MIXINS
+  *
+  * CARD-QUOTE: Use this mixin to create the quote card that the theme home uses.
+  * CARD-QUOTE-BEFORE: Use this mixin to position quotes using the theme.
+  * CARD-QUOTE-AFTER: Use this mixin to position the quotes cone that the theme uses.
+  *
+  */
+
+.card-quote ( @margin, @padding ) {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: @margin;
+    padding: @padding;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+}
+
+.card-quote-before ( @width, @height, @top, @right, @bottom, @left, @rotate  ) {
+    content: "";
+    width: @width;
+    height: @height;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    margin: 0 auto;
+    background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/b.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(@rotate);
+}
+
+.card-quote-after ( @top, @right, @bottom, @left, @rotate ) {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+    border-bottom: 50px solid @background-gay;
+    border-left: 37px solid transparent;
+    border-right: 0 solid transparent;
+    box-shadow: e("0px 0px 97px -17px #b0b0b0");
+    transform: rotate( @rotate );
+}
 
 //
 //  Common

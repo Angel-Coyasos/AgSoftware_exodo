@@ -1,36 +1,51 @@
-// alert("la puta hostia tioo");
-
-define([ 'jquery' ], function ( $ ) {
+define(['jquery'], function($) {
     'use strict';
-    var mixins={
-        less: function ( id ){
 
-            let input = document.querySelector( `#cart-item-${id.item_id}-qty` );
+    var mixins = {
 
-            input.value--;
+        less: function(id) {
 
-            let update = document.querySelector( `#update-cart-item-${id.item_id}` );
+            let input = $(`#cart-item-${id.item_id}-qty`);
+            let update = $(`#update-cart-item-${id.item_id}`);
+            let spinner = input.siblings('.spinner');
 
-            $( update ).trigger( "click" );
+            spinner.show();
+            input.hide();
+
+            input.val(parseInt(input.val()) - 1);
+
+            update.trigger("click");
+
+            setTimeout(function() {
+                spinner.hide();
+                input.show();
+            }, 1000);
 
         },
-        plus: function ( id ) {
+        plus: function(id) {
 
-            let input = document.querySelector( `#cart-item-${id.item_id}-qty` );
+            let input = $(`#cart-item-${id.item_id}-qty`);
+            let update = $(`#update-cart-item-${id.item_id}`);
+            let spinner = input.siblings('.spinner');
 
-            input.value++;
+            spinner.show();
+            input.hide();
 
-            let update = document.querySelector( `#update-cart-item-${id.item_id}` );
+            input.val(parseInt(input.val()) + 1);
 
-            $( update ).trigger( "click" );
+            update.trigger("click");
 
+            setTimeout(function() {
+                spinner.hide();
+                input.show();
+            }, 1000);
 
         },
 
     };
 
-    return function(target){
+    return function(target) {
         return target.extend(mixins);
-    }
+    };
 
 });
