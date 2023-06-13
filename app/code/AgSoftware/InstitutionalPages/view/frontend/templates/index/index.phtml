@@ -1,0 +1,143 @@
+<div class="container">
+
+  <nav class="container__nav">
+    <div class="container__items">
+      <li class="container__link">
+        <a href="/hc/en-us">WeltPixel Support Center</a>
+      </li>
+      <li class="container__title--link">
+        Submit a request
+      </li>
+    </div>
+    <form class="container__search" id="new_search_form" action="/catalogsearch/result/" method="get">
+      <div class="field search">
+        <div class="control">
+          <input id="new-search" data-mage-init='{"quickSearch":{
+                     "formSelector":"#new_search_form",
+                     "minSearchLength": 1,
+                     "url":"/search/ajax/suggest",
+                     "destinationSelector":"#search_results"}
+                    }' type="text" name="q" placeholder="<?= $block->escapeHtmlAttr(__('Search ')) ?>" class="input-text" />
+          <div id="search_results" class="search-autocomplete"></div>
+        </div>
+      </div>
+    </form>
+  </nav>
+
+  <h1 class="container__title">Submit a request</h1>
+  <p class="container__description">For Installation services please use this form:</p>
+  <a class="button-submit" href="">Submit an Installation request.</a>
+  <p class="container__description">
+
+    Post questions about our products. Answer questions, share knowledge with other users. Discuss Configurations, Tips
+    & Tricks, Optimizations, Customizations and Feature Requests. Support each other. The WeltPixel Team will also
+    contribute.
+
+  </p>
+  <a class="button-submit" href="">Join the Community Forum - Stronger Together.</a>
+  <strong>For more specific inqueries, open a ticket with our Support Team using the form below:</strong>
+  <div class="container__form">
+    <form action="">
+      <div class="form-field required">
+        <label for="email">Your email address</label>
+        <input type="text" id="email" name="request[email]">
+      </div>
+      <div class="form-field required">
+        <label for="">How can we help you today?</label>
+        <div class="customer-welcome">
+          <button data-mage-init='{"dropdown":{}}' data-toggle="dropdown" class="action" data-action="customer-menu-toggle">
+            <span>-</span>
+          </button>
+          <ul data-target="dropdown" class="dropdown-options">
+            <li>
+              <span class="item" data-option="Pricing / Sales" onclick="selectOption('Pricing / Sales')">Pricing / Sales</span>
+            </li>
+            <li>
+              <span class="item" data-option="Pathership" onclick="selectOption('Pathership')">Pathership</span>
+            </li>
+            <li>
+              <span class="item" data-option="Afiliates" onclick="selectOption('Afiliates')">Afiliates</span>
+            </li>
+            <li>
+              <span class="item" data-option="Installation and Update" onclick="selectOption('Installation and Update')">Installation and Update</span>
+            </li>
+            <li>
+              <span class="item" data-option="Customization" onclick="selectOption('Customization')">Customization</span>
+            </li>
+            <li>
+              <span class="item" data-option="Theme options" onclick="selectOption('Theme options')">Theme options</span>
+            </li>
+            <li>
+              <span class="item" data-option="Translations" onclick="selectOption('Translations')">Translations</span>
+            </li>
+            <li>
+              <span class="item" onclick="selectOption('Other')">Other</span>
+            </li>
+            <li>
+              <span class="item" onclick="selectOption('3rd Party Module Conflict')">3rd Party Module Conflict</span>
+            </li>
+            <li>
+              <span class="item" onclick="selectOption('Sample Data')">Sample Data</span>
+            </li>
+            <li>
+              <span class="item" onclick="selectOption('Performance')">Performance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-field required">
+        <label for="">Subject</label>
+        <input type="text">
+      </div>
+      <div class="form-field required">
+        <label for="">Description</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p class="description--small">
+          For technical reports, we kindly ask you to include below information, for minimum rezolution time: #1 Product
+          version - are you using latest release? #2 Order No. #3 a. Preconditions (Magento version, WeltPixel Theme /
+          Extension version) b. Steps to reproduce reported behaviour on a Magento environment without extensions/custom
+          code that could alter default Magento functionality c. Expected result d. Actual result. Use screenshots where
+          necessary. #4 (Optional) Magento admin URL and credentials where the issue can be investigated.
+        </p>
+      </div>
+      <div class="form-field required">
+        <label for="">Support Terms</label>
+        <input type="checkbox">
+        <p class="description--small">
+          By submitting this ticket I confirm the answer is not found in the Knowledge Base. WeltPixel support
+          operations are 24/5, over weekends and public holidays we check in on tickets for any urgent issues, but
+          otherwise, we'll respond once we're back at work during business days from 6AM to 3PM (GMT 0.0) in the order
+          the tickets were received. Please note that most of them are handled within 24h – 48h, but sometimes (in very
+          rare and complicated cases) you will have to wait 5-7 business days for our response.
+        </p>
+      </div>
+      <div class="required">
+        <label for="">Attachments</label>
+        <div class="upload-dropzone">
+          <input type="file" multiple="true" value="">
+          <span>
+            <a>Add file</a> or drop files here
+          </span>
+        </div>
+      </div>
+      <div class="container__footer">
+        <input type="submit" name="commit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function selectOption(option) {
+    var button = document.querySelector('.customer-welcome button');
+    button.innerHTML = option;
+
+    // Aumentar el font-weight del texto seleccionado
+    var selectedOption = document.querySelector('.customer-welcome .dropdown-options .item.selected');
+    if (selectedOption) {
+      selectedOption.classList.remove('selected');
+    }
+    var newSelectedOption = document.querySelector('.customer-welcome .dropdown-options .item[data-option="' + option + '"]');
+    newSelectedOption.classList.add('selected');
+  }
+</script>
