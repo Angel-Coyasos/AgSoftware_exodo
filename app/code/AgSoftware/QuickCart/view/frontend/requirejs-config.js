@@ -11,6 +11,6 @@ var config = {
                 'AgSoftware_QuickCart/js/view/cart-item-renderer-mixins':true
             }
         }
-    }
+    },
 };
 
