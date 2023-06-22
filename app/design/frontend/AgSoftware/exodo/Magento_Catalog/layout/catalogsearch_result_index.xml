@@ -8,8 +8,17 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
+        <referenceContainer name="content">
+
+            <block name="support.widget" template="Magento_Catalog::product/search/support-widget.phtml" after="visitor_count"/>
+
+        </referenceContainer>
+
         <referenceBlock name="sidebar.additional" remove="true" />
         <referenceBlock name="div.sidebar.main" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="true" />
+
+        <referenceBlock name="additional" remove="true" />
 
         <move element="breadcrumbs" destination="page.wrapper" before="main.content" />
 
