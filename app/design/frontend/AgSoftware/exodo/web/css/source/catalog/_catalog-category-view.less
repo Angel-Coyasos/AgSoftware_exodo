@@ -1,0 +1,104 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body.catalog-category-view {
+        .page-wrapper {
+
+            .page-header {
+
+            }
+
+            .breadcrumbs {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 15px;
+                background-color: @background-gay;
+                .items {
+                    max-width: 90%;
+                    margin: 0 auto;
+                    .item {
+                        float: left;
+                        line-height: 18px;
+
+                        a {
+                            font-size: 12px;
+                            font-style: normal;
+                            text-transform: capitalize;
+                            color: #444;
+                        }
+
+                        strong {
+                            text-transform: capitalize;
+                            color: #707070;
+                        }
+
+                        &:after {
+                            line-height: 17px;
+                            font-weight: 400;
+                            vertical-align: middle;
+                            color: @color-primario;
+                        }
+
+                    }
+                }
+            }
+
+            .page-main {
+                background-color: @background-gay;
+            }
+
+        }
+    }
+
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body.catalog-category-view {
+        .page-wrapper {
+
+            .breadcrumbs {
+                display: none;
+            }
+
+        }
+    }
+
+}
+
+//
+//  Table Medium
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    body.catalog-category-view {
+        .page-wrapper {
+
+            .breadcrumbs {
+                display: block;
+            }
+
+        }
+    }
+
+}
