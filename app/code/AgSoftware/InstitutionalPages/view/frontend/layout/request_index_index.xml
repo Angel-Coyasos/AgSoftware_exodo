@@ -1,20 +1,10 @@
 <?xml version="1.0" ?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-	<head>
-        <title>Submit a request</title>
-    </head>
-	
 	<body>
 		<referenceContainer name="content">
 			<block name="index.index" class="AgSoftware\InstitutionalPages\Block\Index\Index" template="AgSoftware_InstitutionalPages::index/index.phtml"/>
 			<block name="footer.inst"  template="AgSoftware_InstitutionalPages::footer/footer.phtml" after="-"/>
-			
-			<!-- Agregar el título a la pestaña de navegación -->
-		<referenceBlock name="page.main.title">
-			<arguments>
-				<argument name="text" xsi:type="string"></argument>
-			</arguments>
-		</referenceBlock>
+
 		<!-- remuevo bloque flotante -->
         <referenceBlock name="block.float"  remove="true"/>
         <!-- remueve bloque contenedor del carrito, lupa y login -->
