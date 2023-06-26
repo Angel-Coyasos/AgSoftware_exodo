@@ -13,5 +13,8 @@
 
         <move element="breadcrumbs" destination="page.wrapper" before="main.content" />
 
+        <!--<move element="page.main.title" destination="main.content" before="-" />-->
+        <!--<referenceBlock name="page.main.title" remove="false"/>-->
+
     </body>
 </page>
