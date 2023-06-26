@@ -21,25 +21,13 @@
 & when (@media-common = true) {
 
     body#html-body.request-index-index {
-        .config-font ( @fuente-ins, 15px, 400, normal, 1.5, 0.5px, rgba(51, 51, 51, 1));
-        
-        .page-title-wrapper {
-            display: none;
-        }
 
         .column.main {
             padding: 0;
-            
         }
 
         .header.content {
             justify-content: flex-start;
-        }
-
-        .container-divider {
-            border-top: 1px solid #ddd;
-            margin-bottom: 20px;
-
         }
         
         .container {
@@ -119,9 +107,11 @@
 
             &__title {
                 .config-font ( @fuente-ins, 32px, 400, normal, 1.5, 0.5px, rgba(51, 51, 51, 1));
-                margin: 0 0 0.67em;
             }
 
+            &__description {
+                margin-bottom: 3rem;
+            }
             strong {
                 display: block;
             }
@@ -144,6 +134,7 @@
                 user-select: none;
                 white-space: nowrap;
                 width: 100%;
+                margin-bottom: 4rem;
                 &:hover, &:active {
                     background-color: rgba(7, 55, 86, 1);
                     color: #ffffff;
@@ -151,6 +142,9 @@
                 }
             }
 
+            &__form {
+                margin-top: 2.5rem;
+            }
             .form-field.required {
                 margin-top: 25px;
 
@@ -162,13 +156,8 @@
                     transition: border .12s ease-in-out;
                     color: #000;
                     line-height: normal;
-                    //font: inherit;
+                    font: inherit;
                     font-size: 14px;
-                    .border();
-                    &:focus {
-                        border: 1px solid rgba(7, 55, 86, 1);
-                        box-shadow: none;
-                    }
                 }
             }
             .required {
@@ -205,24 +194,17 @@
                 }
                
             }
-
             .form-field.required, .required > label{
                 font-size: 13px;
                 display: block;
             }
-
-            // .form-field.required > input {
-            //     .border();
-            // }
+            .form-field.required > input {
+                border-radius: 2px;
+                .border();
+            }
 
             .form-field.required > textarea{
                 .border();
-                min-height: 120px;
-                &:focus {
-                    border: 1px solid rgba(7, 55, 86, 1);
-                    box-shadow: none;
-                    border-radius: 2px;
-                }
             }
             
             .form-field.required > .description--small {
@@ -248,10 +230,6 @@
                     border-radius: 4px;
                     text-align: left;
                     line-height: 40px;
-                    &:focus {
-                        
-                    }
-
                     &::after {
                         color: rgb(153, 153, 153);
                         content: "▾";
@@ -334,33 +312,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    body#html-body.request-index-index {
-        .container {
-            .form-field.required > .customer-welcome {
-                position: relative;
-                .dropdown-options {
-                        margin: 0;
-                        padding: 0;
-                        list-style: none none;
-                        background: #ffffff;
-                        border: 1px solid #bbbbbb;
-                        margin-top: 4px;
-                        min-width: 100%;
-                        z-index: 101;
-                        box-sizing: border-box;
-                        display: none; 
-                        position: absolute;
-                        top: 100%;
-                        right: 0;
-                        // box-shadow: ;
-                }
-            }
 
-            .form-field.required > .customer-welcome.active ul {
-                display: block;
-            }
-        }
-    }
 }
 
 //
@@ -424,10 +376,4 @@
 //  _____________________________________________
 
 
-@media (min-width: 769px) {
-    #html-body.request-index-index .page-wrapper .page-header div.header.content a.logo img {
-        width: 163px;
-        height: 60px;
-    }
-}
 
