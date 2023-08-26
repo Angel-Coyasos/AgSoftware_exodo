@@ -179,8 +179,13 @@
                                 }
                                 .product-item-details {
                                     .item-options {
-                                        display: flex;
-                                        flex-direction: column;
+                                        dt {
+                                            //font-size: 1.4rem;
+                                        }
+
+                                        dd {
+                                            font-size: 1.2rem;
+                                        }
                                     }
                                 }
                             }
@@ -214,7 +219,7 @@
             }
 
             .cart-discount {
-                margin-top: 20px;
+                //margin-top: 20px;
                 padding: 10px 15px;
 
                 .discount, .reward-container {
@@ -322,14 +327,14 @@
                 .checkout-methods-items {
                     padding: 0 15px;
                 }
-            }           
+            } 
         }
     }
 
 }
 
 
-@media  (min-width: 841px) {
+@media  (min-width: 840px) {
     #html-body.checkout-cart-index {
         .page-wrapper {
             overflow-x: hidden;
@@ -346,6 +351,12 @@
         }
 
         .cart-container {
+            .cart-summary {
+                padding: 1px 20px 25px;
+                .social-login-container {
+                    padding: 0;
+                }
+            }  
             .form-cart {
                 .main.actions {
                     display: flex;
@@ -363,6 +374,16 @@
                 .discount, .reward-container {
                     width: 53%;
 
+                    [data-role="title"].title, .arrow-down{
+                        &::after {
+                            position: static;
+                            margin-left: 10px;
+                        }
+                        strong {
+                            display: inline;
+                        }
+                    }
+
                     .content {
                         #discount-coupon-form, .discount-coupon-apply {
                             .fieldset {
@@ -375,6 +396,10 @@
                         }
                     }
                 }
+            }
+
+            .divider-space {
+                margin-bottom: 50px;
             }
         }
     }
@@ -408,23 +433,6 @@
     }
 }
 
-@media  (min-width: 1024px){
-    #html-body.checkout-cart-index  {
-        .cart-discount {
-            .discount, .reward-container {
-                [data-role="title"].title, .arrow-down{
-                    &::after {
-                        position: static;
-                        margin-left: 10px;
-                    }
-                    strong {
-                        display: inline;
-                    }
-                }
-            }
-        }
-    }
-}
 
 //
 // Breaking point for large custom desktop
@@ -443,5 +451,12 @@
                     color: @color-oscuro;
             }
         }
+        .cart-container {
+            .cart-discount {
+                //margin: 0;
+                float: none;
+            }
+        }
+        
     }
 }

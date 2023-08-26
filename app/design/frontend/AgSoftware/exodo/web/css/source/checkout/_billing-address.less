@@ -123,7 +123,26 @@
 
 }
 
+@media  (max-width: 768px) {
+    .checkout-index-index  {
+        .checkout-container {
+            .opc-wrapper {
+                .checkout-shipping-address{
+                    .step-content {
+                        .new-address-popup {
+                            .action-show-popup {
+                                .btn-checkout(@color-titulo, @color-primario);
+                                padding: 10px 15px;
+                               
+                            }
 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 //
 // Breakpoints for different devices
 //  _____________________________________________
@@ -137,6 +156,28 @@
         }
     }
 }
+
+@media  (min-width: 768px) and (max-width:840px) {
+    .checkout-index-index  {
+        .checkout-container {
+            .opc-wrapper {
+                .checkout-shipping-method {
+                    .step-content {
+                        .methods-shipping{
+                            .actions-toolbar {
+                                .primary {
+                                    width: 100%
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @media  (min-width: 768px) and (max-width:1438px) {
     .checkout-index-index  {
